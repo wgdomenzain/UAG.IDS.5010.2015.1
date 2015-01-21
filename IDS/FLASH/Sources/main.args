@@ -4,10 +4,10 @@
 -g3
 -gdwarf-2
 -gstrict-dwarf
--I"C:/UAG.IDS.5010.2015.1/IDS/Project_Headers"
--I"C:/UAG.IDS.5010.2015.1/IDS/Project_Settings/Startup_Code"
--I"C:/Freescale/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include"
--I"C:/Freescale/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/EWL_Runtime/include"
+-I"C:/UAG/Projects/UAG.IDS.5010.2015.1/IDS/Project_Headers"
+-I"C:/UAG/Projects/UAG.IDS.5010.2015.1/IDS/Project_Settings/Startup_Code"
+-I"C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include"
+-I"C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/EWL_Runtime/include"
 -O0
 -ffunction-sections
 -fdata-sections
