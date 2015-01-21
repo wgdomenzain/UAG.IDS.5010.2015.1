@@ -9,6 +9,14 @@
 
 #include "derivative.h" /* include peripheral declarations */
 //prototipe declaration
+
+//  _           _        
+// | |         | |       
+// | |__   ___ | | __ _  
+// | '_ \ / _ \| |/ _` | 
+// | | | | (_) | | (_| | 
+ //|_| |_|\___/|_|\__,_| 
+                      
 void cfgPorts(void);
 int calculateAverage (int age1,int age2,int age3);
 
