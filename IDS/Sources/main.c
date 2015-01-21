@@ -28,6 +28,6 @@ void cfgPorts(void){
 
 int calculateAverage(int age1, int age2, int age3){
 	int avg = age1 + age2 + age3;
-	avg = result/3;
+	avg = avg/3;
 	return avg;
 }
