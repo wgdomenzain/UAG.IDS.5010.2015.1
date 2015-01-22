@@ -9,24 +9,21 @@
 
 //prototype declaration
 void cfgPorts(void);
-int calculateAverage(int age1,int age2,int age3);
+float calculateAverage(int age1,int age2,int age3);
 
 
 int main(void)
 {
 	int counter = 0;
-	int counter2 = 0;
-	
+	float average;
 	cfgPorts();
-	counter=calculateAverage(1,2,3);
+	
+	average=calculateAverage(1,2,3);
+	average+1-1;
 	
 	for(;;) {	   
 	   	counter++;
 	}
-	
-	for(;;) {	   
-		   	counter2++;
-		}
 	
 	return 0;
 }
@@ -38,7 +35,11 @@ void cfgPorts(void)
 
 }
 
-int calculateAverage(int age1,int age2,int age3)
+float calculateAverage(int age1,int age2,int age3)
 {
-	return 1;
+	float average;
+	average = (age1+age2+age3)/3;
+	
+	
+	return average;
 }
