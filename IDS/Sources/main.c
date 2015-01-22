@@ -32,6 +32,10 @@ void cfgPorts(void)
 }
 int calculateAverage(int age1,int age2, int age3)
 {
-	return 1;
+	int result;
+	result= (age1+age2+age3)/3;
+	return result;
 }
+
+// primer prototipo para Branch de Enrique Martinez Salas que calcula promedio de edades.
 
