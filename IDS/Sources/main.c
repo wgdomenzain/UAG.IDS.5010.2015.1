@@ -8,11 +8,11 @@
 
 
 #include "derivative.h" /* include peripheral declarations */
-
+#include <stdio.h>
 
 void cfgporTs(void);
 int calculateAverage(int age1,int age2,int age3);
-
+float calculateIMC(float altura,float peso);
 int main(void)
 {
 	//prototype declaration
@@ -31,7 +31,15 @@ void cfgporTs(void){
 	
 }
 int calculateAverage(int age1,int age2,int age3){
+	int avg=0;
 	
-	return 1;
 	
+	avg = (age1+age2+age3)/3;
+	
+	return avg;
+	
+}
+float calculateIMC(float altura,float peso){
+	
+	return 0;
 }
