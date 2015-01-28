@@ -9,20 +9,21 @@
 
 //prototype declaration
 void cfgPorts(void);
-float calculateAverage(int age1,int age2,int age3);
-
 
 int main(void)
 {
-	int counter = 0;
-	float average;
+	//port configuration
 	cfgPorts();
+	//TURN ON LED RED
+	//GPIOB_PDOR = 0xFFF3FFFF;
+	//TURN ON LED GREEN
+	//GPIOB_PDOR = 0xFFF3FFFF;
+	//TURN ON LED BLUE
+	GPIOD_PDOR = 0xFFFFFFFD;
+		
+	for(;;) 
+	{	   
 	
-	average=calculateAverage(1,2,3);
-	average+1-1;
-	
-	for(;;) {	   
-	   	counter++;
 	}
 	
 	return 0;
@@ -30,16 +31,22 @@ int main(void)
 
 void cfgPorts(void)
 {
+	//URN ON CLOCK FOR PORTb AND pORTB
+	SIM_SCGC5 = SIM_SCGC5_PORTB_MASK;
+	SIM_SCGC5 |= SIM_SCGC5_PORTA_MASK;
+	SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;
+
+	//Activate pin mode
+	PORTB_PCR18 = PORT_PCR_MUX(1);
+	PORTB_PCR19 = PORT_PCR_MUX(1);
+	PORTD_PCR1 = PORT_PCR_MUX(1);
 	
+	//Configure PORT B
+	GPIOA_PDDR = 0xFFFFFFFF;
+	GPIOB_PDDR = 0xFFFFFFFF; 
+	GPIOD_PDDR = 0xFFFFFFFF; 
+}	
 
 
-}
 
-float calculateAverage(int age1,int age2,int age3)
-{
-	float average;
-	average = (age1+age2+age3)/3;
-	
-	
-	return average;
-}
+
