@@ -8,38 +8,37 @@
 
 
 #include "derivative.h" /* include peripheral declarations */
-#include <stdio.h>
+#define portB GPIOB_PDOR
+//Prototype declaration
+void cfgPorts(void);
 
-void cfgporTs(void);
-int calculateAverage(int age1,int age2,int age3);
-float calculateIMC(float altura,float peso);
 int main(void)
 {
-	//prototype declaration
-	int counter = 0;
-	cfgporTs();
-	counter = calculateAverage(1,2,3);
 	
+	cfgPorts();
+	GPIOB_PDOR = 0xFFFFFFFD;
+	portB = 0xFFF3FFFF; 
 	
-	for(;;) {	   
-	   	counter++;
-	}
-	
+	for(;;) {   	
+	}	
 	return 0;
 }
-void cfgporTs(void){
+void cfgPorts(void){
+	//SIM_SCGC5 : RELOJ EL micro por default tiene apagado lso puertos.
+	//funciones que se hacen en el gpio :memory map
+	//por data direction register: le mandamos un 1 o 0
 	
+	SIM_SCGC5 =  SIM_SCGC5_PORTB_MASK;
+	SIM_SCGC5 |=  SIM_SCGC5_PORTA_MASK;
+	SIM_SCGC5 |=  SIM_SCGC5_PORTD_MASK;
+	
+	//ACTIVATE PIN MODE	
+	PORTB_PCR18 = PORT_PCR_MUX(1);
+	PORTB_PCR19 = PORT_PCR_MUX(1);
+	PORTD_PCR1 =  PORT_PCR_MUX(1);
+	
+	//CONFIGURE PORTB AS OUTPUT
+	GPIOB_PDDR = 0xFFFFFFFF;
+	GPIOD_PDDR = 0xFFFFFFFF;
 }
-int calculateAverage(int age1,int age2,int age3){
-	int avg=0;
-	
-	
-	avg = (age1+age2+age3)/3;
-	
-	return avg;
-	
-}
-float calculateIMC(float altura,float peso){
-	
-	return 0;
-}
+
