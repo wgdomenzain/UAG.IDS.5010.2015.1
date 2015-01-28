@@ -8,26 +8,38 @@
 
 
 #include "derivative.h" /* include peripheral declarations */
-//Modificado por Daniel Sànchez Ramírez 
+#define portB GPIOB_PDOR
 
-int avg(int x, int y, int z);
+void cfgPorts(void);
+
 int main(void)
 {
-	int counter = 0;
+	cfgPorts();
 	
+	//GPIOB_PDOR = 0xFFFBFFFF; //PRENDE ROJO
+	//GPIOB_PDOR = 0xFFF7FFFF; //PRENDE VERDE
+	//GPIOB_PDOR = 0xFFF3FFFF; //PRENDE Amarillo
+	portB = 0x00000000;
+	portB = 0xFFFFFFFD;		
 	
-	counter = avg(2, 2, 2);
-	
-	for(;;) {	   
-	   	counter++;
+	for(;;) {	  
+	   	
 	}
 	
 	return 0;
 }
-int avg(int x, int y, int z){
+void cfgPorts(void){
 	
-	int prom;
+	SIM_SCGC5 =  SIM_SCGC5_PORTB_MASK;
+	SIM_SCGC5 |=  SIM_SCGC5_PORTA_MASK; 
+	SIM_SCGC5 |=  SIM_SCGC5_PORTD_MASK; 
 	
-	prom = (x+y+z)/3
-	return prom; 
+	PORTB_PCR18 = PORT_PCR_MUX(1);
+	PORTB_PCR19 = PORT_PCR_MUX(1);
+	PORTD_PCR1 = PORT_PCR_MUX(1);
+	
+	//CONFIGURE PORT: B AS OUTPUT
+	GPIOB_PDDR = 0xFFFFFFFF;
+	GPIOD_PDDR = 0xFFFFFFFF;
+	
 }
