@@ -1,6 +1,6 @@
 /*
  * main implementation: use this 'C' sample to create your own application
- *
+ *  Alfredo Dávila Assad
  */
 
 
