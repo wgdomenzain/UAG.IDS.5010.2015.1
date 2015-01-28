@@ -7,29 +7,46 @@
 
 
 
-#include "derivative.h" /* include peripheral declarations */
-//Este codigo fue modificado por Carlos Alejandro "Java" Payan Castellanos
-int promedio(int uno,int dos,int tres);
+#include "derivative.h" 
+/* include peripheral declarations */
+
+void cfgPorts(void);
+
 
 int main(void)
 {
-	int counter = 0;
+
+	cfgPorts();
 	
-	counter=promedio(1,2,3);
+	//PRende ROjo
+GPIOB_PDOR = 0xFFFBFFFF;
+GPIOB_PDOR &= 0xFFF7FFFF;
+GPIOD_PDOR =0xFFFFFFFD;
+	
+for(;;) {	   
+	   	
+	
+}
 	
 	
-	for(;;) {	   
-	   	counter++;
-	}
-	
-	return 0;
+return 0;
+
 }
 
-int promedio(int uno,int dos,int tres)
+void cfgPorts(void)
 {
-	int total=0;
-	total=uno+dos+tres;
-	total=total/3;
+	
+	
+SIM_SCGC5 =  SIM_SCGC5_PORTB_MASK;
+	
+SIM_SCGC5 |=  SIM_SCGC5_PORTA_MASK; 
+SIM_SCGC5 |=  SIM_SCGC5_PORTD_MASK; 
 
-	return total;
+PORTB_PCR18 = PORT_PCR_MUX(1);
+	
+PORTB_PCR19 = PORT_PCR_MUX(1);
+PORTD_PCR1 = PORT_PCR_MUX(1);	
+	
+GPIOB_PDDR = 0xFFFFFFFF;
+GPIOD_PDDR = 0xFFFFFFFF;
 }
