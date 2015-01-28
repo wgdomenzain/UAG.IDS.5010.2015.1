@@ -164,8 +164,8 @@ LOAD ./Project_Settings/Startup_Code/__arm_start.o
 LOAD ./Project_Settings/Startup_Code/__arm_end.o
 LOAD ./Sources/sa_mtb.o
 LOAD ./Sources/main.o
-                0x00000b84                __pformatter = __pformatter_
-                [0x00000fac]                __sformatter = __sformatter
+                0x00000bf4                __pformatter = __pformatter_
+                [0x0000101c]                __sformatter = __sformatter
 START GROUP
 LOAD C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a
 LOAD C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libm.a
@@ -191,7 +191,7 @@ END GROUP
  *(.cfmconfig)
                 0x00000400                . = ALIGN (0x4)
 
-.text           0x00000800     0x1378
+.text           0x00000800     0x13e8
                 0x00000800                . = ALIGN (0x4)
  *(.text)
  .text          0x00000800       0x14 c:/users/ana mariel/desktop/cw mcu v10.4/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_thumb1_case_sqi.o)
@@ -255,78 +255,75 @@ END GROUP
  .text._ExitProcess
                 0x00000954        0xc ./Project_Settings/Startup_Code/__arm_end.o
                 0x00000954                _ExitProcess
- .text.main     0x00000960       0x24 ./Sources/main.o
+ .text.main     0x00000960       0x34 ./Sources/main.o
                 0x00000960                main
  .text.cfgPorts
-                0x00000984        0x8 ./Sources/main.o
-                0x00000984                cfgPorts
- .text.calculateAverage
-                0x0000098c       0x18 ./Sources/main.o
-                0x0000098c                calculateAverage
- .text.exit     0x000009a4       0x38 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
-                0x000009a4                exit
- .text.memset   0x000009dc        0xc C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
-                0x000009dc                memset
+                0x00000994       0x80 ./Sources/main.o
+                0x00000994                cfgPorts
+ .text.exit     0x00000a14       0x38 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+                0x00000a14                exit
+ .text.memset   0x00000a4c        0xc C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+                0x00000a4c                memset
  .text.long2str.isra.0
-                0x000009e8      0x19c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00000a58      0x19c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .text.__pformatter_
-                0x00000b84      0x428 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
-                0x00000b84                __pformatter_
+                0x00000bf4      0x428 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00000bf4                __pformatter_
  .text.__sformatter
-                0x00000fac      0x698 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
-                0x00000fac                __sformatter
- .text.isalpha  0x00001644       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
-                0x00001644                isalpha
- .text.isspace  0x00001664       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
-                0x00001664                isspace
- .text.toupper  0x00001684        0xe C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
-                0x00001684                toupper
+                0x0000101c      0x698 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+                0x0000101c                __sformatter
+ .text.isalpha  0x000016b4       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x000016b4                isalpha
+ .text.isspace  0x000016d4       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x000016d4                isspace
+ .text.toupper  0x000016f4        0xe C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x000016f4                toupper
  .text.__strtoul
-                0x00001692      0x1ce C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
-                0x00001692                __strtoul
+                0x00001702      0x1ce C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+                0x00001702                __strtoul
  .text.__fill_mem
-                0x00001860       0x7e C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
-                0x00001860                __fill_mem
- .text.memchr   0x000018de       0x1a C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
-                0x000018de                memchr
- .text.memcpy   0x000018f8       0x12 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
-                0x000018f8                memcpy
- .text.strchr   0x0000190a       0x1e C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
-                0x0000190a                strchr
- .text.strlen   0x00001928       0x10 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
-                0x00001928                strlen
+                0x000018d0       0x7e C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+                0x000018d0                __fill_mem
+ .text.memchr   0x0000194e       0x1a C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+                0x0000194e                memchr
+ .text.memcpy   0x00001968       0x12 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+                0x00001968                memcpy
+ .text.strchr   0x0000197a       0x1e C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+                0x0000197a                strchr
+ .text.strlen   0x00001998       0x10 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+                0x00001998                strlen
  .text.__init_cpp
-                0x00001938       0x48 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
-                0x00001938                __init_cpp
+                0x000019a8       0x48 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+                0x000019a8                __init_cpp
  .text.__fini_cpp
-                0x00001980       0x34 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
-                0x00001980                __fini_cpp
+                0x000019f0       0x34 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+                0x000019f0                __fini_cpp
  .text.__copy_rom_section
-                0x000019b4       0x48 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
-                0x000019b4                __copy_rom_section
+                0x00001a24       0x48 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+                0x00001a24                __copy_rom_section
  .text.__copy_rom_sections_to_ram
-                0x000019fc       0x34 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
-                0x000019fc                __copy_rom_sections_to_ram
+                0x00001a6c       0x34 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+                0x00001a6c                __copy_rom_sections_to_ram
  .text.__destroy_global_chain
-                0x00001a30       0x1c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
-                0x00001a30                __destroy_global_chain
+                0x00001aa0       0x1c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+                0x00001aa0                __destroy_global_chain
  .text.__init_registers
-                0x00001a4c       0x1c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
-                0x00001a4c                __init_registers
+                0x00001abc       0x1c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+                0x00001abc                __init_registers
  .text.__init_user
-                0x00001a68        0x4 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
-                0x00001a68                __init_user
+                0x00001ad8        0x4 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+                0x00001ad8                __init_user
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x00001a6c        0x1 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00001adc        0x1 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .rodata.CSWTCH.20
-                0x00001a6d        0x5 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00001add        0x5 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .rodata.CSWTCH.21
-                0x00001a72        0x5 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00001ae2        0x5 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .rodata.__aeabi_ctype_table_C
-                0x00001a77      0x101 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
-                0x00001a77                __aeabi_ctype_table_C
+                0x00001ae7      0x101 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x00001ae7                __aeabi_ctype_table_C
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.glue_7t)
@@ -334,62 +331,62 @@ END GROUP
  *(.eh_frame)
  *(.init)
  *(.fini)
-                0x00001b78                . = ALIGN (0x4)
-                0x00001b78                _etext = .
+                0x00001be8                . = ALIGN (0x4)
+                0x00001be8                _etext = .
 
-.vfp11_veneer   0x00001b78        0x0
+.vfp11_veneer   0x00001be8        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00001b78        0x0
+.v4_bx          0x00001be8        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00001b78        0x0
+.iplt           0x00001be8        0x0
  .iplt          0x00000000        0x0 ./Project_Settings/Startup_Code/kinetis_sysinit.o
 
-.rel.dyn        0x00001b78        0x0
+.rel.dyn        0x00001be8        0x0
  .rel.iplt      0x00000000        0x0 ./Project_Settings/Startup_Code/kinetis_sysinit.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x00001b78        0x0
-                0x00001b78                __exidx_start = .
+.ARM            0x00001be8        0x0
+                0x00001be8                __exidx_start = .
  *(.ARM.exidx*)
-                0x00001b78                __exidx_end = .
+                0x00001be8                __exidx_end = .
 
-.ctors          0x00001b78        0x0
-                0x00001b78                __CTOR_LIST__ = .
+.ctors          0x00001be8        0x0
+                0x00001be8                __CTOR_LIST__ = .
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x00001b78                __CTOR_END__ = .
+                0x00001be8                __CTOR_END__ = .
 
-.dtors          0x00001b78        0x0
-                0x00001b78                __DTOR_LIST__ = .
+.dtors          0x00001be8        0x0
+                0x00001be8                __DTOR_LIST__ = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x00001b78                __DTOR_END__ = .
+                0x00001be8                __DTOR_END__ = .
 
-.preinit_array  0x00001b78        0x0
-                0x00001b78                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x00001be8        0x0
+                0x00001be8                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x00001b78                PROVIDE (__preinit_array_end, .)
+                0x00001be8                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x00001b78        0x0
-                0x00001b78                PROVIDE (__init_array_start, .)
+.init_array     0x00001be8        0x0
+                0x00001be8                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
-                0x00001b78                PROVIDE (__init_array_end, .)
+                0x00001be8                PROVIDE (__init_array_end, .)
 
-.fini_array     0x00001b78        0x0
-                0x00001b78                PROVIDE (__fini_array_start, .)
+.fini_array     0x00001be8        0x0
+                0x00001be8                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
-                0x00001b78                PROVIDE (__fini_array_end, .)
-                0x00001b78                ___ROM_AT = .
+                0x00001be8                PROVIDE (__fini_array_end, .)
+                0x00001be8                ___ROM_AT = .
 
 .mtb            0x1ffff000        0x0
                 0x1ffff000                . = ALIGN (0x8)
@@ -398,7 +395,7 @@ END GROUP
                 0x1ffff000                . = ALIGN (0x8)
                 0x1ffff000                _mtb_end = .
 
-.data           0x1ffff000        0x0 load address 0x00001b78
+.data           0x1ffff000        0x0 load address 0x00001be8
                 0x1ffff000                . = ALIGN (0x4)
                 0x1ffff000                _sdata = .
  *(.data)
@@ -431,11 +428,11 @@ END GROUP
                 0x1ffff01c                . = ALIGN (0x4)
                 0x1ffff01c                __END_BSS = .
                 0x1ffff01c                PROVIDE (__bss_end__, __END_BSS)
-                0x00001b78                _romp_at = (___ROM_AT + SIZEOF (.data))
+                0x00001be8                _romp_at = (___ROM_AT + SIZEOF (.data))
 
-.romp           0x1ffff01c       0x18 load address 0x00001b78
-                0x00001b78                __S_romp = _romp_at
-                0x1ffff01c        0x4 LONG 0x1b78 ___ROM_AT
+.romp           0x1ffff01c       0x18 load address 0x00001be8
+                0x00001be8                __S_romp = _romp_at
+                0x1ffff01c        0x4 LONG 0x1be8 ___ROM_AT
                 0x1ffff020        0x4 LONG 0x1ffff000 _sdata
                 0x1ffff024        0x4 LONG 0x0 ___data_size
                 0x1ffff028        0x4 LONG 0x0
@@ -443,7 +440,7 @@ END GROUP
                 0x1ffff030        0x4 LONG 0x0
 
 ._user_heap_stack
-                0x1ffff034      0x800 load address 0x00001b90
+                0x1ffff034      0x800 load address 0x00001c00
                 0x1ffff034                . = ALIGN (0x4)
                 0x1ffff034                PROVIDE (end, .)
                 0x1ffff034                PROVIDE (_end, .)
@@ -503,67 +500,67 @@ END GROUP
                 0x000003b9       0x31 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
 OUTPUT(IDS.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x22ca
+.debug_info     0x00000000     0x25c0
  .debug_info    0x00000000      0x447 ./Project_Settings/Startup_Code/kinetis_sysinit.o
  .debug_info    0x00000447      0x12a ./Project_Settings/Startup_Code/__arm_start.o
  .debug_info    0x00000571       0x54 ./Project_Settings/Startup_Code/__arm_end.o
- .debug_info    0x000005c5       0xed ./Sources/main.o
- .debug_info    0x000006b2       0xe8 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_info    0x0000079a       0xec C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_info    0x00000886      0x50d C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_info    0x00000d93      0x568 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_info    0x000012fb      0x313 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_info    0x0000160e      0x1d6 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_info    0x000017e4      0x137 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_info    0x0000191b      0x121 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_info    0x00001a3c      0x10f C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_info    0x00001b4b      0x10b C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_info    0x00001c56       0xea C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_info    0x00001d40      0x136 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_info    0x00001e76      0x19b C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
- .debug_info    0x00002011      0x2b9 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_info    0x000005c5      0x3e3 ./Sources/main.o
+ .debug_info    0x000009a8       0xe8 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_info    0x00000a90       0xec C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_info    0x00000b7c      0x50d C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_info    0x00001089      0x568 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_info    0x000015f1      0x313 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_info    0x00001904      0x1d6 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_info    0x00001ada      0x137 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_info    0x00001c11      0x121 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_info    0x00001d32      0x10f C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_info    0x00001e41      0x10b C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_info    0x00001f4c       0xea C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_info    0x00002036      0x136 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_info    0x0000216c      0x19b C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_info    0x00002307      0x2b9 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
 
-.debug_abbrev   0x00000000      0xe7e
+.debug_abbrev   0x00000000      0xec8
  .debug_abbrev  0x00000000       0xe7 ./Project_Settings/Startup_Code/kinetis_sysinit.o
  .debug_abbrev  0x000000e7       0x92 ./Project_Settings/Startup_Code/__arm_start.o
  .debug_abbrev  0x00000179       0x4c ./Project_Settings/Startup_Code/__arm_end.o
- .debug_abbrev  0x000001c5       0x8b ./Sources/main.o
- .debug_abbrev  0x00000250       0x7a C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_abbrev  0x000002ca       0x62 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_abbrev  0x0000032c      0x200 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_abbrev  0x0000052c      0x1f0 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_abbrev  0x0000071c       0x9e C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_abbrev  0x000007ba       0xc2 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_abbrev  0x0000087c       0x78 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_abbrev  0x000008f4       0x95 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_abbrev  0x00000989       0x95 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_abbrev  0x00000a1e       0x7a C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_abbrev  0x00000a98       0x7a C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_abbrev  0x00000b12       0x99 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_abbrev  0x00000bab      0x120 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
- .debug_abbrev  0x00000ccb      0x1b3 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_abbrev  0x000001c5       0xd5 ./Sources/main.o
+ .debug_abbrev  0x0000029a       0x7a C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_abbrev  0x00000314       0x62 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_abbrev  0x00000376      0x200 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_abbrev  0x00000576      0x1f0 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_abbrev  0x00000766       0x9e C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_abbrev  0x00000804       0xc2 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_abbrev  0x000008c6       0x78 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_abbrev  0x0000093e       0x95 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_abbrev  0x000009d3       0x95 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_abbrev  0x00000a68       0x7a C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_abbrev  0x00000ae2       0x7a C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_abbrev  0x00000b5c       0x99 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_abbrev  0x00000bf5      0x120 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_abbrev  0x00000d15      0x1b3 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
 
-.debug_loc      0x00000000     0x2843
+.debug_loc      0x00000000     0x27ff
  .debug_loc     0x00000000       0x58 ./Project_Settings/Startup_Code/kinetis_sysinit.o
  .debug_loc     0x00000058       0x2c ./Project_Settings/Startup_Code/__arm_start.o
  .debug_loc     0x00000084       0x38 ./Project_Settings/Startup_Code/__arm_end.o
- .debug_loc     0x000000bc       0x9c ./Sources/main.o
- .debug_loc     0x00000158       0x3e C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_loc     0x00000196       0x6f C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_loc     0x00000205     0x104b C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_loc     0x00001250      0x9d8 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_loc     0x00001c28      0x30d C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_loc     0x00001f35      0x305 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_loc     0x0000223a      0x14a C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_loc     0x00002384       0x77 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_loc     0x000023fb       0x59 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_loc     0x00002454       0xaf C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_loc     0x00002503       0x33 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_loc     0x00002536       0x9d C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_loc     0x000025d3       0xd9 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
- .debug_loc     0x000026ac      0x197 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_loc     0x000000bc       0x58 ./Sources/main.o
+ .debug_loc     0x00000114       0x3e C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_loc     0x00000152       0x6f C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_loc     0x000001c1     0x104b C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_loc     0x0000120c      0x9d8 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_loc     0x00001be4      0x30d C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_loc     0x00001ef1      0x305 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_loc     0x000021f6      0x14a C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_loc     0x00002340       0x77 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_loc     0x000023b7       0x59 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_loc     0x00002410       0xaf C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_loc     0x000024bf       0x33 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_loc     0x000024f2       0x9d C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_loc     0x0000258f       0xd9 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_loc     0x00002668      0x197 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
 
-.debug_aranges  0x00000000      0x328
+.debug_aranges  0x00000000      0x320
  .debug_aranges
                 0x00000000       0x28 ./Project_Settings/Startup_Code/kinetis_sysinit.o
  .debug_aranges
@@ -571,37 +568,37 @@ OUTPUT(IDS.elf elf32-littlearm)
  .debug_aranges
                 0x00000058       0x20 ./Project_Settings/Startup_Code/__arm_end.o
  .debug_aranges
-                0x00000078       0x30 ./Sources/main.o
+                0x00000078       0x28 ./Sources/main.o
  .debug_aranges
-                0x000000a8       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+                0x000000a0       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
  .debug_aranges
-                0x000000c8       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+                0x000000c0       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
  .debug_aranges
-                0x000000e8       0x28 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x000000e0       0x28 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .debug_aranges
-                0x00000110       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+                0x00000108       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
  .debug_aranges
-                0x00000130       0x88 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x00000128       0x88 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
  .debug_aranges
-                0x000001b8       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+                0x000001b0       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
  .debug_aranges
-                0x000001d8       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+                0x000001d0       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
  .debug_aranges
-                0x000001f8       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+                0x000001f0       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
  .debug_aranges
-                0x00000218       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+                0x00000210       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
  .debug_aranges
-                0x00000238       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+                0x00000230       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
  .debug_aranges
-                0x00000258       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+                0x00000250       0x20 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
  .debug_aranges
-                0x00000278       0x28 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+                0x00000270       0x28 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
  .debug_aranges
-                0x000002a0       0x30 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+                0x00000298       0x30 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
  .debug_aranges
-                0x000002d0       0x58 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+                0x000002c8       0x58 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
 
-.debug_macinfo  0x00000000    0x53bf3
+.debug_macinfo  0x00000000    0x53c06
  .debug_macinfo
                 0x00000000    0x264b5 ./Project_Settings/Startup_Code/kinetis_sysinit.o
  .debug_macinfo
@@ -609,64 +606,64 @@ OUTPUT(IDS.elf elf32-littlearm)
  .debug_macinfo
                 0x0002a322     0x3456 ./Project_Settings/Startup_Code/__arm_end.o
  .debug_macinfo
-                0x0002d778    0x2647b ./Sources/main.o
+                0x0002d778    0x2648e ./Sources/main.o
 
-.debug_line     0x00000000     0x1876
+.debug_line     0x00000000     0x186e
  .debug_line    0x00000000      0x233 ./Project_Settings/Startup_Code/kinetis_sysinit.o
  .debug_line    0x00000233      0x2b6 ./Project_Settings/Startup_Code/__arm_start.o
  .debug_line    0x000004e9      0x2a2 ./Project_Settings/Startup_Code/__arm_end.o
- .debug_line    0x0000078b      0x20f ./Sources/main.o
- .debug_line    0x0000099a       0x8d C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_line    0x00000a27       0x90 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_line    0x00000ab7      0x2c3 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_line    0x00000d7a      0x2be C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_line    0x00001038      0x1be C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_line    0x000011f6      0x11e C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_line    0x00001314       0xf6 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_line    0x0000140a       0x9f C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_line    0x000014a9       0x8b C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_line    0x00001534       0x7d C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_line    0x000015b1       0x85 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_line    0x00001636       0x6c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_line    0x000016a2       0xbd C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
- .debug_line    0x0000175f      0x117 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_line    0x0000078b      0x207 ./Sources/main.o
+ .debug_line    0x00000992       0x8d C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_line    0x00000a1f       0x90 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_line    0x00000aaf      0x2c3 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_line    0x00000d72      0x2be C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_line    0x00001030      0x1be C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_line    0x000011ee      0x11e C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_line    0x0000130c       0xf6 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_line    0x00001402       0x9f C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_line    0x000014a1       0x8b C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_line    0x0000152c       0x7d C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_line    0x000015a9       0x85 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_line    0x0000162e       0x6c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_line    0x0000169a       0xbd C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_line    0x00001757      0x117 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
 
-.debug_str      0x00000000      0xc3b
+.debug_str      0x00000000      0xc78
  .debug_str     0x00000000      0x296 ./Project_Settings/Startup_Code/kinetis_sysinit.o
                                 0x2bd (size before relaxing)
  .debug_str     0x00000296       0x85 ./Project_Settings/Startup_Code/__arm_start.o
                                 0x197 (size before relaxing)
  .debug_str     0x0000031b       0x41 ./Project_Settings/Startup_Code/__arm_end.o
                                  0xce (size before relaxing)
- .debug_str     0x0000035c       0x48 ./Sources/main.o
-                                0x148 (size before relaxing)
- .debug_str     0x000003a4       0x5a C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_str     0x0000035c       0x85 ./Sources/main.o
+                                0x27c (size before relaxing)
+ .debug_str     0x000003e1       0x5a C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
                                 0x157 (size before relaxing)
- .debug_str     0x000003fe       0x23 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_str     0x0000043b       0x23 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
                                 0x140 (size before relaxing)
- .debug_str     0x00000421      0x244 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_str     0x0000045e      0x244 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
                                 0x3b3 (size before relaxing)
- .debug_str     0x00000665      0x184 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_str     0x000006a2      0x184 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
                                 0x3f9 (size before relaxing)
- .debug_str     0x000007e9       0x9d C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_str     0x00000826       0x9d C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
                                 0x1bc (size before relaxing)
- .debug_str     0x00000886       0x61 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_str     0x000008c3       0x61 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
                                 0x1fb (size before relaxing)
- .debug_str     0x000008e7       0x25 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_str     0x00000924       0x25 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
                                 0x152 (size before relaxing)
- .debug_str     0x0000090c       0x1c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_str     0x00000949       0x1c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
                                 0x148 (size before relaxing)
- .debug_str     0x00000928       0x1c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_str     0x00000965       0x1c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
                                 0x138 (size before relaxing)
- .debug_str     0x00000944       0x1c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_str     0x00000981       0x1c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
                                 0x137 (size before relaxing)
- .debug_str     0x00000960       0x1c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_str     0x0000099d       0x1c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
                                 0x140 (size before relaxing)
- .debug_str     0x0000097c      0x126 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_str     0x000009b9      0x126 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
                                 0x181 (size before relaxing)
- .debug_str     0x00000aa2       0xa1 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_str     0x00000adf       0xa1 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
                                 0x13c (size before relaxing)
- .debug_str     0x00000b43       0xf8 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_str     0x00000b80       0xf8 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
                                 0x1b5 (size before relaxing)
 
 .comment        0x00000000       0x79
@@ -690,23 +687,23 @@ OUTPUT(IDS.elf elf32-littlearm)
  .comment       0x00000000       0x7a C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
  .comment       0x00000000       0x7a C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
 
-.debug_frame    0x00000000      0x5d0
+.debug_frame    0x00000000      0x5ac
  .debug_frame   0x00000000       0x48 ./Project_Settings/Startup_Code/kinetis_sysinit.o
  .debug_frame   0x00000048       0x4c ./Project_Settings/Startup_Code/__arm_start.o
  .debug_frame   0x00000094       0x30 ./Project_Settings/Startup_Code/__arm_end.o
- .debug_frame   0x000000c4       0x6c ./Sources/main.o
- .debug_frame   0x00000130       0x2c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_frame   0x0000015c       0x28 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_frame   0x00000184       0x54 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_frame   0x000001d8       0x34 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_frame   0x0000020c      0x158 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_frame   0x00000364       0x30 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_frame   0x00000394       0x2c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_frame   0x000003c0       0x28 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_frame   0x000003e8       0x28 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_frame   0x00000410       0x28 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_frame   0x00000438       0x28 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_frame   0x00000460       0x20 c:/users/ana mariel/desktop/cw mcu v10.4/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
- .debug_frame   0x00000480       0x40 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_frame   0x000004c0       0x54 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
- .debug_frame   0x00000514       0xbc C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_frame   0x000000c4       0x48 ./Sources/main.o
+ .debug_frame   0x0000010c       0x2c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_frame   0x00000138       0x28 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_frame   0x00000160       0x54 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_frame   0x000001b4       0x34 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_frame   0x000001e8      0x158 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_frame   0x00000340       0x30 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_frame   0x00000370       0x2c C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_frame   0x0000039c       0x28 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_frame   0x000003c4       0x28 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_frame   0x000003ec       0x28 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_frame   0x00000414       0x28 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_frame   0x0000043c       0x20 c:/users/ana mariel/desktop/cw mcu v10.4/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x0000045c       0x40 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_frame   0x0000049c       0x54 C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_frame   0x000004f0       0xbc C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
