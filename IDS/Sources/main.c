@@ -12,19 +12,34 @@
 
 void cfgPorts(void);
 
-
+void delay(void);
 int main(void)
 {
 
 	cfgPorts();
+	GPIOB_PDOR = 0xFFFFFFFF;
+	GPIOB_PDOR = 0xFFFFFFFF;
+	GPIOD_PDOR = 0xFFFFFFFF;
+	int inf=0;
+	while(inf==0){
+		
+		
+		GPIOB_PDOR = 0xFFFBFFFF;
+		delay();
+		GPIOB_PDOR = 0xFFFFFFFF;
+		delay();
+		GPIOB_PDOR = 0xFFF7FFFF;
+		delay();
+		GPIOB_PDOR = 0xFFFFFFFF;
+		delay();
+		GPIOD_PDOR = 0xFFFFFFFD;
+		delay();
+		GPIOD_PDOR = 0xFFFFFFFF;
+		delay();
+	}
+for(;;) {	
 	
-	//PRende ROjo
-GPIOB_PDOR = 0xFFFBFFFF;
-GPIOB_PDOR &= 0xFFF7FFFF;
-GPIOD_PDOR =0xFFFFFFFD;
 	
-for(;;) {	   
-	   	
 	
 }
 	
@@ -48,5 +63,20 @@ PORTB_PCR19 = PORT_PCR_MUX(1);
 PORTD_PCR1 = PORT_PCR_MUX(1);	
 	
 GPIOB_PDDR = 0xFFFFFFFF;
-GPIOD_PDDR = 0xFFFFFFFF;
+GPIOD_PDDR = 0x00000002;
 }
+
+void delay(void){
+	
+	{
+	   int c = 1, d = 1;
+	 
+	   for ( c = 1 ; c <= 1250 ; c++ )
+	       for ( d = 1 ; d <= 1250 ; d++ )
+	       {}
+	 
+	  
+	}
+}
+
+
