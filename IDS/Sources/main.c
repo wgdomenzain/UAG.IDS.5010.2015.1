@@ -3,69 +3,49 @@
  *
  */
 
-
-
-
-
 #include "derivative.h" /* include peripheral declarations */
-#define portB GPIOB_PDOR
+#define portB 			GPIOB_PDOR
+#define portD 			GPIOD_PDOR
+#define turnRedLedOn 	0xFFFBFFFF
+#define turnGreenLedOn 	0xFFF7FFFF
+#define turnBlueLedOn  	0xFFFFFFFD
+#define turnLedsOff 	0xFFFFFFFF
+//time constants
+#define n1sec			1600000
+#define n2sec			n1sec*2
+#define	nhalfsec		n1sec/2
+
+
 
 void cfgPorts(void);
-void delay(void);
+void delay(long time);
 void limpiar(void);
 int main(void)
 {
 	cfgPorts();
-	//ROJO
-	//GPIOB_PDOR = 0xFFFBFFFF; //PRENDE ROJO
-	//GPIOD_PDOR = 0xFFFFFFFF;
-	//ROJO
-	//VERDE
-	GPIOD_PDOR = 0xFFFFFFFF;
-	GPIOB_PDOR = 0xFFF7FFFF;
-	delay();
-	GPIOB_PDOR = 0xFFFFFFFF;
-	GPIOD_PDOR = 0xFFFFFFFF;
-	//VERDE
+	portB = turnLedsOff;
+	portD = turnLedsOff;
 	
-	
-	
-	
-	//Azul
-	//GPIOB_PDOR = 0xFFFFFFFFFF;
-	//GPIOD_PDOR = 0xFFFFFFFD;
-	//Azul
 	for(;;) {	
-		//Limpia
-		GPIOB_PDOR = 0xFFFFFFFF;
-		GPIOD_PDOR = 0xFFFFFFFF;
-		//ROJO
-		GPIOB_PDOR = 0xFFFBFFFF;
-		GPIOD_PDOR = 0xFFFFFFFF;
-		delay();
-		limpiar();
-		delay();
-		
-		//VERDE
-		GPIOD_PDOR = 0xFFFFFFFF;
-		GPIOB_PDOR = 0xFFF7FFFF;
-		delay();
-		limpiar();
-		delay();
-		//AZUL
-		GPIOB_PDOR = 0xFFFFFFFF;
-		GPIOD_PDOR = 0xFFFFFFFD;
-		delay();
-		limpiar();
-		delay();
-	   	
+		portB = turnRedLedOn;
+		delay(n1sec);
+		portB = turnLedsOff;
+		delay(n1sec);
+		portB = turnGreenLedOn;
+		delay(n1sec);
+		portB = turnLedsOff;
+		delay(n1sec);
+		portD = turnBlueLedOn;
+		delay(n1sec);
+		portD = turnLedsOff;
+		delay(n1sec);
 	}
 	
 	return 0;
 }
-void delay(void){
-	int i;
-	for(i = 0; i<1600000;i++){
+void delay(long time){
+	long i;
+	for(i = 0; i<time;i++){
 		
 	}
 }
