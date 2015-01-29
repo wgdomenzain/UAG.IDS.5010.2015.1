@@ -11,15 +11,28 @@
 #define portB GPIOB_PDOR
 //Prototype declaration
 void cfgPorts(void);
-
+void delay(long time);
+void tl(void);
+void abc(void);
 int main(void)
 {
 	
 	cfgPorts();
-	GPIOB_PDOR = 0xFFFFFFFD;
-	portB = 0xFFF3FFFF; 
+	tl();
+	//GPIOB_PDOR = 0xFFFFFFFD;
+	//portB = 0xFFF3FFFF; 
 	
-	for(;;) {   	
+	//portB = 0xFFFBFFFF;//RED
+	//portB = 0xFFF7FFFF;//VERDE
+	//GPIOD_PDOR = 0xFFFBFFFD;//AZUL
+	for(;;) {
+		portB = 0xFFFBFFFF;
+		abc();
+		portB = 0xFFF7FFFF;
+		abc();
+		GPIOD_PDOR = 0xFFFFFFFD;
+		abc();
+		
 	}	
 	return 0;
 }
@@ -40,5 +53,28 @@ void cfgPorts(void){
 	//CONFIGURE PORTB AS OUTPUT
 	GPIOB_PDDR = 0xFFFFFFFF;
 	GPIOD_PDDR = 0xFFFFFFFF;
+	
 }
+void delay(long time){
+	while(time!=0){
+		time--;
+	}
+		
+}
+
+void tl(void){
+	
+	GPIOB_PDDR = 0xFFFFFFFF;
+	GPIOD_PDDR = 0xFFFFFFFF;
+}
+void abc(void){
+	delay(1000000);
+	tl();
+	delay(1000000);
+	
+	
+}
+
+
+//rojo pasae 1 segundo y luego green otro segundo y azul y luego otro segundo si n pasar nada
 
