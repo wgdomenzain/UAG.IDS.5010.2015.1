@@ -4,8 +4,8 @@ Project_Settings/Startup_Code/kinetis_sysinit.o: \
  C:/Freescale/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/common.prefix \
  C:/Freescale/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_c_version.h \
  ../Project_Settings/Startup_Code/kinetis_sysinit.h \
- C:/Users/Alan/Documents/GitHub/UAG/UAG.IDS.5010.2015.1/IDS/Project_Headers/derivative.h \
- C:/Users/Alan/Documents/GitHub/UAG/UAG.IDS.5010.2015.1/IDS/Project_Headers/MKL25Z4.h \
+ C:/Users/Alberto/Documents/GitHub/UAG.IDS.5010.2015.1/IDS/Project_Headers/derivative.h \
+ C:/Users/Alberto/Documents/GitHub/UAG.IDS.5010.2015.1/IDS/Project_Headers/MKL25Z4.h \
  C:/Freescale/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdint.h \
  C:/Freescale/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/ansi_parms.h \
  C:/Freescale/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewlGlobals.h \
@@ -23,9 +23,9 @@ C:/Freescale/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_c_version.
 
 ../Project_Settings/Startup_Code/kinetis_sysinit.h:
 
-C:/Users/Alan/Documents/GitHub/UAG/UAG.IDS.5010.2015.1/IDS/Project_Headers/derivative.h:
+C:/Users/Alberto/Documents/GitHub/UAG.IDS.5010.2015.1/IDS/Project_Headers/derivative.h:
 
-C:/Users/Alan/Documents/GitHub/UAG/UAG.IDS.5010.2015.1/IDS/Project_Headers/MKL25Z4.h:
+C:/Users/Alberto/Documents/GitHub/UAG.IDS.5010.2015.1/IDS/Project_Headers/MKL25Z4.h:
 
 C:/Freescale/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdint.h:
 
