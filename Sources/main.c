@@ -25,16 +25,15 @@ int main(void){
 		for(;;){
 			GPIOB_PDOR = 0xFFFBFFFF;//ROJO
 			delay(24000);
-			GPIOB_PDOR = 0xFFFFFFFF;//OFF
+			GPIOB_PDOR = 0xFFFFFFFF;
 			delay(24000);
-			GPIOB_PDOR = 0xFFF7FFFF;//GREEN
+			GPIOD_PDOR = 0xFFFFFFFD;
 			delay(24000);
-			GPIOB_PDOR = 0xFFFFFFFF;//OFF
+			GPIOD_PDOR = 0xFFFFFFFF;
 			delay(24000);
-			GPIOD_PDOR = 0xFFFFFFFD;//AZUL
-			delay(24000);
-			GPIOD_PDOR = 0xFFFFFFFF;//OFF
-			delay(24000);
+			//GPIOB_PDOR = 0xFFFFFFFF;
+			//GPIOD_PDOR = 0xFFFFFFFD;//AZUL
+			//GPIOB_PDOR = 0xFFFFFFFF;
 		}
 		return 0;
 }
