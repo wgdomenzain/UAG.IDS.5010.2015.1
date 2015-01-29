@@ -1,6 +1,8 @@
-/*
+/*Author:Alberto Bautista	
+	Date: 14/01/15
+	Description: Initial Description
  * main implementation: use this 'C' sample to create your own application
- *l
+ *
  */
 
 
@@ -9,31 +11,30 @@
 
 #include "derivative.h" /* include peripheral declarations */
 
-void cfgPorts(void);
-int calculateAverage(int age1,int age2,int age3); 
 
+void cfgPorts(void);
 int main(void)
 {
-	int counter = 0;
+	
 	
 	cfgPorts();
-	counter = calculateAverage(1,2,3);
-	
+	GPI0B_PDDR = 0x00000000;
 	
 	
 	for(;;) {	   
-	   	counter++;
+	   	
 	}
 	
 	return 0;
-}
-void cfgPorts(void)
+	void cfgPorts(void)
 {
+	SIM_SCGC5 =  SIM_SCGC5_PORTB_MASK;
+	SIM_SCGC5 |=  SIM_SCGC5_PORTA_MASK; 
 	
+	PORTB_PCR18 = PORT_PCR_MUX(1);
+	PORTB_PCR19 = PORT_PCR_MUX(1);
+	
+	//CONFIGURE PORTS AS OUTPUT
+	GPI0B_PDDR = 0xFFFFFFFF;
 }
-int calculateAverage(int age1,int age2,int age3)
-{
-	int res;
-	res=((age1+age2+age3)/3);
-	return res;
 }
