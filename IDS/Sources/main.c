@@ -24,13 +24,13 @@ int main(void){
 		//GPIOB_PDOR = 0xFFFBFFFF; //rojo
 		for(;;){
 			GPIOB_PDOR = 0xFFFBFFFF;//ROJO
-			delay(24000);
+			delay(500);
 			GPIOB_PDOR = 0xFFFFFFFF;
-			delay(24000);
+			delay(500);
 			GPIOD_PDOR = 0xFFFFFFFD;
-			delay(24000);
+			delay(500);
 			GPIOD_PDOR = 0xFFFFFFFF;
-			delay(24000);
+			delay(500);
 			//GPIOB_PDOR = 0xFFFFFFFF;
 			//GPIOD_PDOR = 0xFFFFFFFD;//AZUL
 			//GPIOB_PDOR = 0xFFFFFFFF;
