@@ -1,49 +1,44 @@
 /*
-	Author: Rodrigo Orozco
-	Date: 14/01/15
-	Description: Initial application
-	main implementation: use this 'C' sample to create your own application
+ * main implementation: use this 'C' sample to create your own application
+ *
  */
-
-
-
-
-
 #include "derivative.h" /* include peripheral declarations */
 #define portB GPIOB_PDOR
 #define portD GPIOD_PDOR
 
-int CalculateAverage(int age1, int age2, int age3);
 void cfgPorts(void);
+void Delay(long ms);
+void apagarLeds(void);
+
 
 int main(void)
 {
-	
-	//port configuration 
 	cfgPorts();
+	apagarLeds();
 	
-	// turn on led
-  //  GPIOB_PDOR = 0xFFFBFFFF; // ENCIENDE EL LED ROJO
-    // GPIOB_PDOR = 0xFFF7FFFF; // ENCIENDE EL LED VERDE
-   // GPIOB_PDOR = 0xFFF3FFFF; // enciende led rojo y verde
-	
-	//GPIOB_PDOR = 0xFFFFFFFF; // apagar los leds del puerto B
-	portB = 0xFFFBFFFF;
-	portB &= 0xFFF7FFFF;
-	portD = 0xFFFFFFFD; // encender el azul
-	
-	
-	for(;;) {	
+	for(;;) {	   
+		portB = 0xFFFBFFFF; // encender led rojo
+		Delay(1800000);
+		apagarLeds();
+		Delay(1800000);
+		portB = 0xFFF7FFFF; // encender led verde
+		Delay(1800000);
+		apagarLeds();
+		Delay(1800000);
+		portD = 0xFFFFFFFD; // encender el azul
+		Delay(1800000);
+		apagarLeds();
+		Delay(1800000);
+		
 	}
 	
 	return 0;
 }
 
-int CalculateAverage(int age1, int age2, int age3)
+void apagarLeds(void)
 {
-	int average;
-	average=(age1+age2+age3)/3;
-	return average;
+	portB = 0xFFFFFFFF; // apagar lods rojo y verde
+	portD = 0xFFFFFFFF; // apagar led azul
 }
 
 void cfgPorts(void)
@@ -64,3 +59,12 @@ void cfgPorts(void)
 	GPIOD_PDDR= 0xFFFFFFFF;
 }
 
+void Delay(long ms)
+{
+	do
+	{
+		ms--;
+	}
+	while(ms!=0);
+	
+}
