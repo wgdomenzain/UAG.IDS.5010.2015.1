@@ -2,10 +2,18 @@
  * main implementation: use this 'C' sample to create your own application
  *
  */
-
 #include "derivative.h" /* include peripheral declarations */
-#define portB GPIOB_PDOR
-#define portD GPIOD_PDOR
+#define portB			 GPIOB_PDOR
+#define portD 			 GPIOD_PDOR
+#define turnRedLedOn 	 0xFFFBFFFF 
+#define turnLedGreenOn	 0xFFF7FFFF
+#define turnLedBlueOn	 0xFFFFFFFD
+#define turnLedsOff		 0xFFFFFFFF
+
+//Time Constants
+#define n1sec 			1600000
+#define n2sec			n1sec*2
+#define nHalfSec		n1sec/2
 
 void cfgPorts(void);
 void Delay(long ms);
@@ -15,23 +23,22 @@ void apagarLeds(void);
 int main(void)
 {
 	cfgPorts();
-	apagarLeds();
+	portB = turnLedsOff;
+	portD = turnLedsOff;
 	
 	for(;;) {	
-		//Turn on Led
-		GPIOB_PDOR = 0xFFFBFFFF; //Red
-		Delay(1800000);
-		apagarLeds();
-		Delay(1800000);
-		GPIOB_PDOR = 0xFFF7FFFF; //Green
-		Delay(1800000);
-		apagarLeds();
-		Delay(1800000);
-		GPIOD_PDOR = 0xFFFFFFFD; //Blue
-		Delay(1800000);
-		apagarLeds();
-		Delay(1800000);
-		
+		portB = turnRedLedOn;
+		Delay(1600000);
+		portB = turnLedsOff;
+		Delay(1600000);
+		portB = turnLedGreenOn;
+		Delay(1600000);
+		portB = turnLedsOff;
+		Delay(1600000);
+		portD = turnLedBlueOn;
+		Delay(1600000);
+		portD = turnLedsOff;
+		Delay(1600000);
 	}
 	
 	return 0;
