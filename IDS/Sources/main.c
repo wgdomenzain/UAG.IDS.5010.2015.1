@@ -7,76 +7,75 @@
 
 
 
-#include "derivative.h" 
-/* include peripheral declarations */
-
-void cfgPorts(void);
-
-void delay(void);
+#include "derivative.h" /* include peripheral declarations */
+#define portB 			GPIOB_PDOR
+#define portD 			GPIOD_PDOR
+#define TurnRedLedOn 	0xFFFBFFFF
+#define TurnGreenLedOn 	0xFFF7FFFF
+#define TurnBlueLedOn 	0xFFFFFFFD
+#define TurnLedsOff 	0xFFFFFFFF
+//time constant
+#define n1sec			1600000
+#define n2sec			n1sec*2
+#define nhalfsec		n1sec/2
+void configPorts(void);
 int main(void)
 {
-
-	cfgPorts();
-	GPIOB_PDOR = 0xFFFFFFFF;
-	GPIOB_PDOR = 0xFFFFFFFF;
-	GPIOD_PDOR = 0xFFFFFFFF;
-	int inf=0;
-	while(inf==0){
-		
-		
-		GPIOB_PDOR = 0xFFFBFFFF;
-		delay();
-		GPIOB_PDOR = 0xFFFFFFFF;
-		delay();
-		GPIOB_PDOR = 0xFFF7FFFF;
-		delay();
-		GPIOB_PDOR = 0xFFFFFFFF;
-		delay();
-		GPIOD_PDOR = 0xFFFFFFFD;
-		delay();
-		GPIOD_PDOR = 0xFFFFFFFF;
-		delay();
+	//Ports configuration
+	configPorts();
+	portB= TurnLedsOff;
+	portD= TurnLedsOff;
+	
+	for(;;)
+	{	  
+		if(!(GPIOB_PDIR & (0x00000001)))
+		{
+			portB = TurnRedLedOn;		
+		}
+		if(!(GPIOB_PDIR & (0x00000002)))
+		{
+			portB = TurnGreenLedOn;		
+		}
+		if(!(GPIOB_PDIR & (0x00000004)))
+		{
+			portD = TurnBlueLedOn;		
+		}
+		portB= TurnLedsOff;
+		portD= TurnLedsOff;
+			
 	}
-for(;;) {	
 	
-	
-	
+	return 0;
 }
-	
-	
-return 0;
-
-}
-
-void cfgPorts(void)
+void configPorts(void)
 {
-	
-	
-SIM_SCGC5 =  SIM_SCGC5_PORTB_MASK;
-	
-SIM_SCGC5 |=  SIM_SCGC5_PORTA_MASK; 
-SIM_SCGC5 |=  SIM_SCGC5_PORTD_MASK; 
+	//Turn clock on
+	//SIM_SCG5 = 0X00000400;
+	SIM_SCGC5 = SIM_SCGC5_PORTB_MASK;
+	SIM_SCGC5 |= SIM_SCGC5_PORTA_MASK;
+	SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;
 
-PORTB_PCR18 = PORT_PCR_MUX(1);
+	PORTB_PCR0 = PORT_PCR_MUX(1);
+	PORTB_PCR1 = PORT_PCR_MUX(1);
+	PORTB_PCR2 = PORT_PCR_MUX(1);
+	PORTB_PCR18 = PORT_PCR_MUX(1);
+	PORTB_PCR19 = PORT_PCR_MUX(1);
 	
-PORTB_PCR19 = PORT_PCR_MUX(1);
-PORTD_PCR1 = PORT_PCR_MUX(1);	
+	PORTD_PCR1 = PORT_PCR_MUX(1);
 	
-GPIOB_PDDR = 0xFFFFFFFF;
-GPIOD_PDDR = 0x00000002;
+	//Configure portB  B0 to B2 as input
+	//GPIOB_PDDR = 0xFFFFFFFF; //1111 1111 1111 1111
+	
+	GPIOB_PDDR = 0xFFFFFFF8;  
+	GPIOD_PDDR = 0xFFFFFFFF;
+
+	//SIM_SCG5
 }
-
-void delay(void){
-	
+void delay (long time)
+{
+	int i;
+	for(i=0;i<time;i++)
 	{
-	   int c = 1, d = 1;
-	 
-	   for ( c = 1 ; c <= 1250 ; c++ )
-	       for ( d = 1 ; d <= 1250 ; d++ )
-	       {}
-	 
-	  
+		
 	}
 }
-
-
