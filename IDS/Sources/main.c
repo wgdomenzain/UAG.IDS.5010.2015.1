@@ -3,85 +3,80 @@
  *
  */
 
-
-
-
-
 #include "derivative.h" /* include peripheral declarations */
-//#define portB GPIOB_PDOR// Declara una variable 
+#define portB GPIOB_PDOR
+#define portBIn GPIOB_PDIR
+#define portD GPIOD_PDOR
+#define turnRedLedOn 0xFFFBFFFF
+#define turnBlueLedOn 0xFFFFFFFD
+#define turnGreenLedOn 0xFFF7FFFF
+#define turnLedsOff  0xFFFFFFFF
+#define oneSec 1600000
+
 
 void cfgPorts(void);
-void Delay (long IO);
-void LedsInOut (void);
+void Delay(long ms);
+
 
 int main(void)
 {
-	
-	//Port Configuration 
 	cfgPorts();
-	// Turn on Led
-	GPIOB_PDOR = 0xFFFBFFFF; //Rojo
-	GPIOB_PDOR = 0xFFF3FFFF; //Verde
-	GPIOD_PDOR = 0xFFFFFFFD; //Azul
-	LedsInOut();
+	portB=turnLedsOff;
+	portD=turnLedsOff;
+	Delay(oneSec);
 	
-	for(;;) 
-	{
-	   for (;;)
-	   {
-		   GPIOB_PDOR = 0xFFF7FFFF;
-		   Delay(3000000);
-		   LedsInOut();
-		   Delay(3000000);
-		   
-		   GPIOD_PDOR = 0xFFFFFFFD;
-		   Delay(3000000);
-		   LedsInOut();
-		   Delay(3000000);
-		   
-		   GPIOB_PDOR = 0xFFFBFFFF;
-		   Delay(3000000); 
-		   LedsInOut();
-		   Delay(3000000);
-	   }
-	   return 0;
+	for(;;) {
+		
+		if(!(portBIn & (0x00000001)))
+		{
+			portB=turnLedsOff;
+			portD=turnLedsOff;
+			portB=turnRedLedOn;
+		}
+		if(!(portBIn & (0x00000002)))
+		{
+			portB=turnGreenLedOn;
+		}
+		if(!(portBIn & (0x00000004)))
+		{
+			portD=turnBlueLedOn;
+		}
+		portB=turnLedsOff;
+		portD=turnLedsOff;
 	}
 	
+	return 0;
 }
 
-void LedsInOut (void)
-{
-	GPIOB_PDOR  =0xFFFFFFFF;
-	GPIOD_PDOR =0xFFFFFFFF;
-}
+
 void cfgPorts(void)
 {
-	//Turn on Clock for portB and portC
+	// TURN ON CLOCK
+	SIM_SCGC5 = SIM_SCGC5_PORTB_MASK;
+	SIM_SCGC5 |= SIM_SCGC5_PORTA_MASK;
+	SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;
 	
-		SIM_SCGC5 =  SIM_SCGC5_PORTB_MASK;
-		SIM_SCGC5 = SIM_SCGC5_PORTB_MASK;
-	 	SIM_SCGC5 |= SIM_SCGC5_PORTA_MASK;
-	 	SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;
+	// SELECT PORT MODE: SET PINS OF PORTB AS GPIO
+	PORTB_PCR0= PORT_PCR_MUX(1);
+	PORTB_PCR1= PORT_PCR_MUX(1);
+	PORTB_PCR2= PORT_PCR_MUX(1);
 	
-	//Select Port mode : set Pins of PORTs an GPIo
+	PORTB_PCR18= PORT_PCR_MUX(1);
+	PORTB_PCR19= PORT_PCR_MUX(1);
+	PORTD_PCR1= PORT_PCR_MUX(1); 
 	
-	PORTB_PCR18  = PORT_PCR_MUX(1);
-	PORTB_PCR19  = PORT_PCR_MUX(1);
-	PORTD_PCR1   = PORT_PCR_MUX(1); 
-	//Configure PortB as Output
 	
-	GPIOB_PDDR = 0xFFFFFFFF;     // 1111 1111 1111 .... 
-	GPIOD_PDDR = 0xFFFFFFFF;
+	// CONFIGURE PORTB FROM 31 TO 3 AS OUTPUT , 0-2 AS INPUT
+	GPIOB_PDDR= 0xFFFFFFF8;
+	GPIOD_PDDR= 0xFFFFFFFF;
 }
-void Delay (long IO)
+
+void Delay(long ms)
 {
 	do
 	{
-		IO--;
+		ms--;
 	}
-	while(IO!=0);
+	while(ms!=0);
 	
-	GPIOB_PDDR = 0xFFFFFFFF;     // 1111 1111 1111 .... 
-	GPIOD_PDDR = 0xFFFFFFFF;
 }
-
