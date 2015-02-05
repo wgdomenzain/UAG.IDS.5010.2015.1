@@ -26,8 +26,7 @@ int main(void)
 	portB = turnLedsOff;
 	PortD = turnLedsOff;
 	
-	for(;;) {
-		/*
+	for(;;) {	   
 		portB = turnOnRedLedOn;
 		delay(n1Sec);
 		portB = turnLedsOff;
@@ -39,13 +38,7 @@ int main(void)
 		portD = turnBlueLedOn; 
 		delay(n1Sec);
 		portB = turnLedsOff;
-		delay(n1Sec);*/
-		
-		if (PortB == 0xFFFFFFFE) 
-			PortB = turnRedLedOn;
-		else
-			 PortB = turnLedsOff;
-			
+		delay(n1Sec);
 	}
 	
 	return 0;
@@ -53,20 +46,18 @@ int main(void)
 
 void cfgPorts(void){
 	
-	SIM_SCGC5 	= SIM_SCGC5_PORTB_MASK;
+	SIM_SCGC5 =  SIM_SCGC5_PORTB_MASK;
 	SIM_SCGC5 |=  SIM_SCGC5_PORTA_MASK; 
 	SIM_SCGC5 |=  SIM_SCGC5_PORTD_MASK;
 	
 	//Activate pin mode
-	PORTB_PCR0 	= PORT_PCR_MUX(1);
-	PORTB_PCR1 	= PORT_PCR_MUX(1);
-	PORTB_PCR2 	= PORT_PCR_MUX(1);
 	PORTB_PCR18 = PORT_PCR_MUX(1);
 	PORTB_PCR19 = PORT_PCR_MUX(1);
 	PORTD_PCR1  = PORT_PCR_MUX(1);
 	
-	//Configure PortB from 31 to 3 as output in b0 to b2 as input
-	GPIOB_PDDR = 0xFFFFFFF8;
+	//Configure PortB and PortD as output
+	GPIOB_PDDR = 0xFFFFFFFF;
+	GPIOB_PDDR = 0xFFFFFFFF;
 	GPIOD_PDDR = 0xFFFFFFFF;
 }
 
@@ -74,7 +65,7 @@ void delay(long ms) {
 	
 	do {
 		
-		ms = ms--;
+		ms = ms - 1;
 	} while (ms != 0);
 }
 
