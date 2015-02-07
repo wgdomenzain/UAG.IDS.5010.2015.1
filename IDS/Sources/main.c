@@ -2,79 +2,97 @@
  * main implementation: use this 'C' sample to create your own application
  *
  */
-
-
-
-
-
 #include "derivative.h" /* include peripheral declarations */
 #define portB GPIOB_PDOR
-//Prototype declaration
+#define portBIn GPIOB_PDIR
+#define portD GPIOD_PDOR
+#define turnRedLedOn 0xFFFBFFFF
+#define turnBlueLedOn 0xFFFFFFFD
+#define turnGreenLedOn 0xFFF7FFFF
+#define turnLedsOff  0xFFFFFFFF
+#define oneSec 1600000
+
+
 void cfgPorts(void);
-void delay(long time);
-void tl(void);
-void abc(void);
+void Delay(long ms);
+
+
 int main(void)
 {
-	
 	cfgPorts();
-	tl();
-	//GPIOB_PDOR = 0xFFFFFFFD;
-	//portB = 0xFFF3FFFF; 
+	portB=turnLedsOff;
+	portD=turnLedsOff;
+	Delay(oneSec);
 	
-	//portB = 0xFFFBFFFF;//RED
-	//portB = 0xFFF7FFFF;//VERDE
-	//GPIOD_PDOR = 0xFFFBFFFD;//AZUL
 	for(;;) {
-		portB = 0xFFFBFFFF;
-		abc();
-		portB = 0xFFF7FFFF;
-		abc();
-		GPIOD_PDOR = 0xFFFFFFFD;
-		abc();
 		
-	}	
+		if(!(portBIn & (0x00000001)))
+		{
+			portB=turnRedLedOn;
+		}
+		if(!(portBIn & (0x00000002)))
+		{
+			portB=turnGreenLedOn;
+		}
+		if(!(portBIn & (0x00000004)))
+		{
+			portD=turnBlueLedOn;
+		}
+		portB=turnLedsOff;
+		portD=turnLedsOff;
+		/*else
+		{
+			portB=turnLedsOff;
+		}
+		*/
+		/*
+		portB = 0xFFFBFFFF; // encender led rojo
+		Delay(1800000);
+		apagarLeds();
+		Delay(1800000);
+		portB = 0xFFF7FFFF; // encender led verde
+		Delay(1800000);
+		apagarLeds();
+		Delay(1800000);
+		portD = 0xFFFFFFFD; // encender el azul
+		Delay(1800000);
+		apagarLeds();
+		Delay(1800000);*/
+		
+	}
+	
 	return 0;
 }
-void cfgPorts(void){
-	//SIM_SCGC5 : RELOJ EL micro por default tiene apagado lso puertos.
-	//funciones que se hacen en el gpio :memory map
-	//por data direction register: le mandamos un 1 o 0
+
+
+void cfgPorts(void)
+{
+	// TURN ON CLOCK
+	SIM_SCGC5 = SIM_SCGC5_PORTB_MASK;
+	SIM_SCGC5 |= SIM_SCGC5_PORTA_MASK;
+	SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;
 	
-	SIM_SCGC5 =  SIM_SCGC5_PORTB_MASK;
-	SIM_SCGC5 |=  SIM_SCGC5_PORTA_MASK;
-	SIM_SCGC5 |=  SIM_SCGC5_PORTD_MASK;
+	// SELECT PORT MODE: SET PINS OF PORTB AS GPIO
+	PORTB_PCR0= PORT_PCR_MUX(1);
+	PORTB_PCR1= PORT_PCR_MUX(1);
+	PORTB_PCR2= PORT_PCR_MUX(1);
 	
-	//ACTIVATE PIN MODE	
-	PORTB_PCR18 = PORT_PCR_MUX(1);
-	PORTB_PCR19 = PORT_PCR_MUX(1);
-	PORTD_PCR1 =  PORT_PCR_MUX(1);
+	PORTB_PCR18= PORT_PCR_MUX(1);
+	PORTB_PCR19= PORT_PCR_MUX(1);
+	PORTD_PCR1= PORT_PCR_MUX(1); 
 	
-	//CONFIGURE PORTB AS OUTPUT
-	GPIOB_PDDR = 0xFFFFFFFF;
-	GPIOD_PDDR = 0xFFFFFFFF;
 	
+	// CONFIGURE PORTB FROM 31 TO 3 AS OUTPUT , 0-2 AS INPUT
+	GPIOB_PDDR= 0xFFFFFFF8;
+	GPIOD_PDDR= 0xFFFFFFFF;
 }
-void delay(long time){
-	while(time!=0){
-		time--;
+
+void Delay(long ms)
+{
+	do
+	{
+		ms--;
 	}
-		
-}
-
-void tl(void){
-	
-	GPIOB_PDDR = 0xFFFFFFFF;
-	GPIOD_PDDR = 0xFFFFFFFF;
-}
-void abc(void){
-	delay(1000000);
-	tl();
-	delay(1000000);
-	
+	while(ms!=0);
 	
 }
-
-
-//rojo pasae 1 segundo y luego green otro segundo y azul y luego otro segundo si n pasar nada
-
