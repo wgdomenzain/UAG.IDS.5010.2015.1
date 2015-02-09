@@ -17,7 +17,9 @@
 
 void cfgPorts(void);
 void Delay(long miliseg);
+void Max(long miliseg);//no la use
 
+int pausa=1600000;
 
 int main(void)
 {
@@ -25,22 +27,89 @@ int main(void)
 	portB=turnLedsOff;
 	portD=turnLedsOff;
 	Delay(oneSec);
+	int boton=0;
+	int pausa=1600000;
+	
 	
 	for(;;) 
 	{
-		
 		if(!(portBIn & (0x00000001)))
 		{
-			portB=turnRedLedOn;
+			boton=1;
 		}
 		if(!(portBIn & (0x00000002)))
-		{
-			portB=turnGreenLedOn;
-		}
+			{
+				boton=2;
+				pausa=1600000;
+			}
 		if(!(portBIn & (0x00000004)))
+			{
+				
+				pausa=pausa/2;
+			}
+		
+		if(boton==1)
 		{
-			portD=turnBlueLedOn;
+			
+				//Delay(oneSec);
+				portB=turnGreenLedOn;
+				Delay(oneSec);
+				portB=turnLedsOff;
+									
+				portB=turnRedLedOn;
+				Delay(oneSec);
+				portB=turnLedsOff;
+									
+				portD=turnBlueLedOn;
+				Delay(oneSec);
+				portD=turnLedsOff;
+											
+			
 		}
+		if(boton==2)
+		{
+			
+				
+				/*portB=turnLedsOff;
+							portD=turnLedsOff;
+				portB=turnGreenLedOn;
+							portB=turnRedLedOn;
+							portD=turnBlueLedOn;
+				
+			portD=turnBlueLedOn;
+			portB=turnGreenLedOn;
+			portB=turnRedLedOn;
+			Delay(oneSec);
+			portB=turnLedsOff;
+			portD=turnLedsOff;
+			
+			Delay(oneSec);
+			portB=turnGreenLedOn;
+			portB=turnRedLedOn;
+			portD=turnBlueLedOn;
+			Delay(oneSec);
+			portB=turnLedsOff;
+			portD=turnLedsOff;
+			*/
+				
+				
+				portB=0xFFF2FFFF;
+				portD=turnBlueLedOn;
+				Delay(pausa);
+				
+				portD=turnLedsOff;
+				portB=turnLedsOff;
+				Delay(pausa);
+				
+				
+				
+				
+	
+			
+			
+			
+		}
+		
 		portB=turnLedsOff;
 		portD=turnLedsOff;
 		/*else
@@ -99,3 +168,12 @@ void Delay(long miliseg)
 	while(miliseg!=0);
 	
 }
+
+/*void Max(long miliseg)
+{
+	do
+	{
+		miliseg++;
+	}
+	while (miliseg!=0);
+}*/
