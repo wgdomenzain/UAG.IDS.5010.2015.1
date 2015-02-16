@@ -1,368 +1,185 @@
 /*
- * main implementation: use this 'C' sample to create your own application
- *
- */
+@author: 		Walter Gonzalez Domenzain
+@description: 	8020 Group
+@functions:		None
+@environment: 	KL25Z
+@date: 			22/01/2014
+@comments:		
+@version:		1.0 - Initial
+*/
+
 #include "derivative.h" /* include peripheral declarations */
-#define portB GPIOB_PDOR
-#define portBIn GPIOB_PDIR
-#define readPortB(x) (((portBIn >> (x)))&0x00000001)
-#define portD GPIOD_PDOR
-#define turnRedLedOn 0xFFFBFFFF
-#define turnBlueLedOn 0xFFFFFFFD
-#define turnGreenLedOn 0xFFF7FFFF
-#define turnLedsOff  0xFFFFFFFF
-#define oneSec 1600000
-
-// BUTTONS
-#define buttonPressed 0
-#define buttonNotPressed 1
 
 
+#define GPIO_PIN_MASK 0x1Fu
+#define GPIO_PIN(x) (((1)<<(x & GPIO_PIN_MASK)))
+
+#define	nBit0	0x01	//'00000001'
+#define	nBit1	0x02	//'00000010'
+#define	nBit2	0x04	//'00000100'
+#define	nBit3	0x08	//'00001000'
+#define	nBit4	0x10	//'00010000'
+#define	nBit5	0x20	//'00100000'
+#define	nBit6	0x40	//'01000000'
+#define	nBit7	0x80	//'10000000'
+
+//Time definitions
+#define nt15_msec	3500
+#define nt40_usec	35
+
+//LCD Control
+#define nIns	0
+#define nData	1
+
+#define PortLCD    	GPIOC_PDOR
+//Enable connected to portb_01
+#define Enable_1	GPIOB_PDOR |= 0x01
+#define Enable_0	GPIOB_PDOR &= 0xFE
+#define RS_1   		GPIOB_PDOR |= 0x02
+#define RS_0   		GPIOB_PDOR &= 0xFD
+
+
+
+
+#define	Set_GPIOB_PDOR(x)	(GPIOB_PDOR |= (1 << (x-1)))
+
+int int_Temp;
+
+//Cursor Blink off initialization
+const unsigned char InitializeLCD[5] = {0x38, 0x38, 0x38, 0x0C, 0x01};
+//--------------------------------------------------------------
+//Declare Prototypes
+/* Functions */
 void cfgPorts(void);
-void Delay(long ms);
-int check();
+void initLCD(void);
+void delay(long time);
+void sendCode(int Code, int Data);
 
-
+/*@description: Initial Port Cfg 
+*/
+			
 int main(void)
 {
-	int opc=0;
-	int colorCase1=0;
-	int delayCase2=oneSec;
-	int counter=0;
-	int i =0;
+	//Configure ports
 	cfgPorts();
-	portB=turnLedsOff;
-	portD=turnLedsOff;
+	//Initialize LCD
+	initLCD();
+	//Set position to print character
+	sendCode(nIns, 0x80);
+	//Print characters
+	
+	sendCode(nData, 'R');
+	sendCode(nData, 'o');
+	sendCode(nData, 'd');
+	sendCode(nData, 'r');
+	sendCode(nData, 'i');
+	sendCode(nData, 'g');
+	sendCode(nData, 'o');
+	sendCode(nData, ' ');
+	sendCode(nData, 'O');
+	sendCode(nData, 'r');
+	sendCode(nData, 'o');
+	sendCode(nData, 'z');
+	sendCode(nData, 'c');
+	sendCode(nData, 'o');
 	
 	
-	for(;;) {
-		
-		if(!readPortB(0) && readPortB(1) && readPortB(2))
-		{
-			opc=1;
-			Delay(oneSec/2);
-		}
-		if(!readPortB(1) && readPortB(0) && readPortB(2))
-		{
-			opc=2;
-			Delay(oneSec/2);
-		}
-		if(!readPortB(2) && readPortB(0) && readPortB(1))
-		{
-			opc=3;
-			Delay(oneSec/2);
-		}
-		if(!(readPortB(0)) && !readPortB(1) && readPortB(2))
-		{
-				opc=4;			
-			
-		}
-		if(!(readPortB(1)) && !readPortB(2) && readPortB(0))
-		{	
-				opc=5;
-				
-				Delay(oneSec/2);		
-		}
-		if(!(readPortB(1)) && !readPortB(2) && !readPortB(0) && opc!=4)
-		{
-			opc=6;
-			Delay(oneSec);
-			if(!(readPortB(1)) && !readPortB(2) && !readPortB(0) && opc!=4)
-			{
-				Delay(oneSec);
-				if(!(readPortB(1)) && !readPortB(2) && !readPortB(0) && opc!=4)
-				{
-					Delay(oneSec);
-					if(!(readPortB(1)) && !readPortB(2) && !readPortB(0) && opc!=4)
-					{
-						Delay(oneSec);
-						if(!(readPortB(1)) && !readPortB(2) && !readPortB(0) && opc!=4)
-						{
-							Delay(oneSec);
-							if(!(readPortB(1)) && !readPortB(2) && !readPortB(0) && opc!=4)
-							{
-								opc=7;
-							}
-							else
-										{
-											opc=6;
-										}
-							
-						}
-						else
-									{
-										opc=6;
-									}
-							
-					}
-					else
-								{
-									opc=6;
-								}
-					
-				}
-				else
-							{
-								opc=6;
-							}
-			}
-			else
-			{
-				opc=6;
-			}
-		}
-		
-		
-		switch(opc)
-		{
-			case 1:
-				if(colorCase1==2)
-				{
-					portB=turnLedsOff;
-					portD=turnLedsOff;
-					portD=turnBlueLedOn;
-					colorCase1=0;
-					opc=0;
-					break;
-				}
-				if(colorCase1==1)
-				{
-					portB=turnLedsOff;
-					portD=turnLedsOff;
-					portB=turnGreenLedOn;
-					colorCase1=2;
-					opc=0;
-					break;
-				}
-				if(colorCase1==0)
-				{
-					portB=turnLedsOff;
-					portD=turnLedsOff;
-					portB=turnRedLedOn;
-					colorCase1=1;
-					opc=0;
-					break;
-				}
-				
-				
-				break;
-				
-			case 2:
-				portB=turnLedsOff;
-				portD=turnLedsOff;
-				
-				portB=turnRedLedOn;
-				if(check())
-				break;
-				Delay(delayCase2/2);
-				if(check())
-				break;
-				Delay(delayCase2/2);
-				if(check())
-				break;
-				portB=turnLedsOff;
-				if(check())
-				break;
-				Delay(delayCase2/2);
-				if(check())
-				break;
-				Delay(delayCase2/2);
-				break;
-				
-			case 3:
-				delayCase2=delayCase2/2;
-				opc=2;
-				break;
-				
-			case 4:
-				if(!readPortB(2))
-				{
-					Delay(oneSec/4);
-					counter++;
-					
-				}
-				opc=4;
-				break;
-				
-			case 5:
-				if(counter==0)
-				{
-					portB=turnLedsOff;
-					portB=turnLedsOff;
-					portD=turnBlueLedOn;
-					portB=turnGreenLedOn;
-					portB=turnRedLedOn;
-					opc=0;
-					Delay(oneSec/4);
-				}
-				else
-				{
-					portB=turnLedsOff;
-					portD=turnLedsOff;
-					
-					for(i=0;i<counter;i++)
-					{
-						portB=turnRedLedOn;
-						if(check())
-										break;
-										Delay(oneSec/2);
-										if(check())
-										break;
-										Delay(oneSec/2);
-						portB=turnLedsOff;
-						if(check())
-										break;
-										Delay(oneSec/2);
-										if(check())
-										break;
-										Delay(oneSec/2);
-					}
-					for(i=0;i<counter;i++)
-					{
-						portB=turnGreenLedOn;
-						if(check())
-										break;
-										Delay(oneSec/2);
-										if(check())
-										break;
-										Delay(oneSec/2);
-						portB=turnLedsOff;
-						if(check())
-										break;
-										Delay(oneSec/2);
-										if(check())
-										break;
-										Delay(delayCase2/2);
-					}
-					for(i=0;i<counter;i++)
-					{
-						portD=turnBlueLedOn;
-						if(check())
-										break;
-										Delay(oneSec/2);
-										if(check())
-										break;
-										Delay(oneSec/2);
-						portD=turnLedsOff;
-						if(check())
-										break;
-										Delay(oneSec/2);
-										if(check())
-										break;
-										Delay(oneSec/2);
-					}
-				}
-				opc=0;
-				break;
-				
-			case 6:
-				portB=turnLedsOff;
-				portD=turnLedsOff;
-				portB=turnGreenLedOn;
-				portB=turnRedLedOn;
-				portD=turnBlueLedOn;
-				opc=0;
-				
-				break;
-				
-			case 7:
-				portB=turnLedsOff;
-				portD=turnLedsOff;
-				counter=0;
-				opc=0;
-				
-				for(i=0;i<3;i++)
-				{
-					portB=turnRedLedOn;
-					Delay(oneSec);
-					portB=turnLedsOff;
-					Delay(oneSec);
-				}
-				for(i=0;i<3;i++)
-				{
-					portB=turnGreenLedOn;
-					if(check())
-															break;
-															Delay(oneSec/2);
-															if(check())
-															break;
-															Delay(oneSec/2);
-					portB=turnLedsOff;
-					if(check())
-															break;
-															Delay(oneSec/2);
-															if(check())
-															break;
-															Delay(oneSec/2);
-				}
-				for(i=0;i<3;i++)
-				{
-					portD=turnBlueLedOn;
-					if(check())
-															break;
-															Delay(oneSec/2);
-															if(check())
-															break;
-															Delay(oneSec/2);
-					portD=turnLedsOff;
-					if(check())
-															break;
-															Delay(oneSec/2);
-															if(check())
-															break;
-															Delay(oneSec/2);
-				}
-				
-				break;
-		}
-		
-				
+	
+
+	for(;;)
+	{
+ 
 	}
 	
 	return 0;
 }
 
-
 void cfgPorts(void)
 {
-	// TURN ON CLOCK
-	SIM_SCGC5 = SIM_SCGC5_PORTB_MASK;
-	SIM_SCGC5 |= SIM_SCGC5_PORTA_MASK;
-	SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;
+	//Turn on clock for portb
+	SIM_SCGC5 = SIM_SCGC5_PORTB_MASK;	
+	//Turn on clock for portd
+	//SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;	
+	////Turn on clock for portc
+	SIM_SCGC5 |= SIM_SCGC5_PORTC_MASK;
 	
-	// SELECT PORT MODE: SET PINS OF PORTB AS GPIO
+	/* Set pins of PORTB as GPIO */
+	PORTC_PCR0 = PORT_PCR_MUX(1);
+	PORTC_PCR1 = PORT_PCR_MUX(1);
+	PORTC_PCR2 = PORT_PCR_MUX(1);
+	PORTC_PCR3 = PORT_PCR_MUX(1);
+	PORTC_PCR4 = PORT_PCR_MUX(1);
+	PORTC_PCR5 = PORT_PCR_MUX(1);
+	PORTC_PCR6 = PORT_PCR_MUX(1);
+	PORTC_PCR7 = PORT_PCR_MUX(1);
+	
+	/* Set pins of PORTC as GPIO */
 	PORTB_PCR0= PORT_PCR_MUX(1);
 	PORTB_PCR1= PORT_PCR_MUX(1);
-	PORTB_PCR2= PORT_PCR_MUX(1);
-	
-	PORTB_PCR18= PORT_PCR_MUX(1);
-	PORTB_PCR19= PORT_PCR_MUX(1);
-	PORTD_PCR1= PORT_PCR_MUX(1); 
 	
 	
-	// CONFIGURE PORTB FROM 31 TO 3 AS OUTPUT , 0-2 AS INPUT
-	GPIOB_PDDR= 0xFFFFFFF8;
-	GPIOD_PDDR= 0xFFFFFFFF;
+	//Initialize PortB
+	GPIOB_PDOR = 0x00;
+	
+	//Initialize PortC
+	GPIOC_PDOR = 0X00;
+
+	//Configure PortB as outputs
+	GPIOB_PDDR = 0xFF;
+	
+	//Configure PortD as outputs
+	//GPIOD_PDDR = 0xFF;
+	
+	//Configure PortC as outputs
+	GPIOC_PDDR = 0xFF;
 }
 
-int check()
+void initLCD(void)
 {
-	if(!(readPortB(1)) || !readPortB(2) || !readPortB(0))
-	{
-		return 1;
+	int i;
+	delay(nt15_msec);
+	
+	/* Send initialization instructions */
+	/* Loop for sending each character from the array */
+	for(i=0;i<5;i++)
+	{										
+		sendCode(nIns, InitializeLCD[i]);	/* send initialization instructions */
 	}
-	else
-	{
-		return 0;
-	}
+	
 }
 
-void Delay(long ms)
+void sendCode(int Code, int Data)
 {
-	do
-	{
-		ms--;
-	}
-	while(ms!=0);
+	//Assign a value to pin RS
+	/*HINT: When RS is 1, then the LCD receives a data
+	when RS is 0, then the LCD receives an instruction */
+	// Initialize RS and Enable with 0
+	RS_0;
+	Enable_0;
+	//Assign the value we want to send to the LCD
+	PortLCD = Data;	
 	
+	//We make the algorithm to establish if its an instruction we start with 0 on RS value, otherwise if its a data command we start with RS as 1;
+	if (Code == nIns)
+	{
+		Enable_1;
+		delay(nt40_usec);
+		Enable_0;
+		RS_0;
+	}		
+	else if(Code == nData)
+	{
+		RS_1;
+		Enable_1;
+		delay(nt15_msec);
+		Enable_0;
+		RS_0;
+	}
+}
+void delay(long time)
+{
+	while (time > 0)
+	{
+		time--;
+	}
 }
