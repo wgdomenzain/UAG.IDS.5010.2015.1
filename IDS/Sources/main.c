@@ -24,8 +24,8 @@
 #define	nBit7	0x80	//'10000000'
 
 //Time definitions
-#define nt15_msec	3500
-#define nt40_usec	35
+#define nt15_msec	10000
+#define nt40_usec	3500
 
 //LCD Control
 #define nIns	0
@@ -37,6 +37,8 @@
 #define Enable_0	GPIOB_PDOR &= 0xFE
 #define RS_1   		GPIOB_PDOR |= 0x02
 #define RS_0   		GPIOB_PDOR &= 0xFD
+#define FirstLine 0x80
+#define SecondLine 0xC0
 
 
 
@@ -54,6 +56,10 @@ void cfgPorts(void);
 void initLCD(void);
 void delay(long time);
 void sendCode(int Code, int Data);
+void printText(unsigned int Coord, char Text[]);
+void centerText( int Row, char Text[]);
+void recPer(void);
+void printSavedChar(int Coord,int character);
 
 /*@description: Initial Port Cfg 
 */
@@ -64,24 +70,15 @@ int main(void)
 	cfgPorts();
 	//Initialize LCD
 	initLCD();
-	//Set position to print character
-	sendCode(nIns, 0x80);
-	//Print characters
 	
-	sendCode(nData, 'R');
-	sendCode(nData, 'o');
-	sendCode(nData, 'd');
-	sendCode(nData, 'r');
-	sendCode(nData, 'i');
-	sendCode(nData, 'g');
-	sendCode(nData, 'o');
-	sendCode(nData, ' ');
-	sendCode(nData, 'O');
-	sendCode(nData, 'r');
-	sendCode(nData, 'o');
-	sendCode(nData, 'z');
-	sendCode(nData, 'c');
-	sendCode(nData, 'o');
+	// record new Character
+	recPer();
+	printSavedChar(FirstLine,0x00);
+
+	//Print characters
+	//char Name[] = {"*"};	
+//	centerText(FirstLine,0X00);
+		
 	
 	
 	
@@ -182,4 +179,56 @@ void delay(long time)
 	{
 		time--;
 	}
+}
+
+void printText(unsigned int Coord, char Text[])
+{
+	//Set position to print character
+	sendCode(nIns, Coord);
+	// print Data
+		int i;
+		for(i=0; Text[i]!=0l;i++)
+		{
+			sendCode(nData, Text[i]);
+		}
+}
+
+void centerText( int Row, char Text[])
+{
+	int lon=0;
+	while(Text[lon]!=0l)
+	{
+		lon++;
+	}
+	lon=16-lon;
+	int center = lon/2;
+	int coord=Row+center;
+	printText(coord,Text);
+	
+}
+
+void recPer(void)
+{
+	sendCode(nIns,0x40);
+	sendCode(nData,0x0E);
+	sendCode(nIns,0x41);
+	sendCode(nData,0x0E);
+	sendCode(nIns,0x42);
+	sendCode(nData,0x0E);
+	sendCode(nIns,0x43);
+	sendCode(nData,0x04);
+	sendCode(nIns,0x44);
+	sendCode(nData,0x1F);
+	sendCode(nIns,0x45);
+	sendCode(nData,0x04);
+	sendCode(nIns,0x46);
+	sendCode(nData,0x0A);
+	sendCode(nIns,0x47);
+	sendCode(nData,0x11);
+}
+
+void printSavedChar(int Coord,int character)
+{
+	sendCode(nIns,Coord);
+	sendCode(nData,character);
 }
