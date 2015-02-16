@@ -4,8 +4,8 @@ Project_Settings/Startup_Code/kinetis_sysinit.o: \
  C:/Users/Ana\ Mariel/Desktop/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/common.prefix \
  C:/Users/Ana\ Mariel/Desktop/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_c_version.h \
  ../Project_Settings/Startup_Code/kinetis_sysinit.h \
- C:/UAG/Projects/Boton/Project_Headers/derivative.h \
- C:/UAG/Projects/Boton/Project_Headers/MKL25Z4.h \
+ C:/UAG/Projects/UAG.IDS.5010.2015.1/Boton/Project_Headers/derivative.h \
+ C:/UAG/Projects/UAG.IDS.5010.2015.1/Boton/Project_Headers/MKL25Z4.h \
  C:/Users/Ana\ Mariel/Desktop/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdint.h \
  C:/Users/Ana\ Mariel/Desktop/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/ansi_parms.h \
  C:/Users/Ana\ Mariel/Desktop/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewlGlobals.h \
@@ -23,9 +23,9 @@ C:/Users/Ana\ Mariel/Desktop/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/includ
 
 ../Project_Settings/Startup_Code/kinetis_sysinit.h:
 
-C:/UAG/Projects/Boton/Project_Headers/derivative.h:
+C:/UAG/Projects/UAG.IDS.5010.2015.1/Boton/Project_Headers/derivative.h:
 
-C:/UAG/Projects/Boton/Project_Headers/MKL25Z4.h:
+C:/UAG/Projects/UAG.IDS.5010.2015.1/Boton/Project_Headers/MKL25Z4.h:
 
 C:/Users/Ana\ Mariel/Desktop/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdint.h:
 

@@ -1,0 +1,1675 @@
+!SESSION 2015-02-04 13:37:20.737 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2015-02-04 13:37:36.263
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-02-04 13:37:36.263
+!MESSAGE Commands should really have a category: plug-in='com.freescale.core.debugger.ui.cdt', id='com.freescale.cdt.debug.cw.core.ui.rse.export.template', categoryId='com.freescale.categories.rse.freescale'
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-04 13:37:43.123
+!MESSAGE Environment Variable Dependency not resolved for 'ARMGNUDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-04 13:37:43.126
+!MESSAGE Environment Variable Dependency not resolved for 'ARMSummonDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-04 13:37:43.129
+!MESSAGE Environment Variable Dependency not resolved for 'ARMYagartoDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-04 13:37:43.133
+!MESSAGE Environment Variable Dependency not resolved for 'ARMdevkitProDirEnv'.
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2015-02-04 13:37:44.212
+!MESSAGE External elements location 'C:\Users\Ana Mariel\Desktop\CW MCU v10.4\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2015-02-04 13:37:45.384
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-02-04 13:39:02.760
+!MESSAGE Indexed 'Boton' (5 sources, 67 headers) in 2.26 sec: 1,383 declarations; 2,467 references; 0 unresolved inclusions; 0 syntax errors; 1 unresolved names (0.03%)
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-04 13:39:04.742
+!MESSAGE NLS unused message: trace_trigger_dv_error_title in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-04 13:39:04.749
+!MESSAGE NLS unused message: trace_trigger_dv_error_message in: com.freescale.sa.mcu.analysispoints.nls.ui
+!SESSION 2015-02-05 11:10:20.400 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2015-02-05 11:12:16.516
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-02-05 11:12:16.516
+!MESSAGE Commands should really have a category: plug-in='com.freescale.core.debugger.ui.cdt', id='com.freescale.cdt.debug.cw.core.ui.rse.export.template', categoryId='com.freescale.categories.rse.freescale'
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-05 11:12:37.503
+!MESSAGE Environment Variable Dependency not resolved for 'ARMGNUDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-05 11:12:37.506
+!MESSAGE Environment Variable Dependency not resolved for 'ARMSummonDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-05 11:12:37.509
+!MESSAGE Environment Variable Dependency not resolved for 'ARMYagartoDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-05 11:12:37.513
+!MESSAGE Environment Variable Dependency not resolved for 'ARMdevkitProDirEnv'.
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2015-02-05 11:13:08.567
+!MESSAGE External elements location 'C:\Users\Ana Mariel\Desktop\CW MCU v10.4\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2015-02-05 11:13:19.425
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-05 11:29:20.269
+!MESSAGE NLS unused message: trace_trigger_dv_error_title in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-05 11:29:20.272
+!MESSAGE NLS unused message: trace_trigger_dv_error_message in: com.freescale.sa.mcu.analysispoints.nls.ui
+!SESSION 2015-02-08 18:26:34.953 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2015-02-08 18:41:45.537
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-02-08 18:41:45.537
+!MESSAGE Commands should really have a category: plug-in='com.freescale.core.debugger.ui.cdt', id='com.freescale.cdt.debug.cw.core.ui.rse.export.template', categoryId='com.freescale.categories.rse.freescale'
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-08 18:42:04.318
+!MESSAGE Environment Variable Dependency not resolved for 'ARMGNUDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-08 18:42:04.323
+!MESSAGE Environment Variable Dependency not resolved for 'ARMSummonDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-08 18:42:04.328
+!MESSAGE Environment Variable Dependency not resolved for 'ARMYagartoDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-08 18:42:04.333
+!MESSAGE Environment Variable Dependency not resolved for 'ARMdevkitProDirEnv'.
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2015-02-08 18:42:29.667
+!MESSAGE External elements location 'C:\Users\Ana Mariel\Desktop\CW MCU v10.4\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2015-02-08 18:42:40.398
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-08 19:02:49.661
+!MESSAGE NLS unused message: trace_trigger_dv_error_title in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-08 19:02:49.665
+!MESSAGE NLS unused message: trace_trigger_dv_error_message in: com.freescale.sa.mcu.analysispoints.nls.ui
+!SESSION 2015-02-08 19:46:45.785 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2015-02-08 19:46:55.360
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-02-08 19:46:55.360
+!MESSAGE Commands should really have a category: plug-in='com.freescale.core.debugger.ui.cdt', id='com.freescale.cdt.debug.cw.core.ui.rse.export.template', categoryId='com.freescale.categories.rse.freescale'
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-08 19:46:59.308
+!MESSAGE Environment Variable Dependency not resolved for 'ARMGNUDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-08 19:46:59.312
+!MESSAGE Environment Variable Dependency not resolved for 'ARMSummonDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-08 19:46:59.326
+!MESSAGE Environment Variable Dependency not resolved for 'ARMYagartoDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-08 19:46:59.329
+!MESSAGE Environment Variable Dependency not resolved for 'ARMdevkitProDirEnv'.
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2015-02-08 19:47:00.853
+!MESSAGE External elements location 'C:\Users\Ana Mariel\Desktop\CW MCU v10.4\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2015-02-08 19:47:01.906
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-08 19:49:15.402
+!MESSAGE NLS unused message: trace_trigger_dv_error_title in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-08 19:49:15.404
+!MESSAGE NLS unused message: trace_trigger_dv_error_message in: com.freescale.sa.mcu.analysispoints.nls.ui
+!SESSION 2015-02-09 10:45:34.162 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2015-02-09 10:45:39.650
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-02-09 10:45:39.650
+!MESSAGE Commands should really have a category: plug-in='com.freescale.core.debugger.ui.cdt', id='com.freescale.cdt.debug.cw.core.ui.rse.export.template', categoryId='com.freescale.categories.rse.freescale'
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-09 10:45:51.708
+!MESSAGE Environment Variable Dependency not resolved for 'ARMGNUDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-09 10:45:51.712
+!MESSAGE Environment Variable Dependency not resolved for 'ARMSummonDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-09 10:45:51.716
+!MESSAGE Environment Variable Dependency not resolved for 'ARMYagartoDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-09 10:45:51.720
+!MESSAGE Environment Variable Dependency not resolved for 'ARMdevkitProDirEnv'.
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2015-02-09 10:46:17.247
+!MESSAGE External elements location 'C:\Users\Ana Mariel\Desktop\CW MCU v10.4\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2015-02-09 10:46:25.783
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-09 10:48:17.517
+!MESSAGE NLS unused message: trace_trigger_dv_error_title in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-09 10:48:17.519
+!MESSAGE NLS unused message: trace_trigger_dv_error_message in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:27.251
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.architecture.kinetis_e
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:27.254
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v2
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:27.256
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v3
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:27.258
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v4
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:27.260
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v4e
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:27.262
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v2
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:27.264
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v3
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:27.266
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v4
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:27.268
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v4e
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:42.470
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke14d_36
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:42.474
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke14d_72
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:42.477
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke15d_36
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:42.480
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke15d_72
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.646
+!MESSAGE Unknown condition ID: mcu.projectwizard.chip.k10d_100.ID_CHIP_MK60DN256Z
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.651
+!MESSAGE Unknown condition ID: mcu.projectwizard.chip.k10d_100.ID_CHIP_MK60DN256
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.658
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.family.hc08
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.670
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56852
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.672
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56853
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.674
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56854
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.676
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56855
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.678
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56857
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.680
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56858
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.682
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5208evbe
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.684
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5211demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.687
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5213evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.689
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52210demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.691
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52211evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.693
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52221demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.695
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52223evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.697
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52233demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.699
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52235evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.701
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52259demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.703
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52259evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.705
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52277evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.707
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5253evbe
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.709
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v3.m53015evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.711
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v3.m5329evbe
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.713
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v4.m54455evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.716
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QF128
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.718
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QF32
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.720
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QF64
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.723
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QH128
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.725
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QH32
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.727
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QH64
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.729
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k11d_50.ID_CHIP_MK11DN512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.731
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k11d_50.ID_CHIP_MK11DX128_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.733
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k11d_50.ID_CHIP_MK11DX256_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.735
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k21d_50.ID_CHIP_MK21DN512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.737
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k21d_50.ID_CHIP_MK21DX128_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.739
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k21d_50.ID_CHIP_MK21DX256_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.742
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_120.ID_CHIP_MK61FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.744
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_150.ID_CHIP_MK61FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.746
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_120.ID_CHIP_MK61FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.748
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_150.ID_CHIP_MK61FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.750
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_120.ID_CHIP_MK70FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.766
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_150.ID_CHIP_MK70FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.768
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_120.ID_CHIP_MK70FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.770
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_150.ID_CHIP_MK70FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.778
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.cf_v2v4.ID_TARGET_EXTFLASH
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.780
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.cf_v2v4.ID_TARGET_EXTRAM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.850
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.cf_v2v4.ID_TARGET_CONSOLE_EXTRAM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.853
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.dsc.ID_TARGET_EXTERNAL_RAM_SDM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:50.855
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.dsc.ID_TARGET_EXTERNAL_RAM_LDM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:51.465
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copytoproject.cfv1
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:51.471
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.dontcopytoproject
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:51.475
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.abs
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:51.480
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copyelf.pa
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:51.485
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.elf.arm
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:51.490
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.elf.dsc
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:51.493
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.elf.s12z
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:51.495
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.bb.elf
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:51.497
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.kd.elf
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:51.500
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.app.elf
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:51.502
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.flt
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 10:52:51.505
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.arm.setPnEAttribute.STARTUP_USE_SWD
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-02-09 10:52:55.118
+!MESSAGE Indexed 'PrimerParcial' (5 sources, 67 headers) in 2.24 sec: 1,376 declarations; 2,308 references; 0 unresolved inclusions; 0 syntax errors; 1 unresolved names (0.03%)
+
+!ENTRY com.freescale.core.debugger.cdt 4 101789 2015-02-09 10:57:36.214
+!MESSAGE Error launching PrimerParcial_FLASH_OpenSDA, Can only debug one program at a time.
+
+!ENTRY com.freescale.core.debugger.cdt 4 101789 2015-02-09 10:57:48.621
+!MESSAGE Error launching PrimerParcial_FLASH_OpenSDA, Can only debug one program at a time.
+
+!ENTRY com.freescale.core.debugger.cdt 4 101789 2015-02-09 10:58:18.002
+!MESSAGE Error launching PrimerParcial_FLASH_OpenSDA, Can only debug one program at a time.
+
+!ENTRY com.freescale.core.debugger.cdt 4 101789 2015-02-09 10:58:38.639
+!MESSAGE Error launching PrimerParcial_FLASH_OpenSDA, Can only debug one program at a time.
+
+!ENTRY org.eclipse.debug.core 4 125 2015-02-09 10:58:55.937
+!MESSAGE Error logged from Debug Core: 
+!STACK 1
+org.eclipse.debug.core.DebugException: Specified container for launch configuration does not exist
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.writeNewFile(LaunchConfigurationWorkingCopy.java:334)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave0(LaunchConfigurationWorkingCopy.java:245)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.access$0(LaunchConfigurationWorkingCopy.java:233)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy$1.run(LaunchConfigurationWorkingCopy.java:210)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2391)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:213)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:170)
+	at org.eclipse.cdt.debug.internal.core.CSettingsManager.save(CSettingsManager.java:259)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.saveFormats(CDebugTarget.java:1564)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.cleanup(CDebugTarget.java:1091)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.terminated(CDebugTarget.java:1057)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.handleExitedEvent(CDebugTarget.java:1297)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.handleDebugEvents(CDebugTarget.java:940)
+	at com.freescale.cdt.debug.cw.core.cdi.EventManager$EventDispatchJob.run(EventManager.java:79)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.debug.core 4 5012 2015-02-09 10:58:55.938
+!MESSAGE Specified container for launch configuration does not exist
+
+!ENTRY org.eclipse.debug.core 4 125 2015-02-09 11:54:35.865
+!MESSAGE Error logged from Debug Core: 
+!STACK 1
+org.eclipse.debug.core.DebugException: Specified container for launch configuration does not exist
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.writeNewFile(LaunchConfigurationWorkingCopy.java:334)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave0(LaunchConfigurationWorkingCopy.java:245)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.access$0(LaunchConfigurationWorkingCopy.java:233)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy$1.run(LaunchConfigurationWorkingCopy.java:210)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2391)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:213)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:170)
+	at org.eclipse.cdt.debug.internal.core.CSettingsManager.save(CSettingsManager.java:259)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.saveFormats(CDebugTarget.java:1564)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.cleanup(CDebugTarget.java:1091)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.terminated(CDebugTarget.java:1057)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.handleExitedEvent(CDebugTarget.java:1297)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.handleDebugEvents(CDebugTarget.java:940)
+	at com.freescale.cdt.debug.cw.core.cdi.EventManager$EventDispatchJob.run(EventManager.java:79)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.debug.core 4 5012 2015-02-09 11:54:35.865
+!MESSAGE Specified container for launch configuration does not exist
+
+!ENTRY org.eclipse.debug.ui 4 2 2015-02-09 11:54:35.917
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
+!STACK 0
+java.lang.NullPointerException
+	at com.freescale.sa.mcu.launch.configandcollect.ArmTraceStateSourceProvider.updateTraceSession(ArmTraceStateSourceProvider.java:95)
+	at com.freescale.sa.ui.commands.TraceStateSourceProvider.activateTraceSession(TraceStateSourceProvider.java:95)
+	at com.freescale.sa.ui.commands.TraceStateSourceProvider.debugContextChanged(TraceStateSourceProvider.java:124)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:194)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:192)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:173)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:390)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:79)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:77)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:477)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:79)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:77)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.possibleChange(LaunchView.java:368)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider$Visitor.visit(LaunchView.java:291)
+	at org.eclipse.debug.internal.ui.viewers.model.provisional.ModelDelta.doAccept(ModelDelta.java:324)
+	at org.eclipse.debug.internal.ui.viewers.model.provisional.ModelDelta.doAccept(ModelDelta.java:327)
+	at org.eclipse.debug.internal.ui.viewers.model.provisional.ModelDelta.doAccept(ModelDelta.java:327)
+	at org.eclipse.debug.internal.ui.viewers.model.provisional.ModelDelta.accept(ModelDelta.java:320)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.modelChanged(LaunchView.java:396)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider.doModelChanged(ModelContentProvider.java:1396)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider.access$8(ModelContentProvider.java:1385)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider$14.runInUIThread(ModelContentProvider.java:1375)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:96)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:155)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3768)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2698)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2662)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2496)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:675)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:82)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+
+!ENTRY org.eclipse.debug.ui 4 120 2015-02-09 11:54:35.920
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NullPointerException
+	at com.freescale.sa.mcu.launch.configandcollect.ArmTraceStateSourceProvider.updateTraceSession(ArmTraceStateSourceProvider.java:95)
+	at com.freescale.sa.ui.commands.TraceStateSourceProvider.activateTraceSession(TraceStateSourceProvider.java:95)
+	at com.freescale.sa.ui.commands.TraceStateSourceProvider.debugContextChanged(TraceStateSourceProvider.java:124)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:194)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:192)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:173)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:390)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:79)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:77)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:477)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:79)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:77)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.possibleChange(LaunchView.java:368)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider$Visitor.visit(LaunchView.java:291)
+	at org.eclipse.debug.internal.ui.viewers.model.provisional.ModelDelta.doAccept(ModelDelta.java:324)
+	at org.eclipse.debug.internal.ui.viewers.model.provisional.ModelDelta.doAccept(ModelDelta.java:327)
+	at org.eclipse.debug.internal.ui.viewers.model.provisional.ModelDelta.doAccept(ModelDelta.java:327)
+	at org.eclipse.debug.internal.ui.viewers.model.provisional.ModelDelta.accept(ModelDelta.java:320)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.modelChanged(LaunchView.java:396)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider.doModelChanged(ModelContentProvider.java:1396)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider.access$8(ModelContentProvider.java:1385)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider$14.runInUIThread(ModelContentProvider.java:1375)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:96)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:155)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3768)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2698)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2662)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2496)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:675)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:82)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:54:40.228
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.architecture.kinetis_e
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:54:40.230
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v2
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:54:40.232
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v3
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:54:40.235
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v4
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:54:40.237
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v4e
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:54:40.239
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v2
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:54:40.241
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v3
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:54:40.243
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v4
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:54:40.245
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v4e
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:01.564
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke14d_36
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:01.570
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke14d_72
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:01.575
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke15d_36
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:01.580
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke15d_72
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.806
+!MESSAGE Unknown condition ID: mcu.projectwizard.chip.k10d_100.ID_CHIP_MK60DN256Z
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.809
+!MESSAGE Unknown condition ID: mcu.projectwizard.chip.k10d_100.ID_CHIP_MK60DN256
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.821
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.family.hc08
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.831
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56852
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.833
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56853
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.835
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56854
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.837
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56855
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.840
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56857
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.842
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56858
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.844
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5208evbe
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.846
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5211demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.848
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5213evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.851
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52210demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.853
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52211evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.855
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52221demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.857
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52223evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.859
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52233demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.861
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52235evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.863
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52259demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.866
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52259evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.868
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52277evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.870
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5253evbe
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.872
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v3.m53015evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.874
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v3.m5329evbe
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.876
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v4.m54455evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.879
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QF128
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.881
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QF32
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.884
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QF64
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.886
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QH128
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.889
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QH32
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.891
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QH64
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.894
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k11d_50.ID_CHIP_MK11DN512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.896
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k11d_50.ID_CHIP_MK11DX128_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.898
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k11d_50.ID_CHIP_MK11DX256_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.900
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k21d_50.ID_CHIP_MK21DN512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.902
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k21d_50.ID_CHIP_MK21DX128_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.904
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k21d_50.ID_CHIP_MK21DX256_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.907
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_120.ID_CHIP_MK61FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.909
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_150.ID_CHIP_MK61FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.911
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_120.ID_CHIP_MK61FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.913
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_150.ID_CHIP_MK61FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.915
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_120.ID_CHIP_MK70FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.917
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_150.ID_CHIP_MK70FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.919
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_120.ID_CHIP_MK70FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.921
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_150.ID_CHIP_MK70FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.929
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.cf_v2v4.ID_TARGET_EXTFLASH
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.936
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.cf_v2v4.ID_TARGET_EXTRAM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.974
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.cf_v2v4.ID_TARGET_CONSOLE_EXTRAM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.977
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.dsc.ID_TARGET_EXTERNAL_RAM_SDM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:06.979
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.dsc.ID_TARGET_EXTERNAL_RAM_LDM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:07.026
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copytoproject.cfv1
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:07.029
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.dontcopytoproject
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:07.031
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.abs
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:07.033
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copyelf.pa
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:07.035
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.elf.arm
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:07.037
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.elf.dsc
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:07.040
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.elf.s12z
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:07.042
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.bb.elf
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:07.044
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.kd.elf
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:07.046
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.app.elf
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:07.048
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.flt
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-09 11:55:07.050
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.arm.setPnEAttribute.STARTUP_USE_SWD
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-02-09 11:55:10.052
+!MESSAGE Indexed 'Exam1' (5 sources, 67 headers) in 0.83 sec: 1,376 declarations; 2,308 references; 0 unresolved inclusions; 0 syntax errors; 1 unresolved names (0.03%)
+
+!ENTRY org.eclipse.debug.ui 4 2 2015-02-09 11:55:35.200
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
+!STACK 0
+java.lang.NullPointerException
+	at com.freescale.sa.mcu.launch.configandcollect.ArmTraceStateSourceProvider.updateTraceSession(ArmTraceStateSourceProvider.java:95)
+	at com.freescale.sa.ui.commands.TraceStateSourceProvider.activateTraceSession(TraceStateSourceProvider.java:95)
+	at com.freescale.sa.ui.commands.TraceStateSourceProvider.debugContextChanged(TraceStateSourceProvider.java:114)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:194)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:192)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:173)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:390)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:79)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:77)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:477)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:79)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:77)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.activate(LaunchView.java:342)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$1.selectionChanged(LaunchView.java:439)
+	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:164)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:162)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2188)
+	at org.eclipse.jface.viewers.StructuredViewer.handleInvalidSelection(StructuredViewer.java:1175)
+	at org.eclipse.debug.internal.ui.viewers.model.InternalTreeModelViewer.handleInvalidSelection(InternalTreeModelViewer.java:1129)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1456)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:403)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1404)
+	at org.eclipse.jface.viewers.TreeViewer.remove(TreeViewer.java:874)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.handleRemove(TreeModelContentProvider.java:303)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider.updateNodes(ModelContentProvider.java:1443)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider.updateNodes(ModelContentProvider.java:1475)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider.updateModel(ModelContentProvider.java:1417)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider.doModelChanged(ModelContentProvider.java:1391)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider.access$8(ModelContentProvider.java:1385)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider$14.runInUIThread(ModelContentProvider.java:1375)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:96)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:155)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3768)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3750)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.runEventLoop(EventLoopProgressMonitor.java:123)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.isCanceled(EventLoopProgressMonitor.java:97)
+	at org.eclipse.core.internal.jobs.ThreadJob.isCanceled(ThreadJob.java:146)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:235)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:286)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:118)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2329)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1662)
+	at org.eclipse.core.internal.resources.File.refreshLocal(File.java:335)
+	at com.freescale.core.ide.rseSettingsCache.internal.Engine.saveCache(Engine.java:482)
+	at com.freescale.core.ide.rseSettingsCache.internal.Engine.updateCache(Engine.java:387)
+	at com.freescale.core.ide.rseSettingsCache.internal.UpdateScheduler.performPendingTasks(UpdateScheduler.java:118)
+	at com.freescale.core.ide.rseSettingsCache.internal.UpdateScheduler$1$1.run(UpdateScheduler.java:65)
+	at org.eclipse.rse.internal.core.model.SystemProfileManager.runOperation(SystemProfileManager.java:95)
+	at org.eclipse.rse.internal.core.model.SystemProfileManager.run(SystemProfileManager.java:86)
+	at com.freescale.core.ide.rseSettingsCache.internal.UpdateScheduler$1.runInUIThread(UpdateScheduler.java:63)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:96)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:155)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3768)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2698)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2662)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2496)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:675)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:82)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+
+!ENTRY org.eclipse.debug.ui 4 120 2015-02-09 11:55:35.203
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NullPointerException
+	at com.freescale.sa.mcu.launch.configandcollect.ArmTraceStateSourceProvider.updateTraceSession(ArmTraceStateSourceProvider.java:95)
+	at com.freescale.sa.ui.commands.TraceStateSourceProvider.activateTraceSession(TraceStateSourceProvider.java:95)
+	at com.freescale.sa.ui.commands.TraceStateSourceProvider.debugContextChanged(TraceStateSourceProvider.java:114)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:194)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:192)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:173)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:390)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:79)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:77)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:477)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:79)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:77)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.activate(LaunchView.java:342)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$1.selectionChanged(LaunchView.java:439)
+	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:164)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:162)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2188)
+	at org.eclipse.jface.viewers.StructuredViewer.handleInvalidSelection(StructuredViewer.java:1175)
+	at org.eclipse.debug.internal.ui.viewers.model.InternalTreeModelViewer.handleInvalidSelection(InternalTreeModelViewer.java:1129)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1456)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:403)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1404)
+	at org.eclipse.jface.viewers.TreeViewer.remove(TreeViewer.java:874)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.handleRemove(TreeModelContentProvider.java:303)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider.updateNodes(ModelContentProvider.java:1443)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider.updateNodes(ModelContentProvider.java:1475)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider.updateModel(ModelContentProvider.java:1417)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider.doModelChanged(ModelContentProvider.java:1391)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider.access$8(ModelContentProvider.java:1385)
+	at org.eclipse.debug.internal.ui.viewers.model.ModelContentProvider$14.runInUIThread(ModelContentProvider.java:1375)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:96)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:155)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3768)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3750)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.runEventLoop(EventLoopProgressMonitor.java:123)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.isCanceled(EventLoopProgressMonitor.java:97)
+	at org.eclipse.core.internal.jobs.ThreadJob.isCanceled(ThreadJob.java:146)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:235)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:286)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:118)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2329)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1662)
+	at org.eclipse.core.internal.resources.File.refreshLocal(File.java:335)
+	at com.freescale.core.ide.rseSettingsCache.internal.Engine.saveCache(Engine.java:482)
+	at com.freescale.core.ide.rseSettingsCache.internal.Engine.updateCache(Engine.java:387)
+	at com.freescale.core.ide.rseSettingsCache.internal.UpdateScheduler.performPendingTasks(UpdateScheduler.java:118)
+	at com.freescale.core.ide.rseSettingsCache.internal.UpdateScheduler$1$1.run(UpdateScheduler.java:65)
+	at org.eclipse.rse.internal.core.model.SystemProfileManager.runOperation(SystemProfileManager.java:95)
+	at org.eclipse.rse.internal.core.model.SystemProfileManager.run(SystemProfileManager.java:86)
+	at com.freescale.core.ide.rseSettingsCache.internal.UpdateScheduler$1.runInUIThread(UpdateScheduler.java:63)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:96)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:155)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3768)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2698)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2662)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2496)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:675)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:82)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+
+!ENTRY com.freescale.core.debugger.cdt 4 0 2015-02-09 13:51:38.028
+!MESSAGE A debug session is already in progress.
+
+!ENTRY org.eclipse.cdt.debug.core 4 105 2015-02-09 14:29:32.719
+!MESSAGE An application file was not specified in the launch configuration.
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-09 14:47:56.901
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+java.lang.AssertionError: Assertion failed: Exhausted shutdown timeout while asking the DE to shut itself down. Proceeding with Eclipse shutdown.
+	at com.freescale.cdt.debug.cw.CWExceptionLogger.logAssert(CWExceptionLogger.java:100)
+	at com.freescale.cdt.debug.cw.CWCorbaMgr$CorbaContext.terminate(CWCorbaMgr.java:528)
+	at com.freescale.cdt.debug.cw.CWCorbaMgr$CorbaContext.access$15(CWCorbaMgr.java:466)
+	at com.freescale.cdt.debug.cw.CWCorbaMgr.stop(CWCorbaMgr.java:1109)
+	at com.freescale.cdt.debug.cw.core.CWPlugin.stop(CWPlugin.java:455)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:565)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1161)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:595)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:691)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:598)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:390)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-09 14:47:57.973
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+java.lang.AssertionError: Assertion failed: Exhausted shutdown timeout while shutting down the ORB. Will destroy DE & ORB nevertheless.
+	at com.freescale.cdt.debug.cw.CWExceptionLogger.logAssert(CWExceptionLogger.java:100)
+	at com.freescale.cdt.debug.cw.CWCorbaMgr$CorbaContext.terminate(CWCorbaMgr.java:567)
+	at com.freescale.cdt.debug.cw.CWCorbaMgr$CorbaContext.access$15(CWCorbaMgr.java:466)
+	at com.freescale.cdt.debug.cw.CWCorbaMgr.stop(CWCorbaMgr.java:1109)
+	at com.freescale.cdt.debug.cw.core.CWPlugin.stop(CWPlugin.java:455)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:565)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1161)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:595)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:691)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:598)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:390)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-09 14:47:58.279
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+org.eclipse.cdt.debug.core.cdi.CDIException: ARM GDI Protocol Adapter : Stop failed. Non Fatal Error[ARM GDI Protocol Adapter : Stop failed. Non Fatal Error]
+	at com.freescale.cdt.debug.cw.core.DebugErrorUtils.handleDebugError(DebugErrorUtils.java:92)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.doTerminate(Target.java:1403)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.access$2(Target.java:1344)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target$TerminateJob.run(Target.java:1302)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-09 14:47:58.323
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+org.eclipse.cdt.debug.core.cdi.CDIException: ARM GDI Protocol Adapter : Stop failed. Non Fatal Error[ARM GDI Protocol Adapter : Stop failed. Non Fatal Error]
+	at com.freescale.cdt.debug.cw.core.DebugErrorUtils.handleDebugError(DebugErrorUtils.java:92)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.doTerminate(Target.java:1403)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.access$2(Target.java:1344)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target$TerminateJob.run(Target.java:1302)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-09 14:47:58.390
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+org.omg.CORBA.BAD_INV_ORDER:   vmcid: OMG  minor code: 4  completed: No
+	at com.sun.corba.se.impl.logging.OMGSystemException.badOperationAfterShutdown(Unknown Source)
+	at com.sun.corba.se.impl.logging.OMGSystemException.badOperationAfterShutdown(Unknown Source)
+	at com.sun.corba.se.impl.orb.ORBImpl.checkShutdownState(Unknown Source)
+	at com.sun.corba.se.impl.orb.ORBImpl.getInvocationInfo(Unknown Source)
+	at com.sun.corba.se.impl.protocol.CorbaClientDelegateImpl.getClientRequestDispatcher(Unknown Source)
+	at com.sun.corba.se.impl.protocol.CorbaClientDelegateImpl.releaseReply(Unknown Source)
+	at org.omg.CORBA.portable.ObjectImpl._releaseReply(Unknown Source)
+	at cwdbg._DebuggerEngineStub.RequestShutdown(_DebuggerEngineStub.java:912)
+	at com.freescale.cdt.debug.cw.CWCorbaMgr$CorbaContext$2.run(CWCorbaMgr.java:512)
+	at com.freescale.cdt.debug.cw.core.CWWaitTimeout$1.run(CWWaitTimeout.java:66)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-09 14:47:58.529
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+java.lang.AssertionError: Assertion failed: Exhausted shutdown timeout while waiting for DE process to go away. Will forcibly kill.
+	at com.freescale.cdt.debug.cw.CWExceptionLogger.logAssert(CWExceptionLogger.java:100)
+	at com.freescale.cdt.debug.cw.CWCorbaMgr$CorbaContext.terminate(CWCorbaMgr.java:617)
+	at com.freescale.cdt.debug.cw.CWCorbaMgr$CorbaContext.access$15(CWCorbaMgr.java:466)
+	at com.freescale.cdt.debug.cw.CWCorbaMgr.stop(CWCorbaMgr.java:1109)
+	at com.freescale.cdt.debug.cw.core.CWPlugin.stop(CWPlugin.java:455)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:565)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1161)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:595)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:691)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:598)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:390)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+!SESSION 2015-02-12 11:14:37.967 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-02-12 11:15:15.152
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 2 0 2015-02-12 11:15:17.930
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-02-12 11:15:17.931
+!MESSAGE Commands should really have a category: plug-in='com.freescale.core.debugger.ui.cdt', id='com.freescale.cdt.debug.cw.core.ui.rse.export.template', categoryId='com.freescale.categories.rse.freescale'
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-12 11:15:38.329
+!MESSAGE Environment Variable Dependency not resolved for 'ARMGNUDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-12 11:15:38.334
+!MESSAGE Environment Variable Dependency not resolved for 'ARMSummonDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-12 11:15:38.339
+!MESSAGE Environment Variable Dependency not resolved for 'ARMYagartoDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-12 11:15:38.344
+!MESSAGE Environment Variable Dependency not resolved for 'ARMdevkitProDirEnv'.
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2015-02-12 11:16:06.636
+!MESSAGE External elements location 'C:\Users\Ana Mariel\Desktop\CW MCU v10.4\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2015-02-12 11:16:20.299
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-12 11:16:58.171
+!MESSAGE NLS unused message: trace_trigger_dv_error_title in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-12 11:16:58.176
+!MESSAGE NLS unused message: trace_trigger_dv_error_message in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.debug.core 4 125 2015-02-12 11:23:48.658
+!MESSAGE Error logged from Debug Core: 
+!STACK 1
+org.eclipse.debug.core.DebugException: Specified container for launch configuration does not exist
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.writeNewFile(LaunchConfigurationWorkingCopy.java:334)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave0(LaunchConfigurationWorkingCopy.java:245)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.access$0(LaunchConfigurationWorkingCopy.java:233)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy$1.run(LaunchConfigurationWorkingCopy.java:210)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2391)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:213)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:170)
+	at org.eclipse.cdt.debug.internal.core.CSettingsManager.save(CSettingsManager.java:259)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.saveFormats(CDebugTarget.java:1564)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.cleanup(CDebugTarget.java:1091)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.terminated(CDebugTarget.java:1057)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.handleExitedEvent(CDebugTarget.java:1297)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.handleDebugEvents(CDebugTarget.java:940)
+	at com.freescale.cdt.debug.cw.core.cdi.EventManager$EventDispatchJob.run(EventManager.java:79)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.debug.core 4 5012 2015-02-12 11:23:48.659
+!MESSAGE Specified container for launch configuration does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-12 11:46:50.324
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.architecture.kinetis_e
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-12 11:46:50.327
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v2
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-12 11:46:50.330
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v3
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-12 11:46:50.333
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v4
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-12 11:46:50.336
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v4e
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-12 11:46:50.339
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v2
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-12 11:46:50.342
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v3
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-12 11:46:50.345
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v4
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-12 11:46:50.348
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v4e
+!SESSION 2015-02-15 20:54:57.688 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2015-02-15 20:55:04.153
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-02-15 20:55:04.153
+!MESSAGE Commands should really have a category: plug-in='com.freescale.core.debugger.ui.cdt', id='com.freescale.cdt.debug.cw.core.ui.rse.export.template', categoryId='com.freescale.categories.rse.freescale'
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-15 20:55:09.671
+!MESSAGE Environment Variable Dependency not resolved for 'ARMGNUDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-15 20:55:09.676
+!MESSAGE Environment Variable Dependency not resolved for 'ARMSummonDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-15 20:55:09.682
+!MESSAGE Environment Variable Dependency not resolved for 'ARMYagartoDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-15 20:55:09.690
+!MESSAGE Environment Variable Dependency not resolved for 'ARMdevkitProDirEnv'.
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2015-02-15 20:55:31.859
+!MESSAGE External elements location 'C:\Users\Ana Mariel\Desktop\CW MCU v10.4\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2015-02-15 20:55:40.376
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+!SESSION 2015-02-16 09:44:34.331 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2015-02-16 09:44:42.042
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-02-16 09:44:42.042
+!MESSAGE Commands should really have a category: plug-in='com.freescale.core.debugger.ui.cdt', id='com.freescale.cdt.debug.cw.core.ui.rse.export.template', categoryId='com.freescale.categories.rse.freescale'
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-16 09:44:55.181
+!MESSAGE Environment Variable Dependency not resolved for 'ARMGNUDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-16 09:44:55.187
+!MESSAGE Environment Variable Dependency not resolved for 'ARMSummonDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-16 09:44:55.192
+!MESSAGE Environment Variable Dependency not resolved for 'ARMYagartoDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-16 09:44:55.198
+!MESSAGE Environment Variable Dependency not resolved for 'ARMdevkitProDirEnv'.
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2015-02-16 09:45:19.543
+!MESSAGE External elements location 'C:\Users\Ana Mariel\Desktop\CW MCU v10.4\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:45:27.386
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.architecture.kinetis_e
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:45:27.391
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v2
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:45:27.399
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v3
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:45:27.403
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v4
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:45:27.406
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v4e
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:45:27.409
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v2
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:45:27.412
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v3
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:45:27.415
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v4
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:45:27.418
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v4e
+
+!ENTRY com.freescale.processorexpert.core 1 0 2015-02-16 09:45:27.516
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:12.582
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke14d_36
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:12.589
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke14d_72
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:12.594
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke15d_36
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:12.600
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke15d_72
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.228
+!MESSAGE Unknown condition ID: mcu.projectwizard.chip.k10d_100.ID_CHIP_MK60DN256Z
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.235
+!MESSAGE Unknown condition ID: mcu.projectwizard.chip.k10d_100.ID_CHIP_MK60DN256
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.253
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.family.hc08
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.278
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56852
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.283
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56853
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.288
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56854
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.294
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56855
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.299
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56857
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.304
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56858
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.310
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5208evbe
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.315
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5211demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.320
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5213evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.327
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52210demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.333
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52211evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.338
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52221demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.344
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52223evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.350
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52233demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.355
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52235evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.360
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52259demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.375
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52259evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.381
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52277evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.386
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5253evbe
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.391
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v3.m53015evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.398
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v3.m5329evbe
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.403
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v4.m54455evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.410
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QF128
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.415
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QF32
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.420
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QF64
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.426
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QH128
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.431
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QH32
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.436
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QH64
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.442
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k11d_50.ID_CHIP_MK11DN512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.447
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k11d_50.ID_CHIP_MK11DX128_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.452
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k11d_50.ID_CHIP_MK11DX256_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.457
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k21d_50.ID_CHIP_MK21DN512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.460
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k21d_50.ID_CHIP_MK21DX128_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.464
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k21d_50.ID_CHIP_MK21DX256_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.468
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_120.ID_CHIP_MK61FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.471
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_150.ID_CHIP_MK61FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.475
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_120.ID_CHIP_MK61FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.479
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_150.ID_CHIP_MK61FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.482
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_120.ID_CHIP_MK70FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.485
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_150.ID_CHIP_MK70FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.489
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_120.ID_CHIP_MK70FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.492
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_150.ID_CHIP_MK70FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.505
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.cf_v2v4.ID_TARGET_EXTFLASH
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:18.509
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.cf_v2v4.ID_TARGET_EXTRAM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:20.089
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.cf_v2v4.ID_TARGET_CONSOLE_EXTRAM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:20.095
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.dsc.ID_TARGET_EXTERNAL_RAM_SDM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:20.099
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.dsc.ID_TARGET_EXTERNAL_RAM_LDM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:20.916
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copytoproject.cfv1
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:20.921
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.dontcopytoproject
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:20.927
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.abs
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:20.932
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copyelf.pa
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:20.937
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.elf.arm
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:20.943
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.elf.dsc
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:20.948
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.elf.s12z
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:20.953
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.bb.elf
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:20.958
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.kd.elf
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:20.963
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.app.elf
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:20.968
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.flt
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-16 09:46:20.974
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.arm.setPnEAttribute.STARTUP_USE_SWD
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-02-16 09:46:30.751
+!MESSAGE Indexed 'displayName' (5 sources, 67 headers) in 3.53 sec: 1,376 declarations; 2,308 references; 0 unresolved inclusions; 0 syntax errors; 1 unresolved names (0.03%)
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-16 09:46:40.477
+!MESSAGE NLS unused message: trace_trigger_dv_error_title in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-16 09:46:40.482
+!MESSAGE NLS unused message: trace_trigger_dv_error_message in: com.freescale.sa.mcu.analysispoints.nls.ui
+!SESSION 2015-02-16 09:59:15.080 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2015-02-16 09:59:19.775
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-02-16 09:59:19.775
+!MESSAGE Commands should really have a category: plug-in='com.freescale.core.debugger.ui.cdt', id='com.freescale.cdt.debug.cw.core.ui.rse.export.template', categoryId='com.freescale.categories.rse.freescale'
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-16 09:59:23.748
+!MESSAGE Environment Variable Dependency not resolved for 'ARMGNUDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-16 09:59:23.752
+!MESSAGE Environment Variable Dependency not resolved for 'ARMSummonDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-16 09:59:23.757
+!MESSAGE Environment Variable Dependency not resolved for 'ARMYagartoDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-16 09:59:23.761
+!MESSAGE Environment Variable Dependency not resolved for 'ARMdevkitProDirEnv'.
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2015-02-16 09:59:25.666
+!MESSAGE External elements location 'C:\Users\Ana Mariel\Desktop\CW MCU v10.4\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2015-02-16 09:59:26.667
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-16 10:00:50.080
+!MESSAGE NLS unused message: trace_trigger_dv_error_title in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-16 10:00:50.086
+!MESSAGE NLS unused message: trace_trigger_dv_error_message in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-16 10:15:40.187
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+org.eclipse.cdt.debug.core.cdi.CDIException: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device[ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device]
+	at com.freescale.cdt.debug.cw.core.DebugErrorUtils.handleDebugError(DebugErrorUtils.java:92)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.doTerminate(Target.java:1403)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.access$2(Target.java:1344)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target$TerminateJob.run(Target.java:1302)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-16 10:15:40.190
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 1
+org.eclipse.debug.core.DebugException: Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.throwDebugException(CDebugElement.java:292)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.requestFailed(CDebugElement.java:259)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.targetRequestFailed(CDebugElement.java:247)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.terminate(CDebugTarget.java:576)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.terminateConnection(TargetConnectionLostHandler.java:278)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.performAction(TargetConnectionLostHandler.java:166)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.access$0(TargetConnectionLostHandler.java:106)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler$1.run(TargetConnectionLostHandler.java:73)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:155)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3768)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2698)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2662)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2496)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:675)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:82)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+!SUBENTRY 1 org.eclipse.cdt.debug.core 4 5010 2015-02-16 10:15:40.191
+!MESSAGE Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-16 10:20:01.224
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+org.eclipse.cdt.debug.core.cdi.CDIException: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device[ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device]
+	at com.freescale.cdt.debug.cw.core.DebugErrorUtils.handleDebugError(DebugErrorUtils.java:92)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.doTerminate(Target.java:1403)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.access$2(Target.java:1344)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target$TerminateJob.run(Target.java:1302)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-16 10:20:01.226
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 1
+org.eclipse.debug.core.DebugException: Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.throwDebugException(CDebugElement.java:292)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.requestFailed(CDebugElement.java:259)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.targetRequestFailed(CDebugElement.java:247)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.terminate(CDebugTarget.java:576)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.terminateConnection(TargetConnectionLostHandler.java:278)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.performAction(TargetConnectionLostHandler.java:166)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.access$0(TargetConnectionLostHandler.java:106)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler$1.run(TargetConnectionLostHandler.java:73)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:155)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3768)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2698)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2662)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2496)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:675)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:82)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+!SUBENTRY 1 org.eclipse.cdt.debug.core 4 5010 2015-02-16 10:20:01.227
+!MESSAGE Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-16 10:21:06.959
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+org.eclipse.cdt.debug.core.cdi.CDIException: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device[ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device]
+	at com.freescale.cdt.debug.cw.core.DebugErrorUtils.handleDebugError(DebugErrorUtils.java:92)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.doTerminate(Target.java:1403)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.access$2(Target.java:1344)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target$TerminateJob.run(Target.java:1302)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-16 10:21:06.962
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 1
+org.eclipse.debug.core.DebugException: Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.throwDebugException(CDebugElement.java:292)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.requestFailed(CDebugElement.java:259)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.targetRequestFailed(CDebugElement.java:247)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.terminate(CDebugTarget.java:576)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.terminateConnection(TargetConnectionLostHandler.java:278)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.performAction(TargetConnectionLostHandler.java:166)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.access$0(TargetConnectionLostHandler.java:106)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler$1.run(TargetConnectionLostHandler.java:73)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:155)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3768)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2698)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2662)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2496)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:675)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:82)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+!SUBENTRY 1 org.eclipse.cdt.debug.core 4 5010 2015-02-16 10:21:06.962
+!MESSAGE Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.

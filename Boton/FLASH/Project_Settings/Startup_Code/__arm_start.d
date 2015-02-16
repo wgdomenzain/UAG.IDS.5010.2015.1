@@ -20,7 +20,7 @@ Project_Settings/Startup_Code/__arm_start.o: \
  C:/Users/Ana\ Mariel/Desktop/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdint.h \
  C:/Users/Ana\ Mariel/Desktop/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdint \
  C:/Users/Ana\ Mariel/Desktop/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/limits_api.h \
- C:/UAG/Projects/Boton/Project_Settings/Startup_Code/runtime_configuration.h
+ C:/UAG/Projects/UAG.IDS.5010.2015.1/Boton/Project_Settings/Startup_Code/runtime_configuration.h
 
 C:/Users/Ana\ Mariel/Desktop/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
 
@@ -62,4 +62,4 @@ C:/Users/Ana\ Mariel/Desktop/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/includ
 
 C:/Users/Ana\ Mariel/Desktop/CW\ MCU\ v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include/limits_api.h:
 
-C:/UAG/Projects/Boton/Project_Settings/Startup_Code/runtime_configuration.h:
+C:/UAG/Projects/UAG.IDS.5010.2015.1/Boton/Project_Settings/Startup_Code/runtime_configuration.h:

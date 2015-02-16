@@ -4,8 +4,8 @@
 -g3
 -gdwarf-2
 -gstrict-dwarf
--I"C:/UAG/Projects/Boton/Project_Headers"
--I"C:/UAG/Projects/Boton/Project_Settings/Startup_Code"
+-I"C:/UAG/Projects/UAG.IDS.5010.2015.1/Boton/Project_Headers"
+-I"C:/UAG/Projects/UAG.IDS.5010.2015.1/Boton/Project_Settings/Startup_Code"
 -I"C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/EWL_C/include"
 -I"C:/Users/Ana Mariel/Desktop/CW MCU v10.4/MCU/ARM_GCC_Support/ewl/EWL_Runtime/include"
 -O0
