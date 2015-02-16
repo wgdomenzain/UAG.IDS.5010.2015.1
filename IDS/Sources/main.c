@@ -24,8 +24,8 @@
 #define	nBit7	0x80	//'10000000'
 
 //Time definitions
-#define nt15_msec	3500
-#define nt40_usec	35
+#define nt15_msec	10000
+#define nt40_usec	3500
 
 //LCD Control
 #define nIns	0
@@ -37,11 +37,9 @@
 #define Enable_0	GPIOB_PDOR &= 0xFE
 #define RS_1   		GPIOB_PDOR |= 0x02
 #define RS_0   		GPIOB_PDOR &= 0xFD
-
-
-
-
 #define	Set_GPIOB_PDOR(x)	(GPIOB_PDOR |= (1 << (x-1)))
+#define upperRow	0x80
+#define lowerRow	0xC0
 
 int int_Temp;
 
@@ -54,7 +52,9 @@ void cfgPorts(void);
 void initLCD(void);
 void delay(long time);
 void sendCode(int Code, int Data);
-
+void printText(unsigned int Coord, char* Array);
+void centerText(int Row, char Text[]);
+void createPuppet();
 /*@description: Initial Port Cfg 
 */
 			
@@ -67,13 +67,9 @@ int main(void)
 	//Set position to print character
 	sendCode(nIns, 0x80);
 	//Print character
-	char myName[] = {'D','O', 'N', 'A', 'L', 'D', 'O'};
-	int x;
-	for(x = 0; x < 10; x++){
-		sendCode(nData, myName[x]);
-	}
+	char myName[] = {"Donaldo"};
+	centerText(0x80, myName);
 	//sendCode(nIns, 0x80);
-	
 
 	for(;;)
 	{/* The logic for the buttons works if a pull-down 
@@ -214,4 +210,26 @@ void delay(long time)
 	{
 		time--;
 	}
+}
+void printText(unsigned int Coord, char* Array){
+	sendCode(nIns, Coord);
+	sendCode(nIns, Coord);
+	int x, length;
+	for(x = 0; Array[x]!=0l; x++){
+		length=x;
+		sendCode(nData, Array[x]);
+	}
+}
+void centerText(int Row, char Text[]){
+	int lon=0;
+	while(Text[lon]!=0l){
+		lon++;
+	}
+	lon=16-lon;
+	int center = lon/2;
+	int coord = Row+center;
+	printText(coord,Text);
+}
+void createPuppet(){
+	
 }
