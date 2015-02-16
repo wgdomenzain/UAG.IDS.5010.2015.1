@@ -4,8 +4,8 @@
 -g3
 -gdwarf-2
 -gstrict-dwarf
--I"C:/UAG/Projects/ButtonsLeds/Project_Headers"
--I"C:/UAG/Projects/ButtonsLeds/Project_Settings/Startup_Code"
+-I"C:/UAG/Projects/UAG.IDS.5010.2015.1/ButtonsLeds/Project_Headers"
+-I"C:/UAG/Projects/UAG.IDS.5010.2015.1/ButtonsLeds/Project_Settings/Startup_Code"
 -I"C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include"
 -I"C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/EWL_Runtime/include"
 -O0
