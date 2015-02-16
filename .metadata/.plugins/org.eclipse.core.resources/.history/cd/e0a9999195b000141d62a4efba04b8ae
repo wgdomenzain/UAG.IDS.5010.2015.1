@@ -1,0 +1,160 @@
+/*
+ * main implementation: use this 'C' sample to create your own application
+ *
+ */
+#include "derivative.h" /* include peripheral declarations */
+
+#define portBIn 		GPIOB_PDIR
+#define portB 			GPIOB_PDOR
+#define portD 			GPIOD_PDOR
+#define readPortB(x)	((GPIOB_PDIR>>(x)) & 0x00000001)
+#define turnRedLedOn 	0xFFFBFFFF
+#define turnBlueLedOn 	0xFFFFFFFD
+#define turnGreenLedOn 	0xFFF7FFFF
+#define turnLedsOff  	0xFFFFFFFF
+#define oneSec 			1600000
+//BUTTONS
+#define buttonPressed 0
+#define buttonNotPressed 1
+#define buttonA readPortB(0)
+#define buttonB readPortB(1)
+#define buttonC readPortB(2)
+#define Red 0
+#define Green 1
+#define Blue 2
+
+
+
+
+void cfgPorts(void);
+void Delay(long miliseg);
+int Case1(int C);
+
+
+int main(void)
+{
+	int Color=0;
+	cfgPorts();
+	portB=turnLedsOff;
+	portD=turnLedsOff;
+	
+	//Delay(oneSec);
+	
+	for(;;) 
+	{
+		if(buttonA == buttonPressed)
+		{
+			if(Color==0) {
+				portB=turnRedLedOn;
+				Delay(oneSec);
+				Color=1;
+			}
+			else if(Color==1)
+			{
+				portB=turnGreenLedOn;
+				Delay(oneSec);
+				Color=2;
+			}
+			else if(Color==2)
+			{
+				portD=turnBlueLedOn;
+				Delay(oneSec);
+				Color=0;
+			}
+		}
+		if(buttonB == buttonPressed) {
+			portB = turnRedLedOn;
+			Delay(oneSec);
+			portB= turnLedsOff;
+			Delay(oneSec);
+		}
+		if((buttonC == buttonPressed)&&(buttonB ==buttonPressed)) {
+			int x=1;
+			long delay = oneSec;
+			while(x>0){
+				
+				portB = turnRedLedOn;
+				Delay(delay);
+				portB= turnLedsOff;
+				Delay(delay);
+				delay/2;
+			}
+			
+		}
+		/*if(buttonB == buttonPressed)
+		{
+			portB=turnGreenLedOn;
+		}*/
+		/*if(buttonC == buttonPressed)
+		{
+			portD=turnBlueLedOn;
+		}*/
+		portB=turnLedsOff;
+		portD=turnLedsOff;
+		/*else
+		{
+			portB=turnLedsOff;
+		}
+		*/
+		/*
+		portB = 0xFFFBFFFF; //ROJO
+		Delay(1800000);
+		apagarLeds();
+		Delay(1800000);
+		portB = 0xFFF7FFFF; //VERDE
+		Delay(1800000);
+		apagarLeds();
+		Delay(1800000);
+		portD = 0xFFFFFFFD; //AZUL
+		Delay(1800000);
+		apagarLeds();
+		Delay(1800000);*/
+		
+	}
+	
+	return 0;
+}
+
+
+void cfgPorts(void)
+{
+	// TURN ON CLOCK´S
+	SIM_SCGC5 = SIM_SCGC5_PORTB_MASK;
+	SIM_SCGC5 |= SIM_SCGC5_PORTA_MASK;
+	SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;
+	
+	// TURN ON PIN MODE
+	PORTB_PCR0= PORT_PCR_MUX(1);
+	PORTB_PCR1= PORT_PCR_MUX(1);
+	PORTB_PCR2= PORT_PCR_MUX(1);
+	
+	PORTB_PCR18= PORT_PCR_MUX(1);
+	PORTB_PCR19= PORT_PCR_MUX(1);
+	PORTD_PCR1= PORT_PCR_MUX(1); 
+	
+	
+	// CONFIGURE PORTB FROM 31 TO 3 AS OUTPUT AND 0-2 AS INPUT
+	GPIOB_PDDR= 0xFFFFFFF8;
+	GPIOD_PDDR= 0xFFFFFFFF;
+}
+
+void Delay(long miliseg)
+{
+	do
+	{
+		miliseg=miliseg-1;
+	}
+	while(miliseg!=0);
+	
+}
+int Case1(int C){
+	if(C==0){
+		return 0;
+	}
+	if(C==1){
+		return 1;
+	}
+	if(C==2){
+		return 2;
+	}
+}

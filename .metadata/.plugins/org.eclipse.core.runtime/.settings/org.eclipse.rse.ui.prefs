@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-org.eclipse.rse.preferences.order.connections=AlanSanchez.Local;AlanSanchez.LED_FLASH_PnE U-MultiLink;AlanSanchez.LED_FLASH_PnE U-MultiLink Target
+org.eclipse.rse.preferences.order.connections=AlanSanchez.Local;AlanSanchez.IDS_FLASH_OpenSDA;AlanSanchez.IDS_FLASH_OpenSDA Target

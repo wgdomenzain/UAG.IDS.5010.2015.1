@@ -1,4 +1,4 @@
 activeuserprofiles=AlanSanchez;Team
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=Alan
-useridperkey=AlanSanchez.Local\=Alan;AlanSanchez.LED_FLASH_PnE U-MultiLink\=Alan;AlanSanchez.LED_FLASH_PnE U-MultiLink Target\=Alan;
+useridperkey=AlanSanchez.IDS_FLASH_OpenSDA\=walter;AlanSanchez.IDS_FLASH_OpenSDA Target\=walter;AlanSanchez.Local\=Alan;
