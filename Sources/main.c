@@ -1,9 +1,9 @@
 /*
-@author: 		Walter Gonzalez Domenzain
-@description: 	8020 Group
-@functions:		None
+@author: 		Juan Abraham Porras Brambila
+@description: 	5010 Group
+@functions:		Display LCD
 @environment: 	KL25Z
-@date: 			22/01/2014
+@date: 			16/02/2015
 @comments:		
 @version:		1.0 - Initial
 */
@@ -24,8 +24,10 @@
 #define	nBit7	0x80	//'10000000'
 
 //Time definitions
-#define nt15_msec	10000
-#define nt40_usec	3500
+#define nt15_msec		10000
+#define nt40_usec		3500
+#define nt1500_msec		nt15_msec*100
+#define nt3_sec			nt1500_msec*3
 
 //LCD Control
 #define nIns	0
@@ -54,7 +56,10 @@ void delay(long time);
 void sendCode(int Code, int Data);
 void printText(unsigned int Coord, char* Array);
 void centerText(int Row, char Text[]);
-void createPuppet();
+void createPuppetChar0();
+void createPuppetChar1();
+void createPuppetChar2();
+void clearScreen();
 /*@description: Initial Port Cfg 
 */
 int main(void)
@@ -64,54 +69,41 @@ int main(void)
 	//Initialize LCD
 	initLCD();
 	//Set position to print character
-	sendCode(nIns, 0x80);
+	sendCode(nIns, 0xC0);
 	//Print character
-	char myName[] = {"Donaldo"};
+	char myName[] = {"Juan"};
+	char herName[] = {"Andrea"};
 	centerText(0x80, myName);
-	//sendCode(nIns, 0x80);
-
-	createPuppet();
-	sendCode(nIns, 0x80);
-	sendCode(nData, 0x00);
-	for(;;)
-	{/* The logic for the buttons works if a pull-down 
-		resistor is used */
-		/*
-		if ((GPIOC_PDIR && 0x0F) == 0x00)
-		{// No button is pressed
-			//do noting
-		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x01)
-		{// Button 1 has been pressed
-			sendCode(nData, '1');
-		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x02)
-		{// Button 2 has been pressed
-			sendCode(nData, '2');
-		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x04) 
-		{// Button 3 has been pressed
-			sendCode(nData, '3');
-		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x08) 
-		{// Button 4 has been pressed
-			sendCode(nData, '4');	
-		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x03) 
-		{// Buttons 1&2 have been pressed
-			
-		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x07) 
-		{// Buttons 1&2&3 have been pressed
-			
-		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x0F) 
-		{// Buttons 1&2&3&4 have been pressed
-			
-		}*/
- 
-	}
+	centerText(0xC0, herName);
+	//sendCode(nIns, 0x80)
+	createPuppetChar0();//rose/char0
+//	sendCode(nIns, 0x80);
+//	sendCode(nData, 0x00);
+	createPuppetChar1();//rose2/char1..etc
+//	sendCode(nIns, 0x81);
+//	sendCode(nData, 0x01);
+//	createPuppetChar2();
+//	sendCode(nIns, 0x82);
+//	sendCode(nData, 0x02);
 	
+	for(;;){
+		centerText(0x80, myName);
+		centerText(0xC0, herName);
+		delay(nt1500_msec);
+		sendCode(nIns, 0x80);
+		sendCode(nData, 0x00);//rose
+		sendCode(nIns, 0x8F);
+		sendCode(nData, 0xDD);//1101 1101
+		sendCode(nIns, 0xC0);
+		sendCode(nData, 0x27);//0010 0111
+		delay(nt1500_msec);
+		sendCode(nIns, 0x80);
+		sendCode(nData, 0x01);//rose2
+		sendCode(nIns, 0x8F);
+		sendCode(nData, 0xAF);//1010 1111
+		sendCode(nIns, 0xC0);
+		sendCode(nData, 0xEB);//1110 1011
+	}
 	return 0;
 }
 
@@ -232,23 +224,68 @@ void centerText(int Row, char Text[]){
 	int coord = Row+center;
 	printText(coord,Text);
 }
-void createPuppet(){
+void clearScreen(int Coord){
+	sendCode(nIns, Coord);
+	sendCode(nData, 0x20);
+}
+void createPuppetChar0(){//ROSE ON CHAR 0
 	sendCode(nIns, 0x40);
-	sendConde(nData, 0x0E);
+	sendCode(nData, 0x0A);
 	sendCode(nIns, 0x41);
-	sendConde(nData, 0x0E);
+	sendCode(nData, 0x1F);
 	sendCode(nIns, 0x42);
-	sendConde(nData, 0x0E);
+	sendCode(nData, 0x0E);
+	
 	sendCode(nIns, 0x43);
-	sendConde(nData, 0x04);
+	sendCode(nData, 0x04);
 	
 	sendCode(nIns, 0x44);
-	sendConde(nData, 0x1F);
-	
+	sendCode(nData, 0x05);
 	sendCode(nIns, 0x45);
-	sendConde(nData, 0x04);
+	sendCode(nData, 0x16);
+	
 	sendCode(nIns, 0x46);
-	sendConde(nData, 0x0A);
+	sendCode(nData, 0x0C);
 	sendCode(nIns, 0x47);
-	sendConde(nData, 0x11);
+	sendCode(nData, 0x04);
+}
+void createPuppetChar1(){//ROSE ON CHAR 1
+	sendCode(nIns, 0x48);
+	sendCode(nData, 0x00);
+	sendCode(nIns, 0x49);
+	sendCode(nData, 0x0A);
+	sendCode(nIns, 0x4A);
+	sendCode(nData, 0x1F);
+	sendCode(nIns, 0x4B);
+	sendCode(nData, 0x0E);
+	
+	sendCode(nIns, 0x4C);
+	sendCode(nData, 0x04);
+	
+	sendCode(nIns, 0x4D);
+	sendCode(nData, 0x17);	
+	sendCode(nIns, 0x4E);
+	sendCode(nData, 0x1C);
+	sendCode(nIns, 0x4F);
+	sendCode(nData, 0x04);
+}
+void createPuppetChar2(){//HEART
+	sendCode(nIns, 0x50);
+	sendCode(nData, 0x0A);
+	sendCode(nIns, 0x51);
+	sendCode(nData, 0x15);
+	sendCode(nIns, 0x52);
+	sendCode(nData, 0x0A);
+	
+	sendCode(nIns, 0x53);
+	sendCode(nData, 0x04);
+	/*
+	sendCode(nIns, 0x54);
+	sendCode(nData, 0x00);
+	sendCode(nIns, 0x55);
+	sendCode(nData, 0x0A);
+	sendCode(nIns, 0x56);
+	sendCode(nData, 0x00);
+	sendCode(nIns, 0x57);
+	sendCode(nData, 0x1B);*/
 }
