@@ -24,8 +24,8 @@
 #define	nBit7	0x80	//'10000000'
 
 //Time definitions
-#define nt15_msec	3500
-#define nt40_usec	35
+#define nt15_msec	10000
+#define nt40_usec	3500
 
 //LCD Control
 #define nIns	0
@@ -37,11 +37,12 @@
 #define Enable_0	GPIOB_PDOR &= 0xFE
 #define RS_1   		GPIOB_PDOR |= 0x02
 #define RS_0   		GPIOB_PDOR &= 0xFD
-
-
-
-
 #define	Set_GPIOB_PDOR(x)	(GPIOB_PDOR |= (1 << (x-1)))
+#define upperRow	0x80
+#define lowerRow	0xC0
+
+#define character0 0;
+
 
 int int_Temp;
 
@@ -54,7 +55,9 @@ void cfgPorts(void);
 void initLCD(void);
 void delay(long time);
 void sendCode(int Code, int Data);
-
+void printText(unsigned int Coord, char* Array);
+void centerText(int Row, char Text[]);
+void monito();
 /*@description: Initial Port Cfg 
 */
 			
@@ -65,23 +68,14 @@ int main(void)
 	//Initialize LCD
 	initLCD();
 	//Set position to print character
-	sendCode(nIns, 0x80);
-	sendCode(nData, 'J');
-	sendCode(nData, 'e');
-	sendCode(nData, 's');
-	sendCode(nData, 's');
-	sendCode(nData, 'i');
-	sendCode(nData, 'c');
-	sendCode(nData, 'a');
-	
+//	sendCode(nIns, 0x80);
 	//Print character
-	/*char myName[] = {'J','e', 's', 's', 'i', 'c', 'a'};
-	int x;
-	for(x = 0; x < 10; x++){
-		sendCode(nData, myName[x]);
-	}*/
+	//char myName[] = {"Jessica Arvizu"};
+	//centerText(0x80, myName);
+	monito();
+		sendCode(nIns,0x80);
+		sendCode(nData,0x00);
 	//sendCode(nIns, 0x80);
-	
 
 	for(;;)
 	{/* The logic for the buttons works if a pull-down 
@@ -223,4 +217,42 @@ void delay(long time)
 		time--;
 	}
 }
+void printText(unsigned int Coord, char* Array){
+	sendCode(nIns, Coord);
+	sendCode(nIns, Coord);
+	int x, length;
+	for(x = 0; Array[x]!=0l; x++){
+		length=x;
+		sendCode(nData, Array[x]);
+	}
+}
+void centerText(int Row, char Text[]){
+	int lon=0;
+	while(Text[lon]!=0l){
+		lon++;
+	}
+	lon=16-lon;
+	int center = lon/2;
+	int coord = Row+center;
+	printText(coord,Text);
+}
+void monito(void)
+{
+	sendCode(nIns,0x40);
+	sendCode(nData,0x0E);
+	sendCode(nIns,0x41);
+	sendCode(nData,0x0E);
+	sendCode(nIns,0x42);
+	sendCode(nData,0x0E);
+	sendCode(nIns,0x43);
+	sendCode(nData,0x04);
+	sendCode(nIns,0x44);
+	sendCode(nData,0x1f);
+	sendCode(nIns,0x45);
+	sendCode(nData,0x04);
+	sendCode(nIns,0x46);
+	sendCode(nData,0x0A);
+	sendCode(nIns,0x47);
+	sendCode(nData,0x11);
 
+}
