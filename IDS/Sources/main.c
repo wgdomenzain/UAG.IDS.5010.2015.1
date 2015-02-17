@@ -24,12 +24,13 @@
 #define	nBit7	0x80	//'10000000'
 
 //Time definitions
-#define nt15_msec	3500
-#define nt40_usec	35
+#define nt15_msec	10000
+#define nt40_usec	5000
 
 //LCD Control
 #define nIns	0
 #define nData	1
+#define nCaracter 2
 
 #define PortLCD    	GPIOC_PDOR
 //Enable connected to portb_01
@@ -38,6 +39,10 @@
 #define RS_1   		GPIOB_PDOR |= 0x02
 #define RS_0   		GPIOB_PDOR &= 0xFD
 
+
+
+#define upperRow 0x80
+#define lowerRow 0xC0
 
 
 
@@ -54,7 +59,8 @@ void cfgPorts(void);
 void initLCD(void);
 void delay(long time);
 void sendCode(int Code, int Data);
-
+void printText(unsigned char coord ,char* array[]);
+void crearMonito();
 /*@description: Initial Port Cfg 
 */
 			
@@ -65,21 +71,21 @@ int main(void)
 	//Initialize LCD
 	initLCD();
 	//Set position to print character
-	sendCode(nIns, 0x80);
+	sendCode(nIns, 0x40);
+	sendCode(nData,0x0E);
+	sendCode(nData,0x0E);
+	sendCode(nData,0x0E);
+	sendCode(nData,0x04);
+	sendCode(nData,0x1F);
+	sendCode(nData,0x04);
+	sendCode(nData,0x0A);
+	sendCode(nData,0x11);
+	
+	
 	//Print characters
 	
-	sendCode(nData, 'C');
-	sendCode(nData, 'A');
-	sendCode(nData, 'R');
-	sendCode(nData, 'L');
-	sendCode(nData, 'O');
-	sendCode(nData, 'S');
-	sendCode(nData, ' ');
-	sendCode(nData, 'P');
-	sendCode(nData, 'A');
-	sendCode(nData, 'Y');
-	sendCode(nData, 'A');
-	sendCode(nData, 'N');
+	sendCode(nIns,0x80);
+	sendCode(nData,0x00);
 
 	for(;;)
 	{
@@ -170,6 +176,12 @@ void sendCode(int Code, int Data)
 		Enable_0;
 		RS_0;
 	}
+	else if(Code==nCaracter)
+	{
+		RS_1;
+		
+	}
+	
 }
 void delay(long time)
 {
@@ -177,4 +189,15 @@ void delay(long time)
 	{
 		time--;
 	}
-}                                                                                                                                                                                          
+}                                          
+
+void printText(unsigned char coord ,char* array[])
+{
+	sendCode(nIns,coord);
+
+	int  x=0;
+	for(x=0;array[x]!=0l;x++)
+	{
+		sendCode(nData,array[x]);
+	}
+}
