@@ -24,24 +24,22 @@
 #define	nBit7	0x80	//'10000000'
 
 //Time definitions
-#define nt15_msec	3500
-#define nt40_usec	35
+#define nt15_msec	10000
+#define nt40_usec	3500
 
 //LCD Control
 #define nIns	0
 #define nData	1
 
-#define PortLCD    	GPIOB_PDOR
+#define PortLCD    	GPIOC_PDOR
 //Enable connected to portb_01
-#define Enable_1	GPIOC_PDOR |= 0x01
-#define Enable_0	GPIOC_PDOR &= 0xFE
-#define RS_1   		GPIOC_PDOR |= 0x02
-#define RS_0   		GPIOC_PDOR &= 0xFD
-
-
-
-
-#define	Set_GPIOC_PDOR(x)	(GPIOC_PDOR |= (1 << (x-1)))
+#define Enable_1	GPIOB_PDOR |= 0x01
+#define Enable_0	GPIOB_PDOR &= 0xFE
+#define RS_1   		GPIOB_PDOR |= 0x02
+#define RS_0   		GPIOB_PDOR &= 0xFD
+#define	Set_GPIOB_PDOR(x)	(GPIOB_PDOR |= (1 << (x-1)))
+#define upperRow	0x80
+#define lowerRow	0xC0
 
 int int_Temp;
 
@@ -54,7 +52,9 @@ void cfgPorts(void);
 void initLCD(void);
 void delay(long time);
 void sendCode(int Code, int Data);
-
+void printText(unsigned int Coord, char* Array);
+void centerText(int Row, char Text[]);
+void createChar();
 /*@description: Initial Port Cfg 
 */
 			
@@ -65,17 +65,25 @@ int main(void)
 	//Initialize LCD
 	initLCD();
 	//Set position to print character
-	sendCode(nIns, 0x83);
+	//sendCode(nIns, 0x80);
 	//Print character
-	sendCode(nData, 'W');
-	sendCode(nIns, 0x80);
+	char up[] = {"Alan"};
+	char down[] = {"Sanchez"};
+	printText(0x80,up);
+	printText(0xC0,down);
 	
+	//centerText(0x80, myName);
+	//sendCode(nData, 0x80);
+	
+	//createChar();
+	//sendCode(nIns,0x80);
+	//sendCode(nData,0x00);
 
 	for(;;)
 	{/* The logic for the buttons works if a pull-down 
 		resistor is used */
-		
-		/*if ((GPIOC_PDIR && 0x0F) == 0x00)
+		/*
+		if ((GPIOC_PDIR && 0x0F) == 0x00)
 		{// No button is pressed
 			//do noting
 		}
@@ -118,25 +126,23 @@ void cfgPorts(void)
 	//Turn on clock for portb
 	SIM_SCGC5 = SIM_SCGC5_PORTB_MASK;	
 	//Turn on clock for portd
-	SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;	
+	//SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;	
 	////Turn on clock for portc
 	SIM_SCGC5 |= SIM_SCGC5_PORTC_MASK;
 	
 	/* Set pins of PORTB as GPIO */
-	PORTB_PCR0= PORT_PCR_MUX(1);
-	PORTB_PCR1= PORT_PCR_MUX(1);
-	PORTB_PCR2=(0|PORT_PCR_MUX(1));
-	PORTB_PCR3=(0|PORT_PCR_MUX(1));
-	PORTB_PCR4=(0|PORT_PCR_MUX(1));
-	PORTB_PCR5=(0|PORT_PCR_MUX(1));
-	PORTB_PCR6=(0|PORT_PCR_MUX(1));
-	PORTB_PCR7=(0|PORT_PCR_MUX(1));
+	PORTC_PCR0 = PORT_PCR_MUX(1);
+	PORTC_PCR1 = PORT_PCR_MUX(1);
+	PORTC_PCR2 = PORT_PCR_MUX(1);
+	PORTC_PCR3 = PORT_PCR_MUX(1);
+	PORTC_PCR4 = PORT_PCR_MUX(1);
+	PORTC_PCR5 = PORT_PCR_MUX(1);
+	PORTC_PCR6 = PORT_PCR_MUX(1);
+	PORTC_PCR7 = PORT_PCR_MUX(1);
 	
 	/* Set pins of PORTC as GPIO */
-	//PORTC_PCR0= PORT_PCR_MUX(1);
-	PORTC_PCR1= PORT_PCR_MUX(1);
-	PORTC_PCR2= PORT_PCR_MUX(1);
-	//PORTC_PCR3= PORT_PCR_MUX(1);
+	PORTB_PCR0= PORT_PCR_MUX(1);
+	PORTB_PCR1= PORT_PCR_MUX(1);
 	
 	/* Set pins of PORTD as GPIO */
 	/*PORTD_PCR0= PORT_PCR_MUX(1);
@@ -151,10 +157,7 @@ void cfgPorts(void)
 	//Initialize PortB
 	GPIOB_PDOR = 0x00;
 	
-	//Initialize PortD 
-	//GPIOD_PDOR = 0x00;
-	
-	//Initialize PortC 
+	//Initialize PortC
 	GPIOC_PDOR = 0x00;
 
 	//Configure PortB as outputs
@@ -164,7 +167,7 @@ void cfgPorts(void)
 	//GPIOD_PDDR = 0xFF;
 	
 	//Configure PortC as outputs
-	GPIOC_PDOR = 0xFF;
+	GPIOC_PDDR = 0xFF;
 }
 
 void initLCD(void)
@@ -176,7 +179,7 @@ void initLCD(void)
 	/* Loop for sending each character from the array */
 	for(i=0;i<5;i++)
 	{										
-		sendCode(nIns, InitializeLCD[i]);	/* send initialization instructions */			
+		sendCode(nIns, InitializeLCD[i]);	/* send initialization instructions */
 	}
 	
 }
@@ -204,7 +207,7 @@ void sendCode(int Code, int Data)
 	{
 		RS_1;
 		Enable_1;
-		delay(nt40_usec);
+		delay(nt15_msec);
 		Enable_0;
 		RS_0;
 	}
@@ -216,9 +219,42 @@ void delay(long time)
 		time--;
 	}
 }
+void printText(unsigned int Coord, char* Array){
+	sendCode(nIns, Coord);
+	sendCode(nIns, Coord);
+	int x, length;
+	for(x = 0; Array[x]!=0l; x++){
+		length=x;
+		sendCode(nData, Array[x]);
+	}
+}
 
+void centerText(int Row, char Text[]){
+	int lon=0;
+	while(Text[lon]!=0l){
+		lon++;
+	}
+	lon=16-lon;
+	int center = lon/2;
+	int coord = Row+center;
+	printText(coord,Text);
+}
 
-
-
-
-
+void createChar(){
+	sendCode(nIns,0x40);
+	sendCode(nData,0x0E);
+	sendCode(nIns,0x41);
+	sendCode(nData,0x0E);
+	sendCode(nIns,0x42);
+	sendCode(nData,0x0E);
+	sendCode(nIns,0x43);
+	sendCode(nData,0x04);
+	sendCode(nIns,0x44);
+	sendCode(nData,0x1F);
+	sendCode(nIns,0x45);
+	sendCode(nData,0x04);
+	sendCode(nIns,0x46);
+	sendCode(nData,0x0A);
+	sendCode(nIns,0x47);
+	sendCode(nData,0x11);
+}
