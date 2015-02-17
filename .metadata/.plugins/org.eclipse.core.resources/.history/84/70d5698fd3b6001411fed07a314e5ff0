@@ -67,17 +67,17 @@ int main(void)
 	//Set position to print character
 	//sendCode(nIns, 0x80);
 	//Print character
-	//char up[] = {"Alan"};
-	//char down[] = {"Sanchez"};
-	//printText(0x80,up);
-	//printText(0xC0,down);
+	char up[] = {"Alan"};
+	char down[] = {"Sanchez"};
+	printText(0x80,up);
+	printText(0xC0,down);
 	
 	//centerText(0x80, myName);
 	//sendCode(nData, 0x80);
 	
-	createChar();
-	sendCode(nIns,0x80);
-	sendCode(nData,0x00);
+	//createChar();
+	//sendCode(nIns,0x80);
+	//sendCode(nData,0x00);
 
 	for(;;)
 	{/* The logic for the buttons works if a pull-down 
