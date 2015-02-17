@@ -65,11 +65,15 @@ int main(void)
 	//Initialize LCD
 	initLCD();
 	//Set position to print character
-	sendCode(nIns, 0x80);
-	//Print character
-	char myName[] = {"Donaldo"};
-	centerText(0x80, myName);
 	//sendCode(nIns, 0x80);
+	//Print character
+	//char myName[] = {"Donaldo"};
+	//centerText(0x80, myName);
+	//sendCode(nIns, 0x80);
+	
+	createPuppet();
+	sendCode(nIns,0x80);
+	sendCode(nData,0x00);
 
 	for(;;)
 	{/* The logic for the buttons works if a pull-down 
@@ -231,5 +235,21 @@ void centerText(int Row, char Text[]){
 	printText(coord,Text);
 }
 void createPuppet(){
+	sendCode(nIns,0x39);
+	sendCode(nData,0x0E);
+	sendCode(nIns,0x41);
+	sendCode(nData,0x0E);
+	sendCode(nIns,0x42);
+	sendCode(nData,0x0E);
+	sendCode(nIns,0x43);
+	sendCode(nData,0x04);
+	sendCode(nIns,0x44);
+	sendCode(nData,0x1F);
+	sendCode(nIns,0x45);
+	sendCode(nData,0x04);
+	sendCode(nIns,0x46);
+	sendCode(nData,0x0A);
+	sendCode(nIns,0x47);
+	sendCode(nData,0x11);
 	
 }
