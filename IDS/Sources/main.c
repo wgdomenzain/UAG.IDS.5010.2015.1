@@ -24,8 +24,8 @@
 #define	nBit7	0x80	//'10000000'
 
 //Time definitions
-#define nt15_msec	3500
-#define nt40_usec	35
+#define nt15_msec	10000
+#define nt40_usec	3500
 
 //LCD Control
 #define nIns	0
@@ -37,7 +37,8 @@
 #define Enable_0	GPIOB_PDOR &= 0xFE
 #define RS_1   		GPIOB_PDOR |= 0x02
 #define RS_0   		GPIOB_PDOR &= 0xFD
-
+#define upperRow  0x80
+#define lowerRow  0xc0
 
 
 
@@ -54,7 +55,9 @@ void cfgPorts(void);
 void initLCD(void);
 void delay(long time);
 void sendCode(int Code, int Data);
-
+void printText (unsigned int Coord, char* Array);
+void centerText (int Row, char Text[]);
+void guardar (void);
 /*@description: Initial Port Cfg 
 */
 			
@@ -65,17 +68,21 @@ int main(void)
 	//Initialize LCD
 	initLCD();
 	//Set position to print character
-	sendCode(nIns, 0x80);
+	//sendCode(nIns, 0x00);
+	guardar();
+	
 	//Print characters
 	
-	sendCode(nData, 'A');
-	sendCode(nData, 'l');
-	sendCode(nData, 'a');
-	sendCode(nData, 'n');
-	sendCode(nData, 'D');
-	sendCode(nData, 'm');
-
-
+	//sendCode(nData, 'A');
+	//sendCode(nData, 'l');
+	//sendCode(nData, 'a');
+	//sendCode(nData, 'n');
+	//sendCode(nData, '');
+	//sendCode(nData, 'D');
+	//sendCode(nData, 'm');
+	//sendCode(nData, 'G');
+	//char myName[] = {"Alan Dm"};
+	//centerText (0x80, myName);
 	for(;;)
 	{
  
@@ -173,7 +180,58 @@ void delay(long time)
 		time--;
 	}
 }
-
-
-
+void printText (unsigned int Coord, char* Array)
+{
+	sendCode (nIns,Coord);
+	sendCode (nIns,Coord);
+	
+	int x,lenght ;
+	
+	for ( x = 0; Array[x]!= 0l; x++)
+	{	lenght =x;
+		sendCode (nData,Array[x]);
+		
+	}
+}
+void centerText (int Row, char Text[])
+{
+	
+	int lon =0;
+	while (Text [lon]!=0l)
+	{
+		lon ++;
+	}
+	lon = 16-lon;
+	int center = lon /2;
+	int coord = Row + center;
+	printText (coord, Text);
+}
+void guardar (void)
+{
+	sendCode (nIns,0x40);
+	sendCode (nData, 0x0E);
+	sendCode (nIns,0x41);
+	sendCode (nData, 0x0E);
+	sendCode (nIns,0x42);
+	sendCode (nData, 0x0E);
+	
+	sendCode (nIns,0x43);
+	sendCode (nData, 0x04);
+	
+	sendCode (nIns,0x44);
+	sendCode (nData, 0x1F);
+	
+	sendCode (nIns,0x45);
+	sendCode (nData, 0x04);
+	
+	sendCode (nIns,0x46);
+	sendCode (nData, 0x0A);
+	
+	sendCode (nIns,0x47);
+	sendCode (nData, 0x11);
+	
+	sendCode(nIns, 0x080);
+	sendCode (nData,0x00);
+	
+}
 
