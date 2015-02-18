@@ -141,7 +141,7 @@ int main(void)
 		if(ban3 > 2){
 			ban3 = 0;
 		}
-		delay(nt1_sec);
+		delay(nt1_sec/2);
 	}
 	
 	return 0;
