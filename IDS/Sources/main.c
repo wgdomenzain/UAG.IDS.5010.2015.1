@@ -24,8 +24,9 @@
 #define	nBit7	0x80	//'10000000'
 
 //Time definitions
-#define nt15_msec	10000
+#define nt15_msec	6000
 #define nt40_usec	3500
+#define nt1_sec		2600000
 
 //LCD Control
 #define nIns	0
@@ -56,7 +57,8 @@ void delay(long time);
 void sendCode(int Code, int Data);
 void printText(unsigned char coord, char* array);
 void centerText(int row, char* array);
-void monito();
+void guardarCaracteres();
+void baileMonos(int ban);
 
 
 /*@description: Initial Port Cfg 
@@ -78,46 +80,68 @@ int main(void)
 	//centerText(1, myName);
 	//centerText(2, myName2);
 	//sendCode(nIns, 0x80);
-	
-	monito();
+	int x = 0, ban1 = 0, ban2 = 0, ban3 = 0, pos1 = 0xC1, pos2 = pos1+4, pos3 = pos2+4, pos4 = pos3+4;
+	guardarCaracteres();
 	
 	for(;;)
-	{/* The logic for the buttons works if a pull-down 
-		resistor is used */
-		/*
-		if ((GPIOC_PDIR && 0x0F) == 0x00)
-		{// No button is pressed
-			//do noting
+	{
+		for(x = 0; x < 16; x++){
+			if(x != 8 && x != 3 && x != 6 && x != 10 && x != 14){
+				sendCode(nIns, 0x80+x);
+				if(ban2 == 0){
+					sendCode(nData, 0x02);
+				}else{
+					sendCode(nData, 0x03);
+				}
+			}
 		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x01)
-		{// Button 1 has been pressed
-			sendCode(nData, '1');
+		for(x = 0; x < 16; x++){
+			sendCode(nIns, 0xC0+x);
+			if(ban2 == 0){
+				sendCode(nData, 0x03);
+			}else{
+				sendCode(nData, 0x02);
+			}
 		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x02)
-		{// Button 2 has been pressed
-			sendCode(nData, '2');
+		sendCode(nIns, 0x83);
+		sendCode(nData, 0x07);
+		sendCode(nIns, 0x86);
+		sendCode(nData, 0x07);
+		sendCode(nIns, 0x8A);
+		sendCode(nData, 0x07);
+		sendCode(nIns, 0x8E);
+		sendCode(nData, 0x07);
+		
+		if(ban1 == 0){
+			sendCode(nIns, 0x88);
+			sendCode(nData, 0x00);
+			ban1 = 1;
+		}else{
+			sendCode(nIns, 0x88);
+			sendCode(nData, 0x01);
+			ban1 = 0;
 		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x04) 
-		{// Button 3 has been pressed
-			sendCode(nData, '3');
+		
+		//baile monos
+		sendCode(nIns, pos1);
+		baileMonos(ban3);
+		sendCode(nIns, pos2);
+		baileMonos(ban3);
+		sendCode(nIns, pos3);
+		baileMonos(ban3);
+		sendCode(nIns, pos4);
+		baileMonos(ban3);
+		ban3++;
+		
+		if(ban2 == 0){
+			ban2 = 1;
+		}else{
+			ban2 = 0;
 		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x08) 
-		{// Button 4 has been pressed
-			sendCode(nData, '4');	
+		if(ban3 > 2){
+			ban3 = 0;
 		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x03) 
-		{// Buttons 1&2 have been pressed
-			
-		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x07) 
-		{// Buttons 1&2&3 have been pressed
-			
-		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x0F) 
-		{// Buttons 1&2&3&4 have been pressed
-			
-		}*/
- 
+		delay(nt1_sec);
 	}
 	
 	return 0;
@@ -239,24 +263,161 @@ void centerText(int row, char* array){
 		printText(0xC0+pos, array);
 	}
 }
-void monito(){
+void guardarCaracteres(){
+	//ccaracter 0
 	sendCode(nIns, 0x40);
-	sendCode(nData, 0x0E);
+	sendCode(nData, 0x05);
 	sendCode(nIns, 0x41);
-	sendCode(nData, 0x0E);
+	sendCode(nData, 0x14);
 	sendCode(nIns, 0x42);
-	sendCode(nData, 0x0E);
-	sendCode(nIns, 0x43);
 	sendCode(nData, 0x04);
+	sendCode(nIns, 0x43);
+	sendCode(nData, 0x0E);
 	sendCode(nIns, 0x44);
 	sendCode(nData, 0x1F);
 	sendCode(nIns, 0x45);
-	sendCode(nData, 0x04);
+	sendCode(nData, 0x0E);
 	sendCode(nIns, 0x46);
-	sendCode(nData, 0x0A);
+	sendCode(nData, 0x04);
 	sendCode(nIns, 0x47);
 	sendCode(nData, 0x11);
 	
-	sendCode(nIns, 0x80);
+	//caracter 1
+	sendCode(nIns, 0x48);
+	sendCode(nData, 0x14);
+	sendCode(nIns, 0x49);
+	sendCode(nData, 0x05);
+	sendCode(nIns, 0x4A);
+	sendCode(nData, 0x04);
+	sendCode(nIns, 0x4B);
+	sendCode(nData, 0x0A);
+	sendCode(nIns, 0x4C);
+	sendCode(nData, 0x15);
+	sendCode(nIns, 0x4D);
+	sendCode(nData, 0x0A);
+	sendCode(nIns, 0x4E);
+	sendCode(nData, 0x14);
+	sendCode(nIns, 0x4F);
+	sendCode(nData, 0x02);
+	
+	//caracter 2
+	sendCode(nIns, 0x50);
+	sendCode(nData, 0x05);
+	sendCode(nIns, 0x51);
+	sendCode(nData, 0x08);
+	sendCode(nIns, 0x52);
 	sendCode(nData, 0x00);
+	sendCode(nIns, 0x53);
+	sendCode(nData, 0x02);
+	sendCode(nIns, 0x54);
+	sendCode(nData, 0x10);
+	sendCode(nIns, 0x55);
+	sendCode(nData, 0x04);
+	sendCode(nIns, 0x56);
+	sendCode(nData, 0x01);
+	sendCode(nIns, 0x57);
+	sendCode(nData, 0x08);
+	
+	//caracter 3
+	sendCode(nIns, 0x58);
+	sendCode(nData, 0x08);
+	sendCode(nIns, 0x59);
+	sendCode(nData, 0x02);
+	sendCode(nIns, 0x5A);
+	sendCode(nData, 0x04);
+	sendCode(nIns, 0x5B);
+	sendCode(nData, 0x10);
+	sendCode(nIns, 0x5C);
+	sendCode(nData, 0x01);
+	sendCode(nIns, 0x5D);
+	sendCode(nData, 0x08);
+	sendCode(nIns, 0x5E);
+	sendCode(nData, 0x02);
+	sendCode(nIns, 0x5F);
+	sendCode(nData, 0x08);
+	
+	//caracter 4
+	sendCode(nIns, 0x60);
+	sendCode(nData, 0x0E);
+	sendCode(nIns, 0x61);
+	sendCode(nData, 0x0E);
+	sendCode(nIns, 0x62);
+	sendCode(nData, 0x1E);
+	sendCode(nIns, 0x63);
+	sendCode(nData, 0x0D);
+	sendCode(nIns, 0x64);
+	sendCode(nData, 0x06);
+	sendCode(nIns, 0x65);
+	sendCode(nData, 0x04);
+	sendCode(nIns, 0x66);
+	sendCode(nData, 0x0A);
+	sendCode(nIns, 0x67);
+	sendCode(nData, 0x09);
+	
+	//caracter 5
+	sendCode(nIns, 0x68);
+	sendCode(nData, 0x0E);
+	sendCode(nIns, 0x69);
+	sendCode(nData, 0x0E);
+	sendCode(nIns, 0x6A);
+	sendCode(nData, 0x0F);
+	sendCode(nIns, 0x6B);
+	sendCode(nData, 0x16);
+	sendCode(nIns, 0x6C);
+	sendCode(nData, 0x0C);
+	sendCode(nIns, 0x6D);
+	sendCode(nData, 0x04);
+	sendCode(nIns, 0x6E);
+	sendCode(nData, 0x0A);
+	sendCode(nIns, 0x6F);
+	sendCode(nData, 0x12);
+	
+	//caracter 6
+	sendCode(nIns, 0x70);
+	sendCode(nData, 0x0E);
+	sendCode(nIns, 0x71);
+	sendCode(nData, 0x0E);
+	sendCode(nIns, 0x72);
+	sendCode(nData, 0x0E);
+	sendCode(nIns, 0x73);
+	sendCode(nData, 0x04);
+	sendCode(nIns, 0x74);
+	sendCode(nData, 0x0E);
+	sendCode(nIns, 0x75);
+	sendCode(nData, 0x15);
+	sendCode(nIns, 0x76);
+	sendCode(nData, 0x0A);
+	sendCode(nIns, 0x77);
+	sendCode(nData, 0x11);
+	
+	//caracter 7
+	sendCode(nIns, 0x78);
+	sendCode(nData, 0x02);
+	sendCode(nIns, 0x79);
+	sendCode(nData, 0x0A);
+	sendCode(nIns, 0x7A);
+	sendCode(nData, 0x03);
+	sendCode(nIns, 0x7B);
+	sendCode(nData, 0x15);
+	sendCode(nIns, 0x7C);
+	sendCode(nData, 0x04);
+	sendCode(nIns, 0x7D);
+	sendCode(nData, 0x0C);
+	sendCode(nIns, 0x7E);
+	sendCode(nData, 0x1D);
+	sendCode(nIns, 0x7F);
+	sendCode(nData, 0x08);
+}
+void baileMonos(int ban){
+	switch(ban){
+		case 0:
+			sendCode(nData, 0x04);
+			break;
+		case 1:
+			sendCode(nData, 0x05);
+			break;
+		case 2:
+			sendCode(nData, 0x06);
+			break;
+	}
 }
