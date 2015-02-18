@@ -1673,3 +1673,495 @@ org.eclipse.debug.core.DebugException: Target request failed: ARM GDI Protocol A
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
 !SUBENTRY 1 org.eclipse.cdt.debug.core 4 5010 2015-02-16 10:21:06.962
 !MESSAGE Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-16 11:25:46.696
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+org.eclipse.cdt.debug.core.cdi.CDIException: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device[ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device]
+	at com.freescale.cdt.debug.cw.core.DebugErrorUtils.handleDebugError(DebugErrorUtils.java:92)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.doTerminate(Target.java:1403)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.access$2(Target.java:1344)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target$TerminateJob.run(Target.java:1302)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-16 11:25:46.699
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 1
+org.eclipse.debug.core.DebugException: Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.throwDebugException(CDebugElement.java:292)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.requestFailed(CDebugElement.java:259)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.targetRequestFailed(CDebugElement.java:247)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.terminate(CDebugTarget.java:576)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.terminateConnection(TargetConnectionLostHandler.java:278)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.performAction(TargetConnectionLostHandler.java:166)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.access$0(TargetConnectionLostHandler.java:106)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler$1.run(TargetConnectionLostHandler.java:73)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:155)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3768)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2698)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2662)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2496)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:675)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:82)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+!SUBENTRY 1 org.eclipse.cdt.debug.core 4 5010 2015-02-16 11:25:46.699
+!MESSAGE Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+!SESSION 2015-02-17 10:50:49.105 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-02-17 10:50:53.957
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 2 0 2015-02-17 10:50:55.080
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-02-17 10:50:55.080
+!MESSAGE Commands should really have a category: plug-in='com.freescale.core.debugger.ui.cdt', id='com.freescale.cdt.debug.cw.core.ui.rse.export.template', categoryId='com.freescale.categories.rse.freescale'
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-17 10:51:06.531
+!MESSAGE Environment Variable Dependency not resolved for 'ARMGNUDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-17 10:51:06.538
+!MESSAGE Environment Variable Dependency not resolved for 'ARMSummonDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-17 10:51:06.545
+!MESSAGE Environment Variable Dependency not resolved for 'ARMYagartoDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-17 10:51:06.553
+!MESSAGE Environment Variable Dependency not resolved for 'ARMdevkitProDirEnv'.
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2015-02-17 10:51:44.108
+!MESSAGE External elements location 'C:\Users\Ana Mariel\Desktop\CW MCU v10.4\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2015-02-17 10:51:55.197
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY org.eclipse.osgi 2 0 2015-02-17 10:52:05.392
+!MESSAGE While loading class "com.processorexpert.packages.IPackageFilter", thread "Thread[Worker-4,5,main]" timed out waiting (5024ms) for thread "Thread[Worker-5,5,main]" to finish starting bundle "com.freescale.processorexpert.core_1.4.0.RT4_b1316-1577 [338]". To avoid deadlock, thread "Thread[Worker-4,5,main]" is proceeding but "com.processorexpert.packages.IPackageFilter" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/com.freescale.processorexpert.core_1.4.0.RT4_b1316-1577/" by thread "Worker-5".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1087)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:297)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:462)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.defineClass(DefaultClassLoader.java:188)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.defineClass(ClasspathManager.java:601)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findClassImpl(ClasspathManager.java:567)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClassImpl(ClasspathManager.java:490)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass_LockClassLoader(ClasspathManager.java:478)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:458)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.processorexpert.core.compiler.AHWT.main(AHWT.java:343)
+	at com.processorexpert.core.application.PE_API_PEApplication.globalInitialization(PE_API_PEApplication.java:457)
+	at com.processorexpert.core.application.PE_API_PEApplication$1.run(PE_API_PEApplication.java:230)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 33 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1087)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:297)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:462)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.defineClass(DefaultClassLoader.java:188)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.defineClass(ClasspathManager.java:601)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findClassImpl(ClasspathManager.java:567)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClassImpl(ClasspathManager.java:490)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass_LockClassLoader(ClasspathManager.java:478)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:458)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.processorexpert.core.compiler.AHWT.main(AHWT.java:343)
+	at com.processorexpert.core.application.PE_API_PEApplication.globalInitialization(PE_API_PEApplication.java:457)
+	at com.processorexpert.core.application.PE_API_PEApplication$1.run(PE_API_PEApplication.java:230)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-17 10:52:52.916
+!MESSAGE NLS unused message: trace_trigger_dv_error_title in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-17 10:52:52.921
+!MESSAGE NLS unused message: trace_trigger_dv_error_message in: com.freescale.sa.mcu.analysispoints.nls.ui
+!SESSION 2015-02-17 11:17:30.100 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-02-17 11:17:44.739
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 2 0 2015-02-17 11:17:47.666
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-02-17 11:17:47.666
+!MESSAGE Commands should really have a category: plug-in='com.freescale.core.debugger.ui.cdt', id='com.freescale.cdt.debug.cw.core.ui.rse.export.template', categoryId='com.freescale.categories.rse.freescale'
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-17 11:18:08.898
+!MESSAGE Environment Variable Dependency not resolved for 'ARMGNUDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-17 11:18:08.902
+!MESSAGE Environment Variable Dependency not resolved for 'ARMSummonDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-17 11:18:08.906
+!MESSAGE Environment Variable Dependency not resolved for 'ARMYagartoDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-17 11:18:08.909
+!MESSAGE Environment Variable Dependency not resolved for 'ARMdevkitProDirEnv'.
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2015-02-17 11:18:37.701
+!MESSAGE External elements location 'C:\Users\Ana Mariel\Desktop\CW MCU v10.4\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2015-02-17 11:18:55.057
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY com.freescale.core.debugger.cdt 4 0 2015-02-17 11:19:34.490
+!MESSAGE A debug session is already in progress.
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-17 11:19:42.382
+!MESSAGE NLS unused message: trace_trigger_dv_error_title in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-17 11:19:42.387
+!MESSAGE NLS unused message: trace_trigger_dv_error_message in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-17 11:30:37.404
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+org.eclipse.cdt.debug.core.cdi.CDIException: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device[ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device]
+	at com.freescale.cdt.debug.cw.core.DebugErrorUtils.handleDebugError(DebugErrorUtils.java:92)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.doTerminate(Target.java:1403)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.access$2(Target.java:1344)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target$TerminateJob.run(Target.java:1302)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-17 11:30:37.407
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 1
+org.eclipse.debug.core.DebugException: Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.throwDebugException(CDebugElement.java:292)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.requestFailed(CDebugElement.java:259)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.targetRequestFailed(CDebugElement.java:247)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.terminate(CDebugTarget.java:576)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.terminateConnection(TargetConnectionLostHandler.java:278)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.performAction(TargetConnectionLostHandler.java:166)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.access$0(TargetConnectionLostHandler.java:106)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler$1.run(TargetConnectionLostHandler.java:73)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:155)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3768)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2698)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2662)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2496)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:675)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:82)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+!SUBENTRY 1 org.eclipse.cdt.debug.core 4 5010 2015-02-17 11:30:37.408
+!MESSAGE Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-17 11:56:26.835
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+org.eclipse.cdt.debug.core.cdi.CDIException: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device[ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device]
+	at com.freescale.cdt.debug.cw.core.DebugErrorUtils.handleDebugError(DebugErrorUtils.java:92)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.doTerminate(Target.java:1403)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.access$2(Target.java:1344)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target$TerminateJob.run(Target.java:1302)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-17 11:56:26.838
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 1
+org.eclipse.debug.core.DebugException: Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.throwDebugException(CDebugElement.java:292)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.requestFailed(CDebugElement.java:259)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.targetRequestFailed(CDebugElement.java:247)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.terminate(CDebugTarget.java:576)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.terminateConnection(TargetConnectionLostHandler.java:278)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.performAction(TargetConnectionLostHandler.java:166)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.access$0(TargetConnectionLostHandler.java:106)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler$1.run(TargetConnectionLostHandler.java:73)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:155)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3768)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2698)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2662)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2496)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:675)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:82)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+!SUBENTRY 1 org.eclipse.cdt.debug.core 4 5010 2015-02-17 11:56:26.838
+!MESSAGE Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-17 12:00:55.713
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+org.eclipse.cdt.debug.core.cdi.CDIException: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device[ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device]
+	at com.freescale.cdt.debug.cw.core.DebugErrorUtils.handleDebugError(DebugErrorUtils.java:92)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.doTerminate(Target.java:1403)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.access$2(Target.java:1344)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target$TerminateJob.run(Target.java:1302)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-17 12:00:55.716
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 1
+org.eclipse.debug.core.DebugException: Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.throwDebugException(CDebugElement.java:292)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.requestFailed(CDebugElement.java:259)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.targetRequestFailed(CDebugElement.java:247)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.terminate(CDebugTarget.java:576)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.terminateConnection(TargetConnectionLostHandler.java:278)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.performAction(TargetConnectionLostHandler.java:166)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.access$0(TargetConnectionLostHandler.java:106)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler$1.run(TargetConnectionLostHandler.java:73)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:155)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3768)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2698)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2662)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2496)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:675)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:82)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+!SUBENTRY 1 org.eclipse.cdt.debug.core 4 5010 2015-02-17 12:00:55.716
+!MESSAGE Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+
+!ENTRY com.freescale.core.debugger.cdt 4 0 2015-02-17 12:23:52.211
+!MESSAGE A debug session is already in progress.
+!SESSION 2015-02-17 19:52:41.728 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2015-02-17 19:57:00.142
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-02-17 19:57:00.142
+!MESSAGE Commands should really have a category: plug-in='com.freescale.core.debugger.ui.cdt', id='com.freescale.cdt.debug.cw.core.ui.rse.export.template', categoryId='com.freescale.categories.rse.freescale'
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-17 19:57:13.042
+!MESSAGE Environment Variable Dependency not resolved for 'ARMGNUDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-17 19:57:13.047
+!MESSAGE Environment Variable Dependency not resolved for 'ARMSummonDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-17 19:57:13.065
+!MESSAGE Environment Variable Dependency not resolved for 'ARMYagartoDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-17 19:57:13.067
+!MESSAGE Environment Variable Dependency not resolved for 'ARMdevkitProDirEnv'.
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2015-02-17 19:57:30.990
+!MESSAGE External elements location 'C:\Users\Ana Mariel\Desktop\CW MCU v10.4\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2015-02-17 19:57:41.484
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-17 20:01:34.154
+!MESSAGE NLS unused message: trace_trigger_dv_error_title in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-17 20:01:34.156
+!MESSAGE NLS unused message: trace_trigger_dv_error_message in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-17 21:02:23.569
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+org.eclipse.cdt.debug.core.cdi.CDIException: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device[ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device]
+	at com.freescale.cdt.debug.cw.core.DebugErrorUtils.handleDebugError(DebugErrorUtils.java:92)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.doTerminate(Target.java:1403)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.access$2(Target.java:1344)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target$TerminateJob.run(Target.java:1302)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-17 21:02:23.574
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 1
+org.eclipse.debug.core.DebugException: Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.throwDebugException(CDebugElement.java:292)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.requestFailed(CDebugElement.java:259)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.targetRequestFailed(CDebugElement.java:247)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.terminate(CDebugTarget.java:576)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.terminateConnection(TargetConnectionLostHandler.java:278)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.performAction(TargetConnectionLostHandler.java:166)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.access$0(TargetConnectionLostHandler.java:106)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler$1.run(TargetConnectionLostHandler.java:73)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:155)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3768)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2698)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2662)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2496)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:675)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:82)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+!SUBENTRY 1 org.eclipse.cdt.debug.core 4 5010 2015-02-17 21:02:23.575
+!MESSAGE Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+
+!ENTRY com.freescale.core.debugger.cdt 4 16777218 2015-02-17 21:03:09.557
+!MESSAGE Error launching displayName_FLASH_OpenSDA, ARM GDI Protocol Adapter : Can't connect. The Debugger can not connect to the P&E device
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-17 21:29:08.017
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+org.eclipse.cdt.debug.core.cdi.CDIException: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device[ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device]
+	at com.freescale.cdt.debug.cw.core.DebugErrorUtils.handleDebugError(DebugErrorUtils.java:92)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.doTerminate(Target.java:1403)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.access$2(Target.java:1344)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target$TerminateJob.run(Target.java:1302)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-17 21:29:08.020
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 1
+org.eclipse.debug.core.DebugException: Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.throwDebugException(CDebugElement.java:292)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.requestFailed(CDebugElement.java:259)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugElement.targetRequestFailed(CDebugElement.java:247)
+	at org.eclipse.cdt.debug.internal.core.model.CDebugTarget.terminate(CDebugTarget.java:576)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.terminateConnection(TargetConnectionLostHandler.java:278)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.performAction(TargetConnectionLostHandler.java:166)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler.access$0(TargetConnectionLostHandler.java:106)
+	at com.freescale.cdt.debug.cw.core.TargetConnectionLostHandler$1.run(TargetConnectionLostHandler.java:73)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:155)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3768)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2698)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2662)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2496)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:675)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:82)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:623)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:578)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1411)
+!SUBENTRY 1 org.eclipse.cdt.debug.core 4 5010 2015-02-17 21:29:08.021
+!MESSAGE Target request failed: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device.
+
+!ENTRY com.freescale.core.debugger.cdt 4 16777218 2015-02-17 21:29:20.783
+!MESSAGE Error launching displayName_FLASH_OpenSDA, ARM GDI Protocol Adapter : Can't connect. The Debugger can not connect to the P&E device
