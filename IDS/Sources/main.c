@@ -24,8 +24,8 @@
 #define	nBit7	0x80	//'10000000'
 
 //Time definitions
-#define nt15_msec	3500
-#define nt40_usec	35
+#define nt15_msec	10000
+#define nt40_usec	3500
 
 //LCD Control
 #define nIns	0
@@ -54,6 +54,10 @@ void cfgPorts(void);
 void initLCD(void);
 void delay(long time);
 void sendCode(int Code, int Data);
+void printText(unsigned char coord, char* array);
+void centerText(int row, char* array);
+void monito();
+
 
 /*@description: Initial Port Cfg 
 */
@@ -65,16 +69,18 @@ int main(void)
 	//Initialize LCD
 	initLCD();
 	//Set position to print character
-	sendCode(nIns, 0x80);
+	//sendCode(nIns, 0x80);
 	//Print character
-	char myName[] = {'A','l', 'f', 'r', 'e', 'd', 'o', ' ', ':','P'};
-	int x;
-	for(x = 0; x < 10; x++){
-		sendCode(nData, myName[x]);
-	}
+	
+	//char myName[] = {"Hola"};
+	//char myName2[] = {"Mundo"};
+	//prinText(0xC0, myName);
+	//centerText(1, myName);
+	//centerText(2, myName2);
 	//sendCode(nIns, 0x80);
 	
-
+	monito();
+	
 	for(;;)
 	{/* The logic for the buttons works if a pull-down 
 		resistor is used */
@@ -214,4 +220,43 @@ void delay(long time)
 	{
 		time--;
 	}
+}
+void printText(unsigned char coord, char* array){
+	int x = 0;
+	sendCode(nIns, coord);
+	for(x = 0; array[x] != 0l; x++){
+		sendCode(nData, array[x]);
+	}
+}
+void centerText(int row, char* array){
+	int x = 0, t = 16, pos;
+	for(x = 0; array[x]!= 0l; x++);
+	pos = t-x;
+	pos = pos/2;
+	if(row == 1){
+		printText(0x80+pos, array);
+	}else if(row == 2){
+		printText(0xC0+pos, array);
+	}
+}
+void monito(){
+	sendCode(nIns, 0x40);
+	sendCode(nData, 0x0E);
+	sendCode(nIns, 0x41);
+	sendCode(nData, 0x0E);
+	sendCode(nIns, 0x42);
+	sendCode(nData, 0x0E);
+	sendCode(nIns, 0x43);
+	sendCode(nData, 0x04);
+	sendCode(nIns, 0x44);
+	sendCode(nData, 0x1F);
+	sendCode(nIns, 0x45);
+	sendCode(nData, 0x04);
+	sendCode(nIns, 0x46);
+	sendCode(nData, 0x0A);
+	sendCode(nIns, 0x47);
+	sendCode(nData, 0x11);
+	
+	sendCode(nIns, 0x80);
+	sendCode(nData, 0x00);
 }
