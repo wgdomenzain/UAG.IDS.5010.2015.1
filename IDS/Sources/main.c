@@ -24,7 +24,7 @@
 #define	nBit7	0x80	//'10000000'
 
 //Time definitions
-#define nt15_msec	10000                                                   
+#define nt15_msec	10000
 #define nt40_usec	3500
 
 //LCD Control
@@ -37,9 +37,9 @@
 #define Enable_0	GPIOB_PDOR &= 0xFE
 #define RS_1   		GPIOB_PDOR |= 0x02
 #define RS_0   		GPIOB_PDOR &= 0xFD
+#define FirstLine 0x80
+#define SecondLine 0xC0
 
-#define up 0x80;
-#define down 0xC0;
 
 
 
@@ -56,12 +56,18 @@ void cfgPorts(void);
 void initLCD(void);
 void delay(long time);
 void sendCode(int Code, int Data);
-void printText(unsigned char Coord,char* Array[]);
-void centerText(int row,char* Array[]);
-void character(void);
-
+void printText(unsigned int Coord, char Text[]);
+void centerText( int Row, char Text[]);
+void clearDisplay(void);
+void person(void);
+void person2(void);
+void print(int Coord,int character);
+void erase (int Coord,int character);
+void obstaculo(void);
+void meta(void);
 /*@description: Initial Port Cfg 
 */
+void erase2(void);
 			
 int main(void)
 {
@@ -69,35 +75,143 @@ int main(void)
 	cfgPorts();
 	//Initialize LCD
 	initLCD();
-	//Set position to print character
-	sendCode(nIns, 0x40);
-	sendCode(nData,0x0E);
-	sendCode(nIns, 0x41);
-	sendCode(nData,0x0E);
-	sendCode(nIns, 0x42);
-	sendCode(nData,0x0E);
-	sendCode(nIns, 0x43);
-	sendCode(nData,0x04);
-	sendCode(nIns, 0x44);
-	sendCode(nData,0x1F);
-	sendCode(nIns, 0x45);
-	sendCode(nData,0x04);
-	sendCode(nIns, 0x46);
-	sendCode(nData,0x0A);
-	sendCode(nIns, 0x47);
-	sendCode(nData,0x11);
-	//Print characters
+	char myName[] = {"Juegos"};
+	char myName2[] = {"Olimpicos"};
+	char myName3[] = {"Medalla de Oro"};
+	char myName4[] = {"MEXICO!!!"};
+	centerText(FirstLine, myName);
+	centerText(SecondLine,myName2);
+	delay(2400000);
+	clearDisplay();
+	// record new Character
+	//
 	
-	//centerText(up,"A");
-	/*sendCode(nData, 'A');
-	sendCode(nData, 'l');
-	sendCode(nData, 'b');
-	sendCode(nData, 'e');
-	sendCode(nData, 'r');
-	sendCode(nData, 't');
-	sendCode(nData, 'o');*/
-	sendCode(nIns,0x80);
-	sendCode(nData,0x00);
+	obstaculo();
+	print(SecondLine+1,0x02);
+	print(SecondLine+3,0x02);
+	print(SecondLine+5,0x02);
+	print(SecondLine+7,0x02);
+	print(SecondLine+9,0x02);
+	print(SecondLine+11,0x02);
+	print(SecondLine+13,0x02);
+	meta();
+	print(SecondLine+15,0x03);
+	
+	person();
+	print(SecondLine,0x00);
+	delay(1400000);
+	print(FirstLine+1,0x00);
+	//delay(1400000);
+    erase(SecondLine,0x01);
+	erase2();
+	delay(1400000);
+	print(SecondLine+2,0x00);
+	erase(FirstLine+1,0x01);
+	
+	delay(1400000);
+	print(FirstLine+3,0x00);
+	erase(SecondLine+2,0x01);
+	
+	delay(1400000);
+	print(SecondLine+4,0x00);
+	erase(FirstLine+3,0x01);
+	print(SecondLine,0x00);
+	
+	delay(1400000);
+	print(FirstLine+5,0x00);
+	print(FirstLine+1,0x00);
+	erase(SecondLine,0x01);
+	erase(SecondLine+4,0x01);
+	
+	delay(1400000);
+	print(SecondLine+6,0x00);
+	print(SecondLine+2,0x00);
+	erase(FirstLine+1,0x01);
+	erase(FirstLine+5,0x01);
+	
+	delay(1400000);
+	print(FirstLine+7,0x00);
+	print(FirstLine+3,0x00);
+	erase(SecondLine+2,0x01);
+	erase(SecondLine+6,0x01);
+	
+	delay(1400000);
+	print(SecondLine+8,0x00);
+	print(SecondLine+4,0x00);
+	erase(FirstLine+3,0x01);
+	erase(FirstLine+7,0x01);
+	
+	delay(1400000);
+	print(FirstLine+9,0x00);
+	print(FirstLine+5,0x00);
+	erase(SecondLine+4,0x01);
+	erase(SecondLine+8,0x01);
+	
+	delay(1400000);
+	print(SecondLine+10,0x00);
+	print(SecondLine+6,0x00);
+	erase(FirstLine+5,0x01);
+	erase(FirstLine+9,0x01);
+
+	delay(1400000);
+	print(FirstLine+11,0x00);
+	print(FirstLine+7,0x00);
+	erase(SecondLine+6,0x01);
+	erase(SecondLine+10,0x01);
+	
+	delay(1400000);
+	print(SecondLine+12,0x00);
+	print(SecondLine+8,0x00);
+	erase(FirstLine+7,0x01);
+	erase(FirstLine+11,0x01);
+	
+	delay(1400000);
+	print(FirstLine+13,0x00);
+	print(FirstLine+9,0x00);
+	erase(SecondLine+8,0x01);
+	erase(SecondLine+12,0x01);
+	
+	delay(1400000);
+	print(SecondLine+14,0x00);
+	print(SecondLine+10,0x00);
+	erase(FirstLine+9,0x01);
+	erase(FirstLine+13,0x01);
+		
+	delay(1400000);
+	print(SecondLine+15,0x00);
+	print(FirstLine+11,0x00);
+	erase(SecondLine+10,0x01);
+	erase(SecondLine+14,0x01);
+	
+	delay(1400000);
+	print(SecondLine+12,0x00);
+	erase(FirstLine+11,0x01);
+	erase(SecondLine+15,0x01);
+	print(SecondLine+15,0x03);
+	
+	delay(1400000);
+	print(FirstLine+13,0x00);
+	erase(SecondLine+12,0x01);
+	
+	delay(1400000);
+	print(SecondLine+14,0x00);
+	erase(FirstLine+13,0x01);
+	
+	delay(1400000);
+	print(SecondLine+15,0x00);
+	erase(SecondLine+14,0x01);
+	
+	delay(1400000);
+	erase(SecondLine+15,0x01);
+	print(SecondLine+15,0x03);
+	
+	delay(1900000);
+	erase(SecondLine+1,0x01);
+	erase(SecondLine+15,0x01);
+	erase(SecondLine+13,0x01);
+	centerText(FirstLine, myName3);
+	centerText(SecondLine,myName4);
+	
 
 	for(;;)
 	{
@@ -195,29 +309,125 @@ void delay(long time)
 	{
 		time--;
 	}
-	
-	void printText(unsigned char Coord,char* Array[]){
-		sendCode(nIns,Coord);
-		sendCode(nIns,Coord);
-		int x;
-		for(x=0;Array[x]!=0l;x++)
-		{
-			sendCode(nData,Array[x]);
-		}
-		
-	}
-	void centerText(int row,char Array[]){
-		int lon=0;
-		while (Array[lon]!=0){
-			lon++;
-		}
-		lon=16-lon;
-		int center=lon/2;
-		int coord=lon+center;
-		printText(coord,Array);
-	}
-	
+}
 
-		
+void printText(unsigned int Coord, char Text[])
+{
+	//Set position to print character
+	sendCode(nIns, Coord);
+	// print Data
+		int i;
+		for(i=0; Text[i]!=0l;i++)
+		{
+			sendCode(nData, Text[i]);
+		}
+}
+
+void centerText( int Row, char Text[])
+{
+	int lon=0;
+	while(Text[lon]!=0l)
+	{
+		lon++;
+	}
+	lon=16-lon;
+	int center = lon/2;
+	int coord=Row+center;
+	printText(coord,Text);
 	
 }
+
+void person(void)
+{
+	sendCode(nIns,0x40);
+	sendCode(nData,0x0E);
+	sendCode(nIns,0x41);
+	sendCode(nData,0x0E);
+	sendCode(nIns,0x42);
+	sendCode(nData,0x0E);
+	sendCode(nIns,0x43);
+	sendCode(nData,0x04);
+	sendCode(nIns,0x44);
+	sendCode(nData,0x1F);
+	sendCode(nIns,0x45);
+	sendCode(nData,0x04);
+	sendCode(nIns,0x46);
+	sendCode(nData,0x0A);
+	sendCode(nIns,0x47);
+	sendCode(nData,0x11);
+}
+
+
+void print(int Coord,int character)
+{
+	sendCode(nIns,Coord);
+	sendCode(nData,character);
+}
+void clearDisplay(void)
+{
+	sendCode(nIns,0x01);
+}
+void erase (int Coord,int character){
+	sendCode(nIns,Coord);
+	sendCode(nData,character);
+}
+void erase2(void){
+	
+		sendCode(nIns,0x48);
+		sendCode(nData,0x00);
+		sendCode(nIns,0x49);
+		sendCode(nData,0x00);
+		sendCode(nIns,0x4A);
+		sendCode(nData,0x00);
+		sendCode(nIns,0x4B);
+		sendCode(nData,0x00);
+		sendCode(nIns,0x4C);
+		sendCode(nData,0x00);
+		sendCode(nIns,0x4D);
+		sendCode(nData,0x00);
+		sendCode(nIns,0x4E);
+		sendCode(nData,0x00);
+		sendCode(nIns,0x4F);
+		sendCode(nData,0x00);
+}
+
+
+void obstaculo(void){
+		sendCode(nIns,0x50);
+		sendCode(nData,0x00);
+		sendCode(nIns,0x51);
+		sendCode(nData,0x00);
+		sendCode(nIns,0x52);
+		sendCode(nData,0x1F);
+		sendCode(nIns,0x53);
+		sendCode(nData,0x1F);
+		sendCode(nIns,0x54);
+		sendCode(nData,0x1F);
+		sendCode(nIns,0x55);
+		sendCode(nData,0x1F);
+		sendCode(nIns,0x56);
+		sendCode(nData,0x1F);
+		sendCode(nIns,0x57);
+		sendCode(nData,0x1F);
+	
+}
+
+void meta (void){
+		sendCode(nIns,0x58);
+		sendCode(nData,0x1F);
+		sendCode(nIns,0x59);
+		sendCode(nData,0x11);
+		sendCode(nIns,0x5A);
+		sendCode(nData,0x11);
+		sendCode(nIns,0x5B);
+		sendCode(nData,0x11);
+		sendCode(nIns,0x5C);
+		sendCode(nData,0x11);
+		sendCode(nIns,0x5D);
+		sendCode(nData,0x11);
+		sendCode(nIns,0x5E);
+		sendCode(nData,0x11);
+		sendCode(nIns,0x5F);
+		sendCode(nData,0x11);
+}
+
