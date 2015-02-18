@@ -1,5 +1,5 @@
 /*
-@author: 		Walter Gonzalez Domenzain
+@author: 		Alan DeMiguel García
 @description: 	8020 Group
 @functions:		None
 @environment: 	KL25Z
@@ -26,6 +26,9 @@
 //Time definitions
 #define nt15_msec	10000
 #define nt40_usec	3500
+#define nt150_msec		nt15_msec*90
+#define nt1500_msec		nt15_msec*100
+#define nt3_sec			nt1500_msec*3
 
 //LCD Control
 #define nIns	0
@@ -58,6 +61,16 @@ void sendCode(int Code, int Data);
 void printText (unsigned int Coord, char* Array);
 void centerText (int Row, char Text[]);
 void guardar (void);
+void tortuga (void);
+void mono2 (void);
+void tortuga2 (void);
+void tortuga3 (void);
+void caja (void);
+void caja2 (void);
+void monoBrincando (void);
+void clearScreen(int Coord);
+void clearAllDisplay(void);
+
 /*@description: Initial Port Cfg 
 */
 			
@@ -69,23 +82,177 @@ int main(void)
 	initLCD();
 	//Set position to print character
 	//sendCode(nIns, 0x00);
-	guardar();
 	
 	//Print characters
-	
-	//sendCode(nData, 'A');
-	//sendCode(nData, 'l');
-	//sendCode(nData, 'a');
-	//sendCode(nData, 'n');
-	//sendCode(nData, '');
-	//sendCode(nData, 'D');
-	//sendCode(nData, 'm');
-	//sendCode(nData, 'G');
+	clearAllDisplay();
+	tortuga();
+	sendCode(nIns, 0x0C6);
+	sendCode (nData,0x01);
+	delay(nt1500_msec);
+	clearScreen(0x0C6);
+				
 	//char myName[] = {"Alan Dm"};
 	//centerText (0x80, myName);
 	for(;;)
 	{
- 
+		caja();
+		sendCode(nIns, 0x088);
+		sendCode (nData,0x04);
+		tortuga();
+		sendCode(nIns, 0x0CD);
+		sendCode (nData,0x01);
+		
+		tortuga();
+		sendCode(nIns, 0x0C6);
+		sendCode (nData,0x01);
+		delay(nt1500_msec);
+		
+			guardar();
+			sendCode(nIns, 0x0C0);
+			sendCode (nData,0x00);
+			
+			clearScreen(0x0C6);
+			clearScreen(0x0C0);
+			
+			guardar();
+			sendCode(nIns, 0x0C1);
+			sendCode (nData,0x00);
+			tortuga();
+			sendCode(nIns, 0x0C5);
+			sendCode (nData,0x01);
+			delay(nt1500_msec);
+			clearScreen(0x0C5);
+			clearScreen(0x0C1);
+			
+			guardar();
+			sendCode(nIns, 0x0C2);
+			sendCode (nData,0x00);
+			tortuga();
+			sendCode(nIns, 0x0C4);
+			sendCode (nData,0x01);
+			delay(nt1500_msec);
+			clearScreen(0x0C2);
+			
+			guardar();
+			sendCode(nIns, 0x0C3);
+			sendCode (nData,0x00);
+			delay(nt15_msec);
+			clearScreen(0x0C3);
+			
+			guardar();
+			sendCode(nIns, 0x084);
+			sendCode (nData,0x00);
+			delay(nt1500_msec);
+			clearScreen(0x084);
+			
+			clearScreen(0x0C4);
+			mono2();
+			sendCode(nIns, 0x0C4);
+			sendCode (nData,0x02);
+			delay(nt1500_msec);
+			
+			tortuga2();
+			sendCode(nIns, 0x0C5);
+			sendCode (nData,0x03);
+			tortuga2();
+			sendCode(nIns, 0x0C3);
+			sendCode (nData,0x03);
+			clearScreen(0x0C5);
+			clearScreen(0x0C3);
+			tortuga3();
+			sendCode(nIns, 0x0C5);
+			sendCode (nData,0x03);
+			tortuga3();
+			sendCode(nIns, 0x0C3);
+			sendCode (nData,0x03);
+			
+			delay(nt1500_msec);
+			clearScreen(0x0C4);
+			guardar();
+			sendCode(nIns, 0x0C6);
+			sendCode (nData,0x00);
+			delay(nt1500_msec);
+			clearScreen(0x0C6);
+			guardar();
+			sendCode(nIns, 0x0C7);
+			sendCode (nData,0x00);
+			delay(nt1500_msec);
+			
+			clearScreen(0x0C7);
+			guardar();
+			sendCode(nIns, 0x0C8);
+			sendCode (nData,0x00);
+			delay(nt15_msec);
+			
+			clearScreen(0x0C7);
+			monoBrincando();
+			sendCode(nIns, 0x0C8);
+			sendCode (nData,0x05);
+			delay(nt150_msec);
+			clearScreen(0x088);
+			caja2();
+			sendCode(nIns, 0x088);
+			sendCode (nData,0x04);
+			
+		
+			sendCode(nIns, 0x80);
+			char myName[] = {"BONUS"};
+			printText (0x80, myName);
+			delay(nt1500_msec);
+			clearScreen(0x088);
+			caja();
+			sendCode(nIns, 0x088);
+			sendCode (nData,0x04);
+			delay(nt1500_msec);
+			clearScreen(0x0c8);
+			
+			guardar();
+			sendCode(nIns, 0x0C8);
+			sendCode (nData,0x00);
+			delay(nt150_msec);
+			clearScreen(0x0c8);
+			
+			guardar();
+			sendCode(nIns, 0x0C9);
+			sendCode (nData,0x00);
+			delay(nt150_msec);
+			clearScreen(0x0c9);
+			
+			guardar();
+			sendCode(nIns, 0x0CA);
+			sendCode (nData,0x00);
+			delay(nt150_msec);
+			clearScreen(0x0CA);
+			
+			guardar();
+			sendCode(nIns, 0x0CB);
+			sendCode (nData,0x00);
+			delay(nt150_msec);
+			clearScreen(0x0CB);
+			
+			guardar();
+			sendCode(nIns, 0x0CC);
+			sendCode (nData,0x00);
+			delay(nt150_msec);
+			clearScreen(0x0CC);
+			delay(nt150_msec);
+			
+			mono2();
+			sendCode(nIns, 0x0CC);
+			sendCode (nData,0x02);
+			delay(nt1500_msec);
+			delay(nt1500_msec);
+			clearAllDisplay();
+			char myName2[] = {"GAME OVER"};
+			centerText (0x80, myName2);
+			
+			delay(nt150_msec);
+			delay(nt150_msec);
+			delay(nt150_msec);
+			clearAllDisplay();
+			
+			
+			
 	}
 	
 	return 0;
@@ -229,9 +396,173 @@ void guardar (void)
 	
 	sendCode (nIns,0x47);
 	sendCode (nData, 0x11);
-	
-	sendCode(nIns, 0x080);
-	sendCode (nData,0x00);
-	
-}
 
+}
+void clearScreen(int Coord){
+	sendCode(nIns, Coord);
+	sendCode(nData, 0x20);
+}
+void tortuga (void)
+{	
+		sendCode (nIns,0x48);
+		sendCode (nData, 0x00);
+		sendCode (nIns,0x49);
+		sendCode (nData, 0x00);
+		sendCode (nIns,0x4A);
+		sendCode (nData, 0x00);
+		sendCode (nIns,0x4B);
+		sendCode (nData, 0x00);
+		sendCode (nIns,0x4C);
+		sendCode (nData, 0x00);
+		sendCode (nIns,0x4D);
+		sendCode (nData, 0x1F);
+		//4F  50-57  58 5F
+		sendCode (nIns,0x4E);
+		sendCode (nData, 0x0A);
+		
+		sendCode (nIns,0x4F);
+		sendCode (nData, 0x1F);
+}
+void mono2 (void)
+{
+		sendCode (nIns,0x50);
+		sendCode (nData, 0x0E);
+		sendCode (nIns,0x51);
+		sendCode (nData, 0x0E);
+		sendCode (nIns,0x52);
+		sendCode (nData, 0x0E);
+		
+		sendCode (nIns,0x53);
+		sendCode (nData, 0x15);
+		
+		sendCode (nIns,0x54);
+		sendCode (nData, 0x0E);
+		
+		sendCode (nIns,0x55);
+		sendCode (nData, 0x04);
+		
+		sendCode (nIns,0x56);
+		sendCode (nData, 0x0A);
+		
+		sendCode (nIns,0x57);
+		sendCode (nData, 0x1F);
+
+}
+void tortuga2 (void)
+{
+			sendCode (nIns,0x58);
+			sendCode (nData, 0x00);
+			sendCode (nIns,0x59);
+			sendCode (nData, 0x00);
+			sendCode (nIns,0x5A);
+			sendCode (nData, 0x00);
+			sendCode (nIns,0x5B);
+			sendCode (nData, 0x00);
+			sendCode (nIns,0x5C);
+			sendCode (nData, 0x00);
+			sendCode (nIns,0x5D);
+			sendCode (nData, 0x00);
+			//4F  50-57  58 5F
+			sendCode (nIns,0x5E);
+			sendCode (nData, 0x01);
+			
+			sendCode (nIns,0x5F);
+			sendCode (nData, 0x00);
+}
+void tortuga3 (void)
+{
+				sendCode (nIns,0x58);
+				sendCode (nData, 0x00);
+				sendCode (nIns,0x59);
+				sendCode (nData, 0x00);
+				sendCode (nIns,0x5A);
+				sendCode (nData, 0x00);
+				sendCode (nIns,0x5B);
+				sendCode (nData, 0x00);
+				sendCode (nIns,0x5C);
+				sendCode (nData, 0x00);
+				sendCode (nIns,0x5D);
+				sendCode (nData, 0x00);
+				//4F  50-57  58 5F
+				sendCode (nIns,0x5E);
+				sendCode (nData, 0x00);
+				
+				sendCode (nIns,0x5F);
+				sendCode (nData, 0x01);
+}
+void caja (void)
+{
+		sendCode (nIns,0x60);
+		sendCode (nData, 0x00);
+		sendCode (nIns,0x61);
+		sendCode (nData, 0x00);
+		sendCode (nIns,0x62);
+		sendCode (nData, 0x00);
+		
+		sendCode (nIns,0x63);
+		sendCode (nData, 0x00);
+		
+		sendCode (nIns,0x64);
+		sendCode (nData, 0x07);
+		
+		sendCode (nIns,0x65);
+		sendCode (nData, 0x07);
+		
+		sendCode (nIns,0x66);
+		sendCode (nData, 0x07);
+		
+		sendCode (nIns,0x67);
+		sendCode (nData, 0x00);
+}
+void monoBrincando (void)
+{
+		sendCode (nIns,0x68);
+		sendCode (nData, 0x0E);
+		sendCode (nIns,0x69);
+		sendCode (nData, 0x0E);
+		sendCode (nIns,0x6A);
+		sendCode (nData, 0x04);
+		
+		sendCode (nIns,0x6B);
+		sendCode (nData, 0x1F);
+		
+		sendCode (nIns,0x6C);
+		sendCode (nData, 0x04);
+		
+		sendCode (nIns,0x6D);
+		sendCode (nData, 0x0A);
+		
+		sendCode (nIns,0x6E);
+		sendCode (nData, 0x11);
+		
+		sendCode (nIns,0x6F);
+		sendCode (nData, 0x00);
+}
+void caja2 (void)
+{
+			sendCode (nIns,0x60);
+			sendCode (nData, 0x01);
+			sendCode (nIns,0x61);
+			sendCode (nData, 0x01);
+			sendCode (nIns,0x62);
+			sendCode (nData, 0x00);
+			
+			sendCode (nIns,0x63);
+			sendCode (nData, 0x00);
+			
+			sendCode (nIns,0x64);
+			sendCode (nData, 0x07);
+			
+			sendCode (nIns,0x65);
+			sendCode (nData, 0x07);
+			
+			sendCode (nIns,0x66);
+			sendCode (nData, 0x07);
+			
+			sendCode (nIns,0x67);
+			sendCode (nData, 0x0E);
+}
+void clearAllDisplay(void)
+{
+	sendCode(nIns,0x01);
+}
