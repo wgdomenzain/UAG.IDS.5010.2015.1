@@ -2,8 +2,6 @@ Archive member included because of file (symbol)
 
 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
                               ./Project_Settings/Startup_Code/__arm_start.o (exit)
-C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
-                              ./Sources/main.o (memcpy)
 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
                               ./Project_Settings/Startup_Code/__arm_start.o (memset)
 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
@@ -18,6 +16,8 @@ C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a
                               C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o) (__fill_mem)
 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
                               C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o) (memchr)
+C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+                              C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o) (memcpy)
 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
                               C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o) (strchr)
 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
@@ -72,13 +72,18 @@ Discarded input sections
  .text          0x00000000        0x0 ./Sources/main.o
  .data          0x00000000        0x0 ./Sources/main.o
  .bss           0x00000000        0x0 ./Sources/main.o
+ .text.centerText
+                0x00000000       0x54 ./Sources/main.o
+ .text.createChar
+                0x00000000       0x88 ./Sources/main.o
+ .text.printCancha
+                0x00000000       0x88 ./Sources/main.o
+ .text.printBalon
+                0x00000000       0x88 ./Sources/main.o
  COMMON         0x00000000        0x4 ./Sources/main.o
  .text          0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
  .data          0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
  .bss           0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .text          0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .data          0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .bss           0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
  .text          0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
  .data          0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
  .bss           0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
@@ -112,6 +117,9 @@ Discarded input sections
  .text          0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
  .data          0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
  .bss           0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .text          0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .data          0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .bss           0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
  .text          0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
  .data          0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
  .bss           0x00000000        0x0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
@@ -170,8 +178,8 @@ LOAD ./Project_Settings/Startup_Code/__arm_start.o
 LOAD ./Project_Settings/Startup_Code/__arm_end.o
 LOAD ./Sources/sa_mtb.o
 LOAD ./Sources/main.o
-                0x00000d54                __pformatter = __pformatter_
-                [0x0000117c]                __sformatter = __sformatter
+                0x00000f58                __pformatter = __pformatter_
+                [0x00001380]                __sformatter = __sformatter
 START GROUP
 LOAD C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a
 LOAD C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libm.a
@@ -197,7 +205,7 @@ END GROUP
  *(.cfmconfig)
                 0x00000400                . = ALIGN (0x4)
 
-.text           0x00000800     0x1548
+.text           0x00000800     0x1764
                 0x00000800                . = ALIGN (0x4)
  *(.text)
  .text          0x00000800       0x14 c:/users/eliel/documents/cw mcu v10.6/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_thumb1_case_sqi.o)
@@ -261,88 +269,95 @@ END GROUP
  .text._ExitProcess
                 0x00000954        0xc ./Project_Settings/Startup_Code/__arm_end.o
                 0x00000954                _ExitProcess
- .text.main     0x00000960       0x54 ./Sources/main.o
+ .text.main     0x00000960      0x1ec ./Sources/main.o
                 0x00000960                main
  .text.cfgPorts
-                0x000009b4       0xa4 ./Sources/main.o
-                0x000009b4                cfgPorts
- .text.initLCD  0x00000a58       0x40 ./Sources/main.o
-                0x00000a58                initLCD
+                0x00000b4c       0xa4 ./Sources/main.o
+                0x00000b4c                cfgPorts
+ .text.initLCD  0x00000bf0       0x40 ./Sources/main.o
+                0x00000bf0                initLCD
+ .text.printText
+                0x00000c30       0x48 ./Sources/main.o
+                0x00000c30                printText
+ .text.clearDisplay
+                0x00000c78       0x10 ./Sources/main.o
+                0x00000c78                clearDisplay
+ .text.printChar
+                0x00000c88       0x24 ./Sources/main.o
+                0x00000c88                printChar
  .text.sendCode
-                0x00000a98       0xac ./Sources/main.o
-                0x00000a98                sendCode
- .text.delay    0x00000b44       0x1c ./Sources/main.o
-                0x00000b44                delay
- .text.exit     0x00000b60       0x38 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
-                0x00000b60                exit
- .text.memcpy   0x00000b98       0x12 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
-                0x00000b98                memcpy
- .text.memset   0x00000baa        0xc C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
-                0x00000baa                memset
- *fill*         0x00000bb6        0x2 00
+                0x00000cac       0xb0 ./Sources/main.o
+                0x00000cac                sendCode
+ .text.delay    0x00000d5c       0x1c ./Sources/main.o
+                0x00000d5c                delay
+ .text.exit     0x00000d78       0x38 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+                0x00000d78                exit
+ .text.memset   0x00000db0        0xc C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+                0x00000db0                memset
  .text.long2str.isra.0
-                0x00000bb8      0x19c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00000dbc      0x19c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .text.__pformatter_
-                0x00000d54      0x428 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
-                0x00000d54                __pformatter_
+                0x00000f58      0x428 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00000f58                __pformatter_
  .text.__sformatter
-                0x0000117c      0x698 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
-                0x0000117c                __sformatter
- .text.isalpha  0x00001814       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
-                0x00001814                isalpha
- .text.isspace  0x00001834       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
-                0x00001834                isspace
- .text.toupper  0x00001854        0xe C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
-                0x00001854                toupper
+                0x00001380      0x698 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+                0x00001380                __sformatter
+ .text.isalpha  0x00001a18       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x00001a18                isalpha
+ .text.isspace  0x00001a38       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x00001a38                isspace
+ .text.toupper  0x00001a58        0xe C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x00001a58                toupper
  .text.__strtoul
-                0x00001862      0x1ce C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
-                0x00001862                __strtoul
+                0x00001a66      0x1ce C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+                0x00001a66                __strtoul
  .text.__fill_mem
-                0x00001a30       0x7e C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
-                0x00001a30                __fill_mem
- .text.memchr   0x00001aae       0x1a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
-                0x00001aae                memchr
- .text.strchr   0x00001ac8       0x1e C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
-                0x00001ac8                strchr
- .text.strlen   0x00001ae6       0x10 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
-                0x00001ae6                strlen
- *fill*         0x00001af6        0x2 00
+                0x00001c34       0x7e C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+                0x00001c34                __fill_mem
+ .text.memchr   0x00001cb2       0x1a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+                0x00001cb2                memchr
+ .text.memcpy   0x00001ccc       0x12 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+                0x00001ccc                memcpy
+ .text.strchr   0x00001cde       0x1e C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+                0x00001cde                strchr
+ .text.strlen   0x00001cfc       0x10 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+                0x00001cfc                strlen
  .text.__init_cpp
-                0x00001af8       0x48 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
-                0x00001af8                __init_cpp
+                0x00001d0c       0x48 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+                0x00001d0c                __init_cpp
  .text.__fini_cpp
-                0x00001b40       0x34 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
-                0x00001b40                __fini_cpp
+                0x00001d54       0x34 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+                0x00001d54                __fini_cpp
  .text.__copy_rom_section
-                0x00001b74       0x48 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
-                0x00001b74                __copy_rom_section
+                0x00001d88       0x48 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+                0x00001d88                __copy_rom_section
  .text.__copy_rom_sections_to_ram
-                0x00001bbc       0x34 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
-                0x00001bbc                __copy_rom_sections_to_ram
+                0x00001dd0       0x34 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+                0x00001dd0                __copy_rom_sections_to_ram
  .text.__destroy_global_chain
-                0x00001bf0       0x1c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
-                0x00001bf0                __destroy_global_chain
+                0x00001e04       0x1c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+                0x00001e04                __destroy_global_chain
  .text.__init_registers
-                0x00001c0c       0x1c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
-                0x00001c0c                __init_registers
+                0x00001e20       0x1c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+                0x00001e20                __init_registers
  .text.__init_user
-                0x00001c28        0x4 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
-                0x00001c28                __init_user
+                0x00001e3c        0x4 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+                0x00001e3c                __init_user
  *(.rodata)
- .rodata        0x00001c2c        0x8 ./Sources/main.o
+ .rodata        0x00001e40       0x10 ./Sources/main.o
  *(.rodata*)
  .rodata.InitializeLCD
-                0x00001c34        0x8 ./Sources/main.o
-                0x00001c34                InitializeLCD
+                0x00001e50        0x8 ./Sources/main.o
+                0x00001e50                InitializeLCD
  .rodata.str1.1
-                0x00001c3c        0x1 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00001e58        0x1 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .rodata.CSWTCH.20
-                0x00001c3d        0x5 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00001e59        0x5 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .rodata.CSWTCH.21
-                0x00001c42        0x5 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00001e5e        0x5 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .rodata.__aeabi_ctype_table_C
-                0x00001c47      0x101 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
-                0x00001c47                __aeabi_ctype_table_C
+                0x00001e63      0x101 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x00001e63                __aeabi_ctype_table_C
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.glue_7t)
@@ -350,62 +365,62 @@ END GROUP
  *(.eh_frame)
  *(.init)
  *(.fini)
-                0x00001d48                . = ALIGN (0x4)
-                0x00001d48                _etext = .
+                0x00001f64                . = ALIGN (0x4)
+                0x00001f64                _etext = .
 
-.vfp11_veneer   0x00001d48        0x0
+.vfp11_veneer   0x00001f64        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00001d48        0x0
+.v4_bx          0x00001f64        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00001d48        0x0
+.iplt           0x00001f64        0x0
  .iplt          0x00000000        0x0 ./Project_Settings/Startup_Code/kinetis_sysinit.o
 
-.rel.dyn        0x00001d48        0x0
+.rel.dyn        0x00001f64        0x0
  .rel.iplt      0x00000000        0x0 ./Project_Settings/Startup_Code/kinetis_sysinit.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x00001d48        0x0
-                0x00001d48                __exidx_start = .
+.ARM            0x00001f64        0x0
+                0x00001f64                __exidx_start = .
  *(.ARM.exidx*)
-                0x00001d48                __exidx_end = .
+                0x00001f64                __exidx_end = .
 
-.ctors          0x00001d48        0x0
-                0x00001d48                __CTOR_LIST__ = .
+.ctors          0x00001f64        0x0
+                0x00001f64                __CTOR_LIST__ = .
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x00001d48                __CTOR_END__ = .
+                0x00001f64                __CTOR_END__ = .
 
-.dtors          0x00001d48        0x0
-                0x00001d48                __DTOR_LIST__ = .
+.dtors          0x00001f64        0x0
+                0x00001f64                __DTOR_LIST__ = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x00001d48                __DTOR_END__ = .
+                0x00001f64                __DTOR_END__ = .
 
-.preinit_array  0x00001d48        0x0
-                0x00001d48                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x00001f64        0x0
+                0x00001f64                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x00001d48                PROVIDE (__preinit_array_end, .)
+                0x00001f64                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x00001d48        0x0
-                0x00001d48                PROVIDE (__init_array_start, .)
+.init_array     0x00001f64        0x0
+                0x00001f64                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
-                0x00001d48                PROVIDE (__init_array_end, .)
+                0x00001f64                PROVIDE (__init_array_end, .)
 
-.fini_array     0x00001d48        0x0
-                0x00001d48                PROVIDE (__fini_array_start, .)
+.fini_array     0x00001f64        0x0
+                0x00001f64                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
-                0x00001d48                PROVIDE (__fini_array_end, .)
-                0x00001d48                ___ROM_AT = .
+                0x00001f64                PROVIDE (__fini_array_end, .)
+                0x00001f64                ___ROM_AT = .
 
 .mtb            0x1ffff000        0x0
                 0x1ffff000                . = ALIGN (0x8)
@@ -414,7 +429,7 @@ END GROUP
                 0x1ffff000                . = ALIGN (0x8)
                 0x1ffff000                _mtb_end = .
 
-.data           0x1ffff000        0x0 load address 0x00001d48
+.data           0x1ffff000        0x0 load address 0x00001f64
                 0x1ffff000                . = ALIGN (0x4)
                 0x1ffff000                _sdata = .
  *(.data)
@@ -447,11 +462,11 @@ END GROUP
                 0x1ffff01c                . = ALIGN (0x4)
                 0x1ffff01c                __END_BSS = .
                 0x1ffff01c                PROVIDE (__bss_end__, __END_BSS)
-                0x00001d48                _romp_at = (___ROM_AT + SIZEOF (.data))
+                0x00001f64                _romp_at = (___ROM_AT + SIZEOF (.data))
 
-.romp           0x1ffff01c       0x18 load address 0x00001d48
-                0x00001d48                __S_romp = _romp_at
-                0x1ffff01c        0x4 LONG 0x1d48 ___ROM_AT
+.romp           0x1ffff01c       0x18 load address 0x00001f64
+                0x00001f64                __S_romp = _romp_at
+                0x1ffff01c        0x4 LONG 0x1f64 ___ROM_AT
                 0x1ffff020        0x4 LONG 0x1ffff000 _sdata
                 0x1ffff024        0x4 LONG 0x0 ___data_size
                 0x1ffff028        0x4 LONG 0x0
@@ -459,7 +474,7 @@ END GROUP
                 0x1ffff030        0x4 LONG 0x0
 
 ._user_heap_stack
-                0x1ffff034      0x800 load address 0x00001d60
+                0x1ffff034      0x800 load address 0x00001f7c
                 0x1ffff034                . = ALIGN (0x4)
                 0x1ffff034                PROVIDE (end, .)
                 0x1ffff034                PROVIDE (_end, .)
@@ -484,21 +499,21 @@ END GROUP
  .ARM.attributes
                 0x000000c4       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
  .ARM.attributes
-                0x000000f5       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+                0x000000f5       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
  .ARM.attributes
-                0x00000126       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+                0x00000126       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .ARM.attributes
-                0x00000157       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00000157       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
  .ARM.attributes
-                0x00000188       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+                0x00000188       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
  .ARM.attributes
-                0x000001b9       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x000001b9       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
  .ARM.attributes
-                0x000001ea       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+                0x000001ea       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
  .ARM.attributes
-                0x0000021b       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+                0x0000021b       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
  .ARM.attributes
-                0x0000024c       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+                0x0000024c       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
  .ARM.attributes
                 0x0000027d       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
  .ARM.attributes
@@ -519,67 +534,67 @@ END GROUP
                 0x000003b9       0x31 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
 OUTPUT(IDS.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x26b3
+.debug_info     0x00000000     0x27da
  .debug_info    0x00000000      0x447 ./Project_Settings/Startup_Code/kinetis_sysinit.o
  .debug_info    0x00000447      0x12a ./Project_Settings/Startup_Code/__arm_start.o
  .debug_info    0x00000571       0x54 ./Project_Settings/Startup_Code/__arm_end.o
- .debug_info    0x000005c5      0x4d6 ./Sources/main.o
- .debug_info    0x00000a9b       0xe8 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_info    0x00000b83      0x10f C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_info    0x00000c92       0xec C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_info    0x00000d7e      0x50d C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_info    0x0000128b      0x568 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_info    0x000017f3      0x313 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_info    0x00001b06      0x1d6 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_info    0x00001cdc      0x137 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_info    0x00001e13      0x121 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_info    0x00001f34      0x10b C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_info    0x0000203f       0xea C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_info    0x00002129      0x136 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_info    0x0000225f      0x19b C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
- .debug_info    0x000023fa      0x2b9 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_info    0x000005c5      0x5fd ./Sources/main.o
+ .debug_info    0x00000bc2       0xe8 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_info    0x00000caa       0xec C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_info    0x00000d96      0x50d C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_info    0x000012a3      0x568 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_info    0x0000180b      0x313 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_info    0x00001b1e      0x1d6 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_info    0x00001cf4      0x137 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_info    0x00001e2b      0x121 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_info    0x00001f4c      0x10f C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_info    0x0000205b      0x10b C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_info    0x00002166       0xea C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_info    0x00002250      0x136 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_info    0x00002386      0x19b C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_info    0x00002521      0x2b9 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
 
-.debug_abbrev   0x00000000      0xf26
+.debug_abbrev   0x00000000      0xf70
  .debug_abbrev  0x00000000       0xe7 ./Project_Settings/Startup_Code/kinetis_sysinit.o
  .debug_abbrev  0x000000e7       0x92 ./Project_Settings/Startup_Code/__arm_start.o
  .debug_abbrev  0x00000179       0x4c ./Project_Settings/Startup_Code/__arm_end.o
- .debug_abbrev  0x000001c5      0x133 ./Sources/main.o
- .debug_abbrev  0x000002f8       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_abbrev  0x00000372       0x95 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_abbrev  0x00000407       0x62 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_abbrev  0x00000469      0x200 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_abbrev  0x00000669      0x1f0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_abbrev  0x00000859       0x9e C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_abbrev  0x000008f7       0xc2 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_abbrev  0x000009b9       0x78 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_abbrev  0x00000a31       0x95 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_abbrev  0x00000ac6       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_abbrev  0x00000b40       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_abbrev  0x00000bba       0x99 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_abbrev  0x00000c53      0x120 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
- .debug_abbrev  0x00000d73      0x1b3 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_abbrev  0x000001c5      0x17d ./Sources/main.o
+ .debug_abbrev  0x00000342       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_abbrev  0x000003bc       0x62 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_abbrev  0x0000041e      0x200 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_abbrev  0x0000061e      0x1f0 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_abbrev  0x0000080e       0x9e C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_abbrev  0x000008ac       0xc2 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_abbrev  0x0000096e       0x78 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_abbrev  0x000009e6       0x95 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_abbrev  0x00000a7b       0x95 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_abbrev  0x00000b10       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_abbrev  0x00000b8a       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_abbrev  0x00000c04       0x99 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_abbrev  0x00000c9d      0x120 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_abbrev  0x00000dbd      0x1b3 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
 
-.debug_loc      0x00000000     0x28b3
+.debug_loc      0x00000000     0x2a0b
  .debug_loc     0x00000000       0x58 ./Project_Settings/Startup_Code/kinetis_sysinit.o
  .debug_loc     0x00000058       0x2c ./Project_Settings/Startup_Code/__arm_start.o
  .debug_loc     0x00000084       0x38 ./Project_Settings/Startup_Code/__arm_end.o
- .debug_loc     0x000000bc      0x10c ./Sources/main.o
- .debug_loc     0x000001c8       0x3e C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_loc     0x00000206       0x59 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_loc     0x0000025f       0x6f C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_loc     0x000002ce     0x104b C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_loc     0x00001319      0x9d8 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_loc     0x00001cf1      0x30d C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_loc     0x00001ffe      0x305 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_loc     0x00002303      0x14a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_loc     0x0000244d       0x77 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_loc     0x000024c4       0xaf C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_loc     0x00002573       0x33 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_loc     0x000025a6       0x9d C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_loc     0x00002643       0xd9 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
- .debug_loc     0x0000271c      0x197 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_loc     0x000000bc      0x264 ./Sources/main.o
+ .debug_loc     0x00000320       0x3e C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_loc     0x0000035e       0x6f C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_loc     0x000003cd     0x104b C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_loc     0x00001418      0x9d8 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_loc     0x00001df0      0x30d C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_loc     0x000020fd      0x305 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_loc     0x00002402      0x14a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_loc     0x0000254c       0x77 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_loc     0x000025c3       0x59 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_loc     0x0000261c       0xaf C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_loc     0x000026cb       0x33 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_loc     0x000026fe       0x9d C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_loc     0x0000279b       0xd9 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_loc     0x00002874      0x197 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
 
-.debug_aranges  0x00000000      0x338
+.debug_aranges  0x00000000      0x370
  .debug_aranges
                 0x00000000       0x28 ./Project_Settings/Startup_Code/kinetis_sysinit.o
  .debug_aranges
@@ -587,37 +602,37 @@ OUTPUT(IDS.elf elf32-littlearm)
  .debug_aranges
                 0x00000058       0x20 ./Project_Settings/Startup_Code/__arm_end.o
  .debug_aranges
-                0x00000078       0x40 ./Sources/main.o
+                0x00000078       0x78 ./Sources/main.o
  .debug_aranges
-                0x000000b8       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+                0x000000f0       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
  .debug_aranges
-                0x000000d8       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+                0x00000110       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
  .debug_aranges
-                0x000000f8       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+                0x00000130       0x28 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .debug_aranges
-                0x00000118       0x28 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00000158       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
  .debug_aranges
-                0x00000140       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+                0x00000178       0x88 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
  .debug_aranges
-                0x00000160       0x88 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x00000200       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
  .debug_aranges
-                0x000001e8       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+                0x00000220       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
  .debug_aranges
-                0x00000208       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+                0x00000240       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
  .debug_aranges
-                0x00000228       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+                0x00000260       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
  .debug_aranges
-                0x00000248       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+                0x00000280       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
  .debug_aranges
-                0x00000268       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+                0x000002a0       0x20 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
  .debug_aranges
-                0x00000288       0x28 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+                0x000002c0       0x28 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
  .debug_aranges
-                0x000002b0       0x30 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+                0x000002e8       0x30 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
  .debug_aranges
-                0x000002e0       0x58 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+                0x00000318       0x58 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
 
-.debug_macinfo  0x00000000    0x53d85
+.debug_macinfo  0x00000000    0x53dc8
  .debug_macinfo
                 0x00000000    0x264b5 ./Project_Settings/Startup_Code/kinetis_sysinit.o
  .debug_macinfo
@@ -625,64 +640,64 @@ OUTPUT(IDS.elf elf32-littlearm)
  .debug_macinfo
                 0x0002a322     0x3456 ./Project_Settings/Startup_Code/__arm_end.o
  .debug_macinfo
-                0x0002d778    0x2660d ./Sources/main.o
+                0x0002d778    0x26650 ./Sources/main.o
 
-.debug_line     0x00000000     0x18ad
+.debug_line     0x00000000     0x199b
  .debug_line    0x00000000      0x22d ./Project_Settings/Startup_Code/kinetis_sysinit.o
  .debug_line    0x0000022d      0x2b0 ./Project_Settings/Startup_Code/__arm_start.o
  .debug_line    0x000004dd      0x296 ./Project_Settings/Startup_Code/__arm_end.o
- .debug_line    0x00000773      0x25e ./Sources/main.o
- .debug_line    0x000009d1       0x8d C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_line    0x00000a5e       0x8b C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_line    0x00000ae9       0x90 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_line    0x00000b79      0x2c3 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_line    0x00000e3c      0x2be C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_line    0x000010fa      0x1be C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_line    0x000012b8      0x11e C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_line    0x000013d6       0xf6 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_line    0x000014cc       0x9f C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_line    0x0000156b       0x7d C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_line    0x000015e8       0x85 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_line    0x0000166d       0x6c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_line    0x000016d9       0xbd C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
- .debug_line    0x00001796      0x117 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_line    0x00000773      0x34c ./Sources/main.o
+ .debug_line    0x00000abf       0x8d C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_line    0x00000b4c       0x90 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_line    0x00000bdc      0x2c3 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_line    0x00000e9f      0x2be C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_line    0x0000115d      0x1be C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_line    0x0000131b      0x11e C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_line    0x00001439       0xf6 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_line    0x0000152f       0x9f C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_line    0x000015ce       0x8b C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_line    0x00001659       0x7d C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_line    0x000016d6       0x85 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_line    0x0000175b       0x6c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_line    0x000017c7       0xbd C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_line    0x00001884      0x117 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
 
-.debug_str      0x00000000      0xcb2
+.debug_str      0x00000000      0xd23
  .debug_str     0x00000000      0x296 ./Project_Settings/Startup_Code/kinetis_sysinit.o
                                 0x2bd (size before relaxing)
  .debug_str     0x00000296       0x85 ./Project_Settings/Startup_Code/__arm_start.o
                                 0x197 (size before relaxing)
  .debug_str     0x0000031b       0x41 ./Project_Settings/Startup_Code/__arm_end.o
                                  0xce (size before relaxing)
- .debug_str     0x0000035c       0xbf ./Sources/main.o
-                                0x2c5 (size before relaxing)
- .debug_str     0x0000041b       0x5a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_str     0x0000035c      0x130 ./Sources/main.o
+                                0x33b (size before relaxing)
+ .debug_str     0x0000048c       0x5a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
                                 0x157 (size before relaxing)
- .debug_str     0x00000475       0x23 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
-                                0x138 (size before relaxing)
- .debug_str     0x00000498       0x1c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_str     0x000004e6       0x23 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
                                 0x140 (size before relaxing)
- .debug_str     0x000004b4      0x244 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_str     0x00000509      0x244 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
                                 0x3b3 (size before relaxing)
- .debug_str     0x000006f8      0x184 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_str     0x0000074d      0x184 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
                                 0x3f9 (size before relaxing)
- .debug_str     0x0000087c       0x9d C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_str     0x000008d1       0x9d C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
                                 0x1bc (size before relaxing)
- .debug_str     0x00000919       0x61 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_str     0x0000096e       0x61 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
                                 0x1fb (size before relaxing)
- .debug_str     0x0000097a       0x25 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_str     0x000009cf       0x25 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
                                 0x152 (size before relaxing)
- .debug_str     0x0000099f       0x1c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_str     0x000009f4       0x1c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
                                 0x148 (size before relaxing)
- .debug_str     0x000009bb       0x1c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_str     0x00000a10       0x1c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+                                0x138 (size before relaxing)
+ .debug_str     0x00000a2c       0x1c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
                                 0x137 (size before relaxing)
- .debug_str     0x000009d7       0x1c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_str     0x00000a48       0x1c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
                                 0x140 (size before relaxing)
- .debug_str     0x000009f3      0x126 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_str     0x00000a64      0x126 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
                                 0x181 (size before relaxing)
- .debug_str     0x00000b19       0xa1 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_str     0x00000b8a       0xa1 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
                                 0x13c (size before relaxing)
- .debug_str     0x00000bba       0xf8 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_str     0x00000c2b       0xf8 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
                                 0x1b5 (size before relaxing)
 
 .comment        0x00000000       0x79
@@ -692,7 +707,6 @@ OUTPUT(IDS.elf elf32-littlearm)
  .comment       0x00000000       0x7a ./Project_Settings/Startup_Code/__arm_end.o
  .comment       0x00000000       0x7a ./Sources/main.o
  .comment       0x00000000       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .comment       0x00000000       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
  .comment       0x00000000       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
  .comment       0x00000000       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .comment       0x00000000       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
@@ -700,29 +714,30 @@ OUTPUT(IDS.elf elf32-littlearm)
  .comment       0x00000000       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
  .comment       0x00000000       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
  .comment       0x00000000       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .comment       0x00000000       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
  .comment       0x00000000       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
  .comment       0x00000000       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
  .comment       0x00000000       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
  .comment       0x00000000       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
  .comment       0x00000000       0x7a C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
 
-.debug_frame    0x00000000      0x610
+.debug_frame    0x00000000      0x6e0
  .debug_frame   0x00000000       0x48 ./Project_Settings/Startup_Code/kinetis_sysinit.o
  .debug_frame   0x00000048       0x4c ./Project_Settings/Startup_Code/__arm_start.o
  .debug_frame   0x00000094       0x30 ./Project_Settings/Startup_Code/__arm_end.o
- .debug_frame   0x000000c4       0xac ./Sources/main.o
- .debug_frame   0x00000170       0x2c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_frame   0x0000019c       0x28 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_frame   0x000001c4       0x28 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_frame   0x000001ec       0x54 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_frame   0x00000240       0x34 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_frame   0x00000274      0x158 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_frame   0x000003cc       0x30 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_frame   0x000003fc       0x2c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_frame   0x00000428       0x28 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_frame   0x00000450       0x28 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_frame   0x00000478       0x28 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_frame   0x000004a0       0x20 c:/users/eliel/documents/cw mcu v10.6/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
- .debug_frame   0x000004c0       0x40 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_frame   0x00000500       0x54 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
- .debug_frame   0x00000554       0xbc C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_frame   0x000000c4      0x17c ./Sources/main.o
+ .debug_frame   0x00000240       0x2c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_frame   0x0000026c       0x28 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_frame   0x00000294       0x54 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_frame   0x000002e8       0x34 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_frame   0x0000031c      0x158 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_frame   0x00000474       0x30 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_frame   0x000004a4       0x2c C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_frame   0x000004d0       0x28 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_frame   0x000004f8       0x28 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_frame   0x00000520       0x28 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_frame   0x00000548       0x28 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_frame   0x00000570       0x20 c:/users/eliel/documents/cw mcu v10.6/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00000590       0x40 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_frame   0x000005d0       0x54 C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_frame   0x00000624       0xbc C:/Users/Eliel/Documents/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
