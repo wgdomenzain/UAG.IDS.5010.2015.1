@@ -222,30 +222,30 @@ void cfgPWM(void)
 	//Clear counter register - page 553
 	TPM0_CNT = 0;
 	
-	//Set signal period to 1 ms  50.5
-	TPM0_MOD = 50500;//151.5;
+	//Set signal period to 1 ms  50.5   05 05
+	TPM0_MOD = 8279;// 146 micy;
 	
 	//See page 552 for TPMx_SC configuration
-	//(freq = ?)
-	TPM0_SC = 0x0B;			
+	//(freq = ?)k
+	TPM0_SC = 0x0F;			
 	
 	//See page 556 for TPMx_CnSC configuration
 	
 	TPM0_C0SC = 0x28;		//0010 1000		
-	TPM0_C0V = 7575;	//15% ;
+	TPM0_C0V = 60;	//15% ;
 	
 	
 	TPM0_C1SC = 0x28;	//0010 1000	
-	TPM0_C1V = 15150;//	
+	TPM0_C1V = 120;//	
 	
 	TPM0_C2SC = 0x28;		//0010 1000	
-	TPM0_C2V = 22725; 	//30%
+	TPM0_C2V = 180; 	//30%
 	
 	TPM0_C3SC = 0x28;		//0010 1000	
-	TPM0_C3V = 30300; 	//45%
+	TPM0_C3V = 240; 	//45%
 	
 	TPM0_C5SC = 0x28;		//0010 1000	
-	TPM0_C5V = 37875; 	//60%
+	TPM0_C5V = 300; 	//60%
 }
 
 
