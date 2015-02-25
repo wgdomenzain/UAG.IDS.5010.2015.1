@@ -23,19 +23,15 @@
 #define	nBit6	0x40	//'01000000'
 #define	nBit7	0x80	//'10000000'
 
-//Rows
-#define upperRow 0x80
-#define lowerRow 0xC0
-
 //Time definitions
-#define nt15_msec	30000
-#define nt40_usec	9000
+#define nt15_msec	3500
+#define nt40_usec	35
 
 //LCD Control
 #define nIns	0
 #define nData	1
 
-#define PortLCD    	GPIOC_PDOR
+#define PortLCD    	GPIOD_PDOR
 //Enable connected to portb_01
 #define Enable_1	GPIOB_PDOR |= 0x01
 #define Enable_0	GPIOB_PDOR &= 0xFE
@@ -55,19 +51,11 @@ const unsigned char InitializeLCD[5] = {0x38, 0x38, 0x38, 0x0C, 0x01};
 //Declare Prototypes
 /* Functions */
 void cfgPorts(void);
+void cfgADC(void);
+void cfgPWM(void);
 void initLCD(void);
 void delay(long time);
 void sendCode(int Code, int Data);
-void printText(int Coord, char* Array);
-void centerText(int Row, char Text[]);
-void printPuppet(void);
-void borrar(void);
-void printHeart(void);
-void printPuppet2(void);
-
-
-/*@description: Initial Port Cfg 
-*/
 			
 int main(void)
 {
@@ -75,175 +63,91 @@ int main(void)
 	cfgPorts();
 	//Initialize LCD
 	initLCD();
+	//Configure PWM
+	cfgPWM();
 	
-	borrar();
-	sendCode(nIns,0x80);
-	sendCode(nData, 0x00);
+	//Set position to print character
+	sendCode(nIns, 0x83);
+	//Print character
+	sendCode(nData, 'W');
+	sendCode(nIns, 0x80);
 	
 	for(;;)
 	{
-		
-				printPuppet();
-				sendCode(nIns,0x89);
-				sendCode(nData, 0x00);
-				delay(1600000/2);
-
-							
-				printPuppet2();
-				sendCode(nIns,0x89);
-				sendCode(nData, 0x01);
-				delay(1600000/2);
-			
-		/*
-		
-		printPuppet();
-		sendCode(nIns, 0xC0);
-		sendCode(nData, 0x00);
-		delay(1600);
-		
-		borrar();
-	   sendCode(nIns, 0xC0);
-	   sendCode(nData, 0x00);
-	   delay(1600);
-					
-			printPuppet();
-			sendCode(nIns, 0xCF);
-			sendCode(nData, 0x00);
-			delay(1600);
-			
-			borrar();
-			sendCode(nIns, 0xCF);
-			sendCode(nData, 0x00);
-			delay(1600);
-			
-			printPuppet();
-			sendCode(nIns, 0xC1);
-			sendCode(nData, 0x00);
-			delay(1600);
-			printPuppet();
-			sendCode(nIns, 0xCE);
-			sendCode(nData, 0x00);
-			delay(1600);
-			borrar();
-			sendCode(nIns, 0xC1);
-			sendCode(nData, 0x00);
-			delay(1600);
-			borrar();
-			sendCode(nIns, 0xCE);
-			sendCode(nData, 0x00);
-			delay(1600);
-			printPuppet();
-			sendCode(nIns, 0xC2);
-			sendCode(nData, 0x00);
-			delay(1600);
-			printPuppet();
-			sendCode(nIns, 0xCD);
-			sendCode(nData, 0x00);
-			delay(1600);
-			
-			borrar();
-						sendCode(nIns, 0xC2);
-						sendCode(nData, 0x00);
-						
-						delay(1600);
-						borrar();
-						sendCode(nIns, 0xCD);
-						sendCode(nData, 0x00);
-						delay(1600);
-						
-						printHeart();
-						sendCode(nIns, 0x89);
-						sendCode(nData, 0x00);
-			*/
-			
-			
-		/* The logic for the buttons works if a pull-down 
-		resistor is used */
-		/*
-		if ((GPIOC_PDIR && 0x0F) == 0x00)
-		{// No button is pressed
-			//do noting
+		if((ADC0_SC1A & ADC_SC1_COCO_MASK) == ADC_SC1_COCO_MASK)
+		{
+			GPIOC_PDOR = ADC0_RA; 
 		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x01)
-		{// Button 1 has been pressed
-			sendCode(nData, '1');
-		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x02)
-		{// Button 2 has been pressed
-			sendCode(nData, '2');
-		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x04) 
-		{// Button 3 has been pressed
-			sendCode(nData, '3');
-		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x08) 
-		{// Button 4 has been pressed
-			sendCode(nData, '4');	
-		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x03) 
-		{// Buttons 1&2 have been pressed
+		else
+		{
 			
-		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x07) 
-		{// Buttons 1&2&3 have been pressed
-			
-		}
-		else if ((GPIOC_PDIR && 0x0F) == 0x0F) 
-		{// Buttons 1&2&3&4 have been pressed
-			
-		}*/
+		}	
 	}
-	
 	return 0;
 }
 
 void cfgPorts(void)
 {
+	//Activate clocks
 	//Turn on clock for portb
 	SIM_SCGC5 = SIM_SCGC5_PORTB_MASK;	
 	//Turn on clock for portd
-	//SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;	
+	SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;	
 	////Turn on clock for portc
 	SIM_SCGC5 |= SIM_SCGC5_PORTC_MASK;
+	////Turn on clock for porte
+	SIM_SCGC5 |= SIM_SCGC5_PORTE_MASK;
+	////Turn on clock for porte
+	SIM_SCGC6 = SIM_SCGC6_ADC0_MASK;
+	//Turn on clock for TPM0
+	SIM_SCGC6 |= SIM_SCGC6_TPM0_MASK;
 	
 	/* Set pins of PORTB as GPIO */
-	PORTC_PCR0 = PORT_PCR_MUX(1);
-	PORTC_PCR1 = PORT_PCR_MUX(1);
-	PORTC_PCR2 = PORT_PCR_MUX(1);
-	PORTC_PCR3 = PORT_PCR_MUX(1);
-	PORTC_PCR4 = PORT_PCR_MUX(1);
-	PORTC_PCR5 = PORT_PCR_MUX(1);
-	PORTC_PCR6 = PORT_PCR_MUX(1);
-	PORTC_PCR7 = PORT_PCR_MUX(1);
-	
-	/* Set pins of PORTC as GPIO */
 	PORTB_PCR0= PORT_PCR_MUX(1);
 	PORTB_PCR1= PORT_PCR_MUX(1);
+	PORTB_PCR2= PORT_PCR_MUX(1);
+	PORTB_PCR3=(0|PORT_PCR_MUX(1));
+	PORTB_PCR4=(0|PORT_PCR_MUX(1));
+	PORTB_PCR5=(0|PORT_PCR_MUX(1));
+	PORTB_PCR6=(0|PORT_PCR_MUX(1));
+	PORTB_PCR7=(0|PORT_PCR_MUX(1));
+	
+	/* Set pins of PORTC as GPIO */
+	PORTC_PCR0= PORT_PCR_MUX(1);
+	PORTC_PCR1= PORT_PCR_MUX(1);
+	PORTC_PCR2= PORT_PCR_MUX(1);
+	PORTC_PCR3= PORT_PCR_MUX(1);
 	
 	/* Set pins of PORTD as GPIO */
-	/*PORTD_PCR0= PORT_PCR_MUX(1);
-	PORTD_PCR1= PORT_PCR_MUX(1);
-	PORTD_PCR2=(0|PORT_PCR_MUX(1));
-	PORTD_PCR3=(0|PORT_PCR_MUX(1));
-	PORTD_PCR4=(0|PORT_PCR_MUX(1));
-	PORTD_PCR5=(0|PORT_PCR_MUX(1));
+	PORTD_PCR0= PORT_PCR_MUX(4);
+	PORTD_PCR1= PORT_PCR_MUX(4);
+	PORTD_PCR2=(0|PORT_PCR_MUX(4));
+	PORTD_PCR3=(0|PORT_PCR_MUX(4));
+	PORTD_PCR4=(0|PORT_PCR_MUX(4));
+	PORTD_PCR5=(0|PORT_PCR_MUX(4));
 	PORTD_PCR6=(0|PORT_PCR_MUX(1));
-	PORTD_PCR7=(0|PORT_PCR_MUX(1));*/
+	PORTD_PCR7=(0|PORT_PCR_MUX(1));
+	
+	/* Set pin of PORTE as TPM1 and TPM2 */
+	PORTE_PCR20 = PORT_PCR_MUX(3);
+	PORTE_PCR21 = PORT_PCR_MUX(3);
+	PORTE_PCR22 = PORT_PCR_MUX(3);
+	PORTE_PCR23 = PORT_PCR_MUX(3);
 	
 	//Initialize PortB
 	GPIOB_PDOR = 0x00;
 	
-	//Initialize PortC
-	GPIOC_PDOR = 0x00;
+	//Initialize PortD 
+	GPIOD_PDOR = 0x00;
 
 	//Configure PortB as outputs
 	GPIOB_PDDR = 0xFF;
 	
 	//Configure PortD as outputs
-	//GPIOD_PDDR = 0xFF;
+	GPIOD_PDDR = 0xFF;
 	
-	//Configure PortC as outputs
-	GPIOC_PDDR = 0xFF;
+	//Configure PortC as inputs
+	GPIOC_PDDR = 0x00;
 }
 
 void initLCD(void)
@@ -255,118 +159,9 @@ void initLCD(void)
 	/* Loop for sending each character from the array */
 	for(i=0;i<5;i++)
 	{										
-		sendCode(nIns, InitializeLCD[i]);	/* send initialization instructions */
+		sendCode(nIns, InitializeLCD[i]);	/* send initialization instructions */			
 	}
 	
-}
-
-void printPuppet(void){
-	
-	sendCode(nIns,0x40);
-	sendCode(nData,0x0E);
-	sendCode(nIns,0x41);
-	sendCode(nData,0x0E);
-	sendCode(nIns,0x42);
-	sendCode(nData,0x0E);
-	sendCode(nIns,0x43);
-	sendCode(nData,0x04);
-	sendCode(nIns,0x44);
-	sendCode(nData,0x1f);
-	sendCode(nIns,0x45);
-	sendCode(nData,0x04);
-	sendCode(nIns,0x46);
-	sendCode(nData,0x0A);
-	sendCode(nIns,0x47);
-	sendCode(nData,0x11);
-	
-}
-void printPuppet2(void){
-	
-	sendCode(nIns,0x40);
-	sendCode(nData,0x0E);
-	sendCode(nIns,0x41);
-	sendCode(nData,0x0E);
-	sendCode(nIns,0x42);
-	sendCode(nData,0x0E);
-	sendCode(nIns,0x43);
-	sendCode(nData,0x15);
-	sendCode(nIns,0x44);
-	sendCode(nData,0x0E);
-	sendCode(nIns,0x45);
-	sendCode(nData,0x04);
-	sendCode(nIns,0x46);
-	sendCode(nData,0x0A);
-	sendCode(nIns,0x47);
-	sendCode(nData,0x11);
-	
-}
-
-void borrar(void){
-/*
-		sendCode(nIns,0x01);
-		sendCode(nData,0x00);
-	*/
-	sendCode(nIns,0x40);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x41);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x42);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x43);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x44);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x45);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x46);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x47);
-		sendCode(nData,0x00);
-		
-	
-	
-}
-void printHeart(void){
-		sendCode(nIns,0x40);
-		sendCode(nData,0x0A);
-		sendCode(nIns,0x41);
-		sendCode(nData,0x11);
-		sendCode(nIns,0x42);
-		sendCode(nData,0x11);
-		sendCode(nIns,0x43);
-		sendCode(nData,0x11);
-		sendCode(nIns,0x44);
-		sendCode(nData,0x0E);
-		sendCode(nIns,0x45);
-		sendCode(nData,0x04);
-		sendCode(nIns,0x46);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x47);
-		sendCode(nData,0x00);
-	
-}
-
-void printText(int Coord, char* Array)
-{
-	sendCode(nIns, Coord);
-	int x,length;
-		for(x = 0; Array[x]!=0l; x++){
-			length=x;
-			sendCode(nData, Array[x]);
-		}	
-}
-
-void centerText(int Row, char Text[]){
-	int lon=0;
-	while(Text[lon]!=0l){
-		lon++;
-	}
-	lon=16-lon;
-	int center = 5;
-	int coord = Row+center;
-	printText(coord,Text);
-
-	sendCode(nIns, Row);
 }
 
 void sendCode(int Code, int Data)
@@ -374,7 +169,7 @@ void sendCode(int Code, int Data)
 	//Assign a value to pin RS
 	/*HINT: When RS is 1, then the LCD receives a data
 	when RS is 0, then the LCD receives an instruction */
-		// Initialize RS and Enable with 0
+	// Initialize RS and Enable with 0
 	RS_0;
 	Enable_0;
 	//Assign the value we want to send to the LCD
@@ -392,7 +187,7 @@ void sendCode(int Code, int Data)
 	{
 		RS_1;
 		Enable_1;
-		delay(nt15_msec);
+		delay(nt40_usec);
 		Enable_0;
 		RS_0;
 	}
@@ -403,4 +198,65 @@ void delay(long time)
 	{
 		time--;
 	}
-}  
+}
+
+void cfgADC(void)
+{	
+	//ADC Configuration Register 1 (ADCx_CFG1) page 465
+	ADC0_CFG1 = 0x00;  
+	
+	//ADC Configuration Register 2 (ADCx_CFG2) page 467
+	//Channel A selected
+	ADC0_CFG2 = 0x00;  	
+	
+	//Status and Control Register 2 (ADCx_SC2) page 470
+	ADC0_SC2 = 0;   	
+	
+	//Status and Control Register 3 (ADCx_SC3)
+	ADC0_SC3 = 0x08; 	
+	
+	//ADC Status and Control Registers 1 - page 462
+	//This registers triggers the ADC conversion
+	ADC0_SC1A = 0x00;
+}
+
+void cfgPWM(void)
+{
+	//Select the CLK for the TPM Module - page 196
+	//Assuming 8 MHz clock, we will have a 125us cycle
+	SIM_SOPT2 |= SIM_SOPT2_TPMSRC(1);
+	
+	// Selects the MCGFLLCLK clock 
+	//SIM_SOPT2 &= ~(SIM_SOPT2_PLLFLLSEL_MASK); 
+	
+	//Clear counter register - page 553
+	//Counter is a 16 bit register, therefore we 65536 steps.
+	//Maximum period is then 65536*125us = 8.192 seconds
+	TPM0_CNT = 0;
+	
+	//Set signal period equal to 125us * 1000 = 125ms  
+	TPM0_MOD = 268;
+	
+	//See page 552 for TPMx_SC configuration
+	//(freq = ?)
+	TPM0_SC = 0x0B;			//0000 1011			
+	
+	//See page 556 for TPMx_CnSC configuration
+	TPM0_C0SC = 0x28;		//0010 1000
+	
+	//This registers assigns the duty cycle value 231.0
+	TPM0_C0V = 30;
+	
+		
+	TPM0_C1SC = 0x28;
+	TPM0_C1V = 30;
+	
+	TPM0_C2SC = 0x28;
+	TPM0_C2V = 30;
+	
+	TPM0_C3SC = 0x28;
+	TPM0_C3V = 30;
+		
+	TPM0_C5SC = 0x28;
+	TPM0_C5V = 30;	
+}
