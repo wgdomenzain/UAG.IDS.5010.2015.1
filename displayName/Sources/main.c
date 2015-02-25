@@ -28,8 +28,8 @@
 #define lowerRow 0xC0
 
 //Time definitions
-#define nt15_msec	30000
-#define nt40_usec	9000
+#define nt15_msec	10000
+#define nt40_usec	3500
 
 //LCD Control
 #define nIns	0
@@ -61,10 +61,6 @@ void sendCode(int Code, int Data);
 void printText(int Coord, char* Array);
 void centerText(int Row, char Text[]);
 void printPuppet(void);
-void borrar(void);
-void printHeart(void);
-void printPuppet2(void);
-
 
 /*@description: Initial Port Cfg 
 */
@@ -75,92 +71,20 @@ int main(void)
 	cfgPorts();
 	//Initialize LCD
 	initLCD();
+	//Set position to print character
+	//sendCode(nIns, 0x80);
+	//sendCode(nData, 0x40);
+	//Print character
+	//char myName[] = {"Mariel"};
+	//printText(0xC0, myName);
+	//centerText(lowerRow, myName);
 	
-	borrar();
-	sendCode(nIns,0x80);
-	sendCode(nData, 0x00);
-	
-	for(;;)
-	{
-		
-				printPuppet();
-						sendCode(nIns,0x89);
-							sendCode(nData, 0x00);
-							delay(1600000/2);
-
-							
-							printPuppet2();
-							sendCode(nIns,0x89);
-								sendCode(nData, 0x00);
-								delay(1600000/2);
-			
-		/*
-		
-		printPuppet();
-		sendCode(nIns, 0xC0);
+	printPuppet();
+		sendCode(nIns, 0x80);
 		sendCode(nData, 0x00);
-		delay(1600);
-		
-		borrar();
-	   sendCode(nIns, 0xC0);
-	   sendCode(nData, 0x00);
-	   delay(1600);
-					
-			printPuppet();
-			sendCode(nIns, 0xCF);
-			sendCode(nData, 0x00);
-			delay(1600);
 
-			
-			borrar();
-			sendCode(nIns, 0xCF);
-			sendCode(nData, 0x00);
-			delay(1600);
-			
-			printPuppet();
-			sendCode(nIns, 0xC1);
-			sendCode(nData, 0x00);
-			delay(1600);
-
-			printPuppet();
-			sendCode(nIns, 0xCE);
-			sendCode(nData, 0x00);
-			delay(1600);
-
-			borrar();
-			sendCode(nIns, 0xC1);
-			sendCode(nData, 0x00);
-			delay(1600);
-			borrar();
-			sendCode(nIns, 0xCE);
-			sendCode(nData, 0x00);
-			delay(1600);
-			printPuppet();
-			sendCode(nIns, 0xC2);
-			sendCode(nData, 0x00);
-			delay(1600);
-			printPuppet();
-			sendCode(nIns, 0xCD);
-			sendCode(nData, 0x00);
-			delay(1600);
-			
-			borrar();
-						sendCode(nIns, 0xC2);
-						sendCode(nData, 0x00);
-						
-						delay(1600);
-						borrar();
-						sendCode(nIns, 0xCD);
-						sendCode(nData, 0x00);
-						delay(1600);
-						
-						printHeart();
-						sendCode(nIns, 0x89);
-						sendCode(nData, 0x00);
-			*/
-			
-			
-		/* The logic for the buttons works if a pull-down 
+	for(;;)
+	{/* The logic for the buttons works if a pull-down 
 		resistor is used */
 		/*
 		if ((GPIOC_PDIR && 0x0F) == 0x00)
@@ -283,72 +207,6 @@ void printPuppet(void){
 	sendCode(nData,0x11);
 	
 }
-void printPuppet2(void){
-	
-	sendCode(nIns,0x40);
-	sendCode(nData,0x0E);
-	sendCode(nIns,0x41);
-	sendCode(nData,0x0E);
-	sendCode(nIns,0x42);
-	sendCode(nData,0x0E);
-	sendCode(nIns,0x43);
-	sendCode(nData,0x15);
-	sendCode(nIns,0x44);
-	sendCode(nData,0x0E);
-	sendCode(nIns,0x45);
-	sendCode(nData,0x04);
-	sendCode(nIns,0x46);
-	sendCode(nData,0x0A);
-	sendCode(nIns,0x47);
-	sendCode(nData,0x11);
-	
-}
-
-void borrar(void){
-/*
-		sendCode(nIns,0x01);
-		sendCode(nData,0x00);
-	*/
-	sendCode(nIns,0x40);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x41);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x42);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x43);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x44);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x45);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x46);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x47);
-		sendCode(nData,0x00);
-		
-	
-	
-}
-void printHeart(void){
-	sendCode(nIns,0x40);
-		sendCode(nData,0x0A);
-		sendCode(nIns,0x41);
-		sendCode(nData,0x11);
-		sendCode(nIns,0x42);
-		sendCode(nData,0x11);
-		sendCode(nIns,0x43);
-		sendCode(nData,0x11);
-		sendCode(nIns,0x44);
-		sendCode(nData,0x0E);
-		sendCode(nIns,0x45);
-		sendCode(nData,0x04);
-		sendCode(nIns,0x46);
-		sendCode(nData,0x00);
-		sendCode(nIns,0x47);
-		sendCode(nData,0x00);
-	
-}
-
 void printText(int Coord, char* Array)
 {
 	sendCode(nIns, Coord);
@@ -406,4 +264,4 @@ void delay(long time)
 	{
 		time--;
 	}
-}  
+}

@@ -1,0 +1,356 @@
+!SESSION 2015-02-23 12:10:25.481 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2015-02-23 12:11:27.132
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-02-23 12:11:27.132
+!MESSAGE Commands should really have a category: plug-in='com.freescale.core.debugger.ui.cdt', id='com.freescale.cdt.debug.cw.core.ui.rse.export.template', categoryId='com.freescale.categories.rse.freescale'
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-23 12:11:33.059
+!MESSAGE Environment Variable Dependency not resolved for 'ARMGNUDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-23 12:11:33.062
+!MESSAGE Environment Variable Dependency not resolved for 'ARMSummonDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-23 12:11:33.065
+!MESSAGE Environment Variable Dependency not resolved for 'ARMYagartoDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-23 12:11:33.172
+!MESSAGE Environment Variable Dependency not resolved for 'ARMdevkitProDirEnv'.
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2015-02-23 12:11:34.135
+!MESSAGE External elements location 'C:\Users\Ana Mariel\Desktop\CW MCU v10.4\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2015-02-23 12:11:35.308
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:15:43.102
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.architecture.kinetis_e
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:15:43.105
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v2
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:15:43.107
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v3
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:15:43.108
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v4
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:15:43.110
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.board.family.v4e
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:15:43.112
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v2
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:15:43.114
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v3
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:15:43.115
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v4
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:15:43.117
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.twrboard.family.v4e
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:13.163
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke14d_36
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:13.168
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke14d_72
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:13.172
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke15d_36
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:13.175
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.kinetis_e.ke1x.subfamily.ke15d_72
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.573
+!MESSAGE Unknown condition ID: mcu.projectwizard.chip.k10d_100.ID_CHIP_MK60DN256Z
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.578
+!MESSAGE Unknown condition ID: mcu.projectwizard.chip.k10d_100.ID_CHIP_MK60DN256
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.589
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.family.hc08
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.602
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56852
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.605
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56853
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.607
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56854
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.610
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56855
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.612
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56857
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.614
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.dsc.ID_CHIP_DSP56858
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.616
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5208evbe
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.618
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5211demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.619
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5213evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.621
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52210demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.623
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52211evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.625
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52221demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.627
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52223evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.628
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52233demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.630
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52235evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.632
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52259demo
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.634
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52259evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.636
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m52277evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.638
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v2.m5253evbe
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.639
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v3.m53015evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.641
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v3.m5329evbe
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.643
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.v4.m54455evb
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.646
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QF128
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.648
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QF32
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.650
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QF64
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.652
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QH128
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.654
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QH32
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.656
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.cfv1+.ID_CHIP_MCF51QH64
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.658
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k11d_50.ID_CHIP_MK11DN512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.660
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k11d_50.ID_CHIP_MK11DX128_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.662
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k11d_50.ID_CHIP_MK11DX256_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.664
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k21d_50.ID_CHIP_MK21DN512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.666
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k21d_50.ID_CHIP_MK21DX128_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.668
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k21d_50.ID_CHIP_MK21DX256_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.670
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_120.ID_CHIP_MK61FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.672
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_150.ID_CHIP_MK61FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.673
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_120.ID_CHIP_MK61FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.675
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k61f_150.ID_CHIP_MK61FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.677
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_120.ID_CHIP_MK70FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.679
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_150.ID_CHIP_MK70FN1M0_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.681
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_120.ID_CHIP_MK70FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.683
+!MESSAGE Unknown UI Element ID: mcu.projectwizard.chip.k70f_150.ID_CHIP_MK70FX512_WS
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.692
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.cf_v2v4.ID_TARGET_EXTFLASH
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.694
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.cf_v2v4.ID_TARGET_EXTRAM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.861
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.cf_v2v4.ID_TARGET_CONSOLE_EXTRAM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.864
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.dsc.ID_TARGET_EXTERNAL_RAM_SDM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:31.866
+!MESSAGE Unknown condition ID: mcu.projectwizard.condition.dsc.ID_TARGET_EXTERNAL_RAM_LDM
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:32.746
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copytoproject.cfv1
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:32.749
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.dontcopytoproject
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:32.751
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.abs
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:32.753
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copyelf.pa
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:32.755
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.elf.arm
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:32.757
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.elf.dsc
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:32.759
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.elf.s12z
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:32.761
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.bb.elf
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:32.763
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.kd.elf
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:32.766
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.app.elf
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:32.768
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.copy.flt
+
+!ENTRY com.freescale.core.ide.wizard.ui 4 0 2015-02-23 12:16:32.770
+!MESSAGE Unknown condition ID: mcu.elfimporter.condition.arm.setPnEAttribute.STARTUP_USE_SWD
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-02-23 12:16:37.751
+!MESSAGE Indexed 'pwmLeds' (5 sources, 67 headers) in 1.78 sec: 1,376 declarations; 2,308 references; 0 unresolved inclusions; 0 syntax errors; 1 unresolved names (0.03%)
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-23 12:17:45.180
+!MESSAGE NLS unused message: trace_trigger_dv_error_title in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-23 12:17:45.183
+!MESSAGE NLS unused message: trace_trigger_dv_error_message in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-23 12:29:46.239
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+org.eclipse.cdt.debug.core.cdi.CDIException: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device[ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device]
+	at com.freescale.cdt.debug.cw.core.DebugErrorUtils.handleDebugError(DebugErrorUtils.java:92)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.doTerminate(Target.java:1403)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.access$2(Target.java:1344)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target$TerminateJob.run(Target.java:1302)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2015-02-23 12:29:46.242
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+org.eclipse.cdt.debug.core.cdi.CDIException: ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device[ARM GDI Protocol Adapter : Stop failed. The Debugger is not connected to the P&E device]
+	at com.freescale.cdt.debug.cw.core.DebugErrorUtils.handleDebugError(DebugErrorUtils.java:92)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.doTerminate(Target.java:1403)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target.access$2(Target.java:1344)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Target$TerminateJob.run(Target.java:1302)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2015-02-25 10:00:35.458 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-02-25 10:00:57.441
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 2 0 2015-02-25 10:00:59.963
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-02-25 10:00:59.963
+!MESSAGE Commands should really have a category: plug-in='com.freescale.core.debugger.ui.cdt', id='com.freescale.cdt.debug.cw.core.ui.rse.export.template', categoryId='com.freescale.categories.rse.freescale'
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-25 10:01:19.966
+!MESSAGE Environment Variable Dependency not resolved for 'ARMGNUDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-25 10:01:19.970
+!MESSAGE Environment Variable Dependency not resolved for 'ARMSummonDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-25 10:01:19.975
+!MESSAGE Environment Variable Dependency not resolved for 'ARMYagartoDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-25 10:01:19.979
+!MESSAGE Environment Variable Dependency not resolved for 'ARMdevkitProDirEnv'.
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2015-02-25 10:01:46.949
+!MESSAGE External elements location 'C:\Users\Ana Mariel\Desktop\CW MCU v10.4\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2015-02-25 10:01:58.475
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-25 10:16:35.588
+!MESSAGE NLS unused message: trace_trigger_dv_error_title in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-25 10:16:35.594
+!MESSAGE NLS unused message: trace_trigger_dv_error_message in: com.freescale.sa.mcu.analysispoints.nls.ui
+!SESSION 2015-02-25 13:13:21.096 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2015-02-25 13:26:07.629
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-02-25 13:26:07.629
+!MESSAGE Commands should really have a category: plug-in='com.freescale.core.debugger.ui.cdt', id='com.freescale.cdt.debug.cw.core.ui.rse.export.template', categoryId='com.freescale.categories.rse.freescale'
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-25 13:26:14.801
+!MESSAGE Environment Variable Dependency not resolved for 'ARMGNUDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-25 13:26:14.810
+!MESSAGE Environment Variable Dependency not resolved for 'ARMSummonDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-25 13:26:14.813
+!MESSAGE Environment Variable Dependency not resolved for 'ARMYagartoDirEnv'.
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2015-02-25 13:26:14.991
+!MESSAGE Environment Variable Dependency not resolved for 'ARMdevkitProDirEnv'.
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2015-02-25 13:26:25.527
+!MESSAGE External elements location 'C:\Users\Ana Mariel\Desktop\CW MCU v10.4\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2015-02-25 13:26:34.902
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-25 13:35:30.814
+!MESSAGE NLS unused message: trace_trigger_dv_error_title in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.osgi 2 1 2015-02-25 13:35:30.820
+!MESSAGE NLS unused message: trace_trigger_dv_error_message in: com.freescale.sa.mcu.analysispoints.nls.ui
