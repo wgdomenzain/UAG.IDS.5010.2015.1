@@ -24,15 +24,14 @@
 #define	nBit7	0x80	//'10000000'
 
 //Time definitions
-#define nt15_msec	6000
-#define nt40_usec	3500
-#define nt1_sec		2600000
+#define nt15_msec	3500
+#define nt40_usec	35
 
 //LCD Control
 #define nIns	0
 #define nData	1
 
-#define PortLCD    	GPIOC_PDOR
+#define PortLCD    	GPIOD_PDOR
 //Enable connected to portb_01
 #define Enable_1	GPIOB_PDOR |= 0x01
 #define Enable_0	GPIOB_PDOR &= 0xFE
@@ -52,148 +51,103 @@ const unsigned char InitializeLCD[5] = {0x38, 0x38, 0x38, 0x0C, 0x01};
 //Declare Prototypes
 /* Functions */
 void cfgPorts(void);
+void cfgADC(void);
+void cfgPWM(void);
 void initLCD(void);
 void delay(long time);
 void sendCode(int Code, int Data);
-void printText(unsigned char coord, char* array);
-void centerText(int row, char* array);
-void guardarCaracteres();
-void baileMonos(int ban);
-
-
-/*@description: Initial Port Cfg 
-*/
 			
 int main(void)
 {
 	//Configure ports
 	cfgPorts();
 	//Initialize LCD
-	initLCD();
-	//Set position to print character
-	//sendCode(nIns, 0x80);
-	//Print character
+	//initLCD();
+	//Configure PWM
+	cfgPWM();
 	
-	//char myName[] = {"Hola"};
-	//char myName2[] = {"Mundo"};
-	//prinText(0xC0, myName);
-	//centerText(1, myName);
-	//centerText(2, myName2);
-	//sendCode(nIns, 0x80);
-	int x = 0, ban1 = 0, ban2 = 0, ban3 = 0, pos1 = 0xC1, pos2 = pos1+4, pos3 = pos2+4, pos4 = pos3+4;
-	guardarCaracteres();
+	//Set position to print character
+	sendCode(nIns, 0x83);
+	//Print character
+	sendCode(nData, 'W');
+	sendCode(nIns, 0x80);
 	
 	for(;;)
 	{
-		for(x = 0; x < 16; x++){
-			if(x != 8 && x != 3 && x != 6 && x != 10 && x != 14){
-				sendCode(nIns, 0x80+x);
-				if(ban2 == 0){
-					sendCode(nData, 0x02);
-				}else{
-					sendCode(nData, 0x03);
-				}
-			}
+		if((ADC0_SC1A & ADC_SC1_COCO_MASK) == ADC_SC1_COCO_MASK)
+		{
+			GPIOC_PDOR = ADC0_RA; 
 		}
-		for(x = 0; x < 16; x++){
-			sendCode(nIns, 0xC0+x);
-			if(ban2 == 0){
-				sendCode(nData, 0x03);
-			}else{
-				sendCode(nData, 0x02);
-			}
-		}
-		sendCode(nIns, 0x83);
-		sendCode(nData, 0x07);
-		sendCode(nIns, 0x86);
-		sendCode(nData, 0x07);
-		sendCode(nIns, 0x8A);
-		sendCode(nData, 0x07);
-		sendCode(nIns, 0x8E);
-		sendCode(nData, 0x07);
-		
-		if(ban1 == 0){
-			sendCode(nIns, 0x88);
-			sendCode(nData, 0x00);
-			ban1 = 1;
-		}else{
-			sendCode(nIns, 0x88);
-			sendCode(nData, 0x01);
-			ban1 = 0;
-		}
-		
-		//baile monos
-		sendCode(nIns, pos1);
-		baileMonos(ban3);
-		sendCode(nIns, pos2);
-		baileMonos(ban3);
-		sendCode(nIns, pos3);
-		baileMonos(ban3);
-		sendCode(nIns, pos4);
-		baileMonos(ban3);
-		ban3++;
-		
-		if(ban2 == 0){
-			ban2 = 1;
-		}else{
-			ban2 = 0;
-		}
-		if(ban3 > 2){
-			ban3 = 0;
-		}
-		delay(nt1_sec/2);
+		else
+		{
+			
+		}	
 	}
-	
 	return 0;
 }
 
 void cfgPorts(void)
 {
+	//Activate clocks
 	//Turn on clock for portb
 	SIM_SCGC5 = SIM_SCGC5_PORTB_MASK;	
 	//Turn on clock for portd
-	//SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;	
+	SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;	
 	////Turn on clock for portc
 	SIM_SCGC5 |= SIM_SCGC5_PORTC_MASK;
+	////Turn on clock for porte
+	SIM_SCGC5 |= SIM_SCGC5_PORTE_MASK;
+	////Turn on clock for porte
+	SIM_SCGC6 = SIM_SCGC6_ADC0_MASK;
+	//Turn on clock for TPM0
+	SIM_SCGC6 |= SIM_SCGC6_TPM0_MASK;
 	
 	/* Set pins of PORTB as GPIO */
-	PORTC_PCR0 = PORT_PCR_MUX(1);
-	PORTC_PCR1 = PORT_PCR_MUX(1);
-	PORTC_PCR2 = PORT_PCR_MUX(1);
-	PORTC_PCR3 = PORT_PCR_MUX(1);
-	PORTC_PCR4 = PORT_PCR_MUX(1);
-	PORTC_PCR5 = PORT_PCR_MUX(1);
-	PORTC_PCR6 = PORT_PCR_MUX(1);
-	PORTC_PCR7 = PORT_PCR_MUX(1);
-	
-	/* Set pins of PORTC as GPIO */
 	PORTB_PCR0= PORT_PCR_MUX(1);
 	PORTB_PCR1= PORT_PCR_MUX(1);
+	PORTB_PCR2= PORT_PCR_MUX(1);
+	PORTB_PCR3=(0|PORT_PCR_MUX(1));
+	PORTB_PCR4=(0|PORT_PCR_MUX(1));
+	PORTB_PCR5=(0|PORT_PCR_MUX(1));
+	PORTB_PCR6=(0|PORT_PCR_MUX(1));
+	PORTB_PCR7=(0|PORT_PCR_MUX(1));
+	
+	/* Set pins of PORTC as GPIO */
+	PORTC_PCR0= PORT_PCR_MUX(1);
+	PORTC_PCR1= PORT_PCR_MUX(1);
+	PORTC_PCR2= PORT_PCR_MUX(1);
+	PORTC_PCR3= PORT_PCR_MUX(1);
 	
 	/* Set pins of PORTD as GPIO */
-	/*PORTD_PCR0= PORT_PCR_MUX(1);
-	PORTD_PCR1= PORT_PCR_MUX(1);
-	PORTD_PCR2=(0|PORT_PCR_MUX(1));
-	PORTD_PCR3=(0|PORT_PCR_MUX(1));
-	PORTD_PCR4=(0|PORT_PCR_MUX(1));
-	PORTD_PCR5=(0|PORT_PCR_MUX(1));
+	PORTD_PCR0= PORT_PCR_MUX(4);
+	PORTD_PCR1= PORT_PCR_MUX(4);
+	PORTD_PCR2=(0|PORT_PCR_MUX(4));
+	PORTD_PCR3=(0|PORT_PCR_MUX(4));
+	PORTD_PCR4=(0|PORT_PCR_MUX(4));
+	PORTD_PCR5=(0|PORT_PCR_MUX(4));
 	PORTD_PCR6=(0|PORT_PCR_MUX(1));
-	PORTD_PCR7=(0|PORT_PCR_MUX(1));*/
+	PORTD_PCR7=(0|PORT_PCR_MUX(1));
+	
+	/* Set pin of PORTE as TPM1 and TPM2 */
+	PORTE_PCR20 = PORT_PCR_MUX(3);
+	PORTE_PCR21 = PORT_PCR_MUX(3);
+	PORTE_PCR22 = PORT_PCR_MUX(3);
+	PORTE_PCR23 = PORT_PCR_MUX(3);
 	
 	//Initialize PortB
 	GPIOB_PDOR = 0x00;
 	
-	//Initialize PortC
-	GPIOC_PDOR = 0x00;
+	//Initialize PortD 
+	GPIOD_PDOR = 0x00;
 
 	//Configure PortB as outputs
 	GPIOB_PDDR = 0xFF;
 	
 	//Configure PortD as outputs
-	//GPIOD_PDDR = 0xFF;
+	GPIOD_PDDR = 0xFF;
 	
-	//Configure PortC as outputs
-	GPIOC_PDDR = 0xFF;
+	//Configure PortC as inputs
+	GPIOC_PDDR = 0x00;
 }
 
 void initLCD(void)
@@ -205,7 +159,7 @@ void initLCD(void)
 	/* Loop for sending each character from the array */
 	for(i=0;i<5;i++)
 	{										
-		sendCode(nIns, InitializeLCD[i]);	/* send initialization instructions */
+		sendCode(nIns, InitializeLCD[i]);	/* send initialization instructions */			
 	}
 	
 }
@@ -233,7 +187,7 @@ void sendCode(int Code, int Data)
 	{
 		RS_1;
 		Enable_1;
-		delay(nt15_msec);
+		delay(nt40_usec);
 		Enable_0;
 		RS_0;
 	}
@@ -245,179 +199,70 @@ void delay(long time)
 		time--;
 	}
 }
-void printText(unsigned char coord, char* array){
-	int x = 0;
-	sendCode(nIns, coord);
-	for(x = 0; array[x] != 0l; x++){
-		sendCode(nData, array[x]);
-	}
+
+void cfgADC(void)
+{	
+	//ADC Configuration Register 1 (ADCx_CFG1) page 465
+	ADC0_CFG1 = 0x00;  
+	
+	//ADC Configuration Register 2 (ADCx_CFG2) page 467
+	//Channel A selected
+	ADC0_CFG2 = 0x00;  	
+	
+	//Status and Control Register 2 (ADCx_SC2) page 470
+	ADC0_SC2 = 0;   	
+	
+	//Status and Control Register 3 (ADCx_SC3)
+	ADC0_SC3 = 0x08; 	
+	
+	//ADC Status and Control Registers 1 - page 462
+	//This registers triggers the ADC conversion
+	ADC0_SC1A = 0x00;
 }
-void centerText(int row, char* array){
-	int x = 0, t = 16, pos;
-	for(x = 0; array[x]!= 0l; x++);
-	pos = t-x;
-	pos = pos/2;
-	if(row == 1){
-		printText(0x80+pos, array);
-	}else if(row == 2){
-		printText(0xC0+pos, array);
-	}
-}
-void guardarCaracteres(){
-	//ccaracter 0
-	sendCode(nIns, 0x40);
-	sendCode(nData, 0x05);
-	sendCode(nIns, 0x41);
-	sendCode(nData, 0x14);
-	sendCode(nIns, 0x42);
-	sendCode(nData, 0x04);
-	sendCode(nIns, 0x43);
-	sendCode(nData, 0x0E);
-	sendCode(nIns, 0x44);
-	sendCode(nData, 0x1F);
-	sendCode(nIns, 0x45);
-	sendCode(nData, 0x0E);
-	sendCode(nIns, 0x46);
-	sendCode(nData, 0x04);
-	sendCode(nIns, 0x47);
-	sendCode(nData, 0x11);
+
+void cfgPWM(void)
+{
+	//Select the CLK for the TPM Module - page 196
+	//Assuming 8 MHz clock, we will have a 125ps cycle
+	SIM_SOPT2 |= SIM_SOPT2_TPMSRC(1);
 	
-	//caracter 1
-	sendCode(nIns, 0x48);
-	sendCode(nData, 0x14);
-	sendCode(nIns, 0x49);
-	sendCode(nData, 0x05);
-	sendCode(nIns, 0x4A);
-	sendCode(nData, 0x04);
-	sendCode(nIns, 0x4B);
-	sendCode(nData, 0x0A);
-	sendCode(nIns, 0x4C);
-	sendCode(nData, 0x15);
-	sendCode(nIns, 0x4D);
-	sendCode(nData, 0x0A);
-	sendCode(nIns, 0x4E);
-	sendCode(nData, 0x14);
-	sendCode(nIns, 0x4F);
-	sendCode(nData, 0x02);
+	// Selects the MCGFLLCLK clock 
+	//SIM_SOPT2 &= ~(SIM_SOPT2_PLLFLLSEL_MASK); 
 	
-	//caracter 2
-	sendCode(nIns, 0x50);
-	sendCode(nData, 0x05);
-	sendCode(nIns, 0x51);
-	sendCode(nData, 0x08);
-	sendCode(nIns, 0x52);
-	sendCode(nData, 0x00);
-	sendCode(nIns, 0x53);
-	sendCode(nData, 0x02);
-	sendCode(nIns, 0x54);
-	sendCode(nData, 0x10);
-	sendCode(nIns, 0x55);
-	sendCode(nData, 0x04);
-	sendCode(nIns, 0x56);
-	sendCode(nData, 0x01);
-	sendCode(nIns, 0x57);
-	sendCode(nData, 0x08);
+	//Clear counter register - page 553
+	//Counter is a 16 bit register, therefore we 65536 steps.
+	//Maximum period is then 65536*125us = 8.192 seconds
+	TPM0_CNT = 0;
 	
-	//caracter 3
-	sendCode(nIns, 0x58);
-	sendCode(nData, 0x08);
-	sendCode(nIns, 0x59);
-	sendCode(nData, 0x02);
-	sendCode(nIns, 0x5A);
-	sendCode(nData, 0x04);
-	sendCode(nIns, 0x5B);
-	sendCode(nData, 0x10);
-	sendCode(nIns, 0x5C);
-	sendCode(nData, 0x01);
-	sendCode(nIns, 0x5D);
-	sendCode(nData, 0x08);
-	sendCode(nIns, 0x5E);
-	sendCode(nData, 0x02);
-	sendCode(nIns, 0x5F);
-	sendCode(nData, 0x08);
+	//Set signal period equal to 125ps * 1000 = 125us
+	TPM0_MOD = 13634; //TPM0_MOD = 10000;   41.6ms = 13634
 	
-	//caracter 4
-	sendCode(nIns, 0x60);
-	sendCode(nData, 0x0E);
-	sendCode(nIns, 0x61);
-	sendCode(nData, 0x0E);
-	sendCode(nIns, 0x62);
-	sendCode(nData, 0x1E);
-	sendCode(nIns, 0x63);
-	sendCode(nData, 0x0D);
-	sendCode(nIns, 0x64);
-	sendCode(nData, 0x06);
-	sendCode(nIns, 0x65);
-	sendCode(nData, 0x04);
-	sendCode(nIns, 0x66);
-	sendCode(nData, 0x0A);
-	sendCode(nIns, 0x67);
-	sendCode(nData, 0x09);
+	//See page 552 for TPMx_SC configuration
+	//(freq = ?)
+	TPM0_SC = 0x0E;			//0000 1110			
 	
-	//caracter 5
-	sendCode(nIns, 0x68);
-	sendCode(nData, 0x0E);
-	sendCode(nIns, 0x69);
-	sendCode(nData, 0x0E);
-	sendCode(nIns, 0x6A);
-	sendCode(nData, 0x0F);
-	sendCode(nIns, 0x6B);
-	sendCode(nData, 0x16);
-	sendCode(nIns, 0x6C);
-	sendCode(nData, 0x0C);
-	sendCode(nIns, 0x6D);
-	sendCode(nData, 0x04);
-	sendCode(nIns, 0x6E);
-	sendCode(nData, 0x0A);
-	sendCode(nIns, 0x6F);
-	sendCode(nData, 0x12);
+	//See page 556 for TPMx_CnSC configuration
+	TPM0_C1SC = 0x28;		//0010 1000
 	
-	//caracter 6
-	sendCode(nIns, 0x70);
-	sendCode(nData, 0x0E);
-	sendCode(nIns, 0x71);
-	sendCode(nData, 0x0E);
-	sendCode(nIns, 0x72);
-	sendCode(nData, 0x0E);
-	sendCode(nIns, 0x73);
-	sendCode(nData, 0x04);
-	sendCode(nIns, 0x74);
-	sendCode(nData, 0x0E);
-	sendCode(nIns, 0x75);
-	sendCode(nData, 0x15);
-	sendCode(nIns, 0x76);
-	sendCode(nData, 0x0A);
-	sendCode(nIns, 0x77);
-	sendCode(nData, 0x11);
+	TPM0_C1V = 6544;  //48% = 159744
 	
-	//caracter 7
-	sendCode(nIns, 0x78);
-	sendCode(nData, 0x02);
-	sendCode(nIns, 0x79);
-	sendCode(nData, 0x0A);
-	sendCode(nIns, 0x7A);
-	sendCode(nData, 0x03);
-	sendCode(nIns, 0x7B);
-	sendCode(nData, 0x15);
-	sendCode(nIns, 0x7C);
-	sendCode(nData, 0x04);
-	sendCode(nIns, 0x7D);
-	sendCode(nData, 0x0C);
-	sendCode(nIns, 0x7E);
-	sendCode(nData, 0x1D);
-	sendCode(nIns, 0x7F);
-	sendCode(nData, 0x08);
-}
-void baileMonos(int ban){
-	switch(ban){
-		case 0:
-			sendCode(nData, 0x04);
-			break;
-		case 1:
-			sendCode(nData, 0x05);
-			break;
-		case 2:
-			sendCode(nData, 0x06);
-			break;
-	}
+	//See page 556 for TPMx_CnSC configuration
+	TPM0_C3SC = 0x28;		//0010 1000
+	
+	TPM0_C3V = 6544;
+	
+	//See page 556 for TPMx_CnSC configuration
+	TPM0_C2SC = 0x28;		//0010 1000
+	
+	TPM0_C2V = 5000;
+	
+	//See page 556 for TPMx_CnSC configuration
+	TPM0_C0SC = 0x28;		//0010 1000
+	
+	TPM0_C0V = 6544;
+	
+	//See page 556 for TPMx_CnSC configuration
+	TPM0_C5SC = 0x28;		//0010 1000
+	
+	TPM0_C5V = 6544;
 }
