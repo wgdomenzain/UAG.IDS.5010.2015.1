@@ -20,7 +20,7 @@ Project_Settings/Startup_Code/__arm_start.o: \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdint.h \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdint \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/limits_api.h \
- C:/UAG/Projects/UAG.IDS.5010.2015.1/IDS/Project_Settings/Startup_Code/runtime_configuration.h
+ C:/UAG/Projects/UAG.IDS.5010.2015.1/UAG.IDS.5010.2015.1/UAG.IDS.5010.2015.1/IDS/Project_Settings/Startup_Code/runtime_configuration.h
 
 C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
 
@@ -62,4 +62,4 @@ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdint:
 
 C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/limits_api.h:
 
-C:/UAG/Projects/UAG.IDS.5010.2015.1/IDS/Project_Settings/Startup_Code/runtime_configuration.h:
+C:/UAG/Projects/UAG.IDS.5010.2015.1/UAG.IDS.5010.2015.1/UAG.IDS.5010.2015.1/IDS/Project_Settings/Startup_Code/runtime_configuration.h:
