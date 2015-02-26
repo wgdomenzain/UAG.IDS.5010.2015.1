@@ -235,28 +235,28 @@ void cfgPWM(void)
 	TPM0_CNT = 0;
 	
 	//Set signal period equal to 125us * 1000 = 125ms  
-	TPM0_MOD = 268;
+	TPM0_MOD = 34100;
 	
 	//See page 552 for TPMx_SC configuration
 	//(freq = ?)
-	TPM0_SC = 0x0B;			//0000 1011			
+	TPM0_SC = 0x0E;			//0000 1011			
 	
 	//See page 556 for TPMx_CnSC configuration
 	TPM0_C0SC = 0x28;		//0010 1000
 	
 	//This registers assigns the duty cycle value 231.0
-	TPM0_C0V = 30;
+	TPM0_C0V = 23529;
 	
 		
 	TPM0_C1SC = 0x28;
-	TPM0_C1V = 30;
+	TPM0_C1V = 23529;
 	
 	TPM0_C2SC = 0x28;
-	TPM0_C2V = 30;
+	TPM0_C2V = 23529;
 	
 	TPM0_C3SC = 0x28;
-	TPM0_C3V = 30;
+	TPM0_C3V = 23529;
 		
 	TPM0_C5SC = 0x28;
-	TPM0_C5V = 30;	
+	TPM0_C5V = 23529;	
 }
