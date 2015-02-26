@@ -235,16 +235,16 @@ void cfgPWM(void)
 	TPM0_CNT = 0;
 	
 	//Set signal period equal to 125ps * 1000 = 125us
-	TPM0_MOD = 13634; //TPM0_MOD = 10000;   41.6ms = 13634
+	TPM0_MOD = 110; //TPM0_MOD = 10000;   41.6ms = 13634
 	
 	//See page 552 for TPMx_SC configuration
 	//(freq = ?)
-	TPM0_SC = 0x0E;			//0000 1110			
+	TPM0_SC = 0x0B;			//0000 1110			
 	
 	//See page 556 for TPMx_CnSC configuration
 	TPM0_C1SC = 0x28;		//0010 1000
 	
-	TPM0_C1V = 6544;  //48% = 159744
+	TPM0_C1V = 53;  //48% = 159744
 	
 	//See page 556 for TPMx_CnSC configuration
 	TPM0_C3SC = 0x28;		//0010 1000
