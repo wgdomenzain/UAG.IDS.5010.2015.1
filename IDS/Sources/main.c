@@ -56,10 +56,10 @@ void cfgpwm(void);
 void initLCD(void);
 void delay(long time);
 void sendCode(int Code, int Data);
-void imprimirTemp(int centena, int decena, int unidad);
+void imprimirTemp(int decMillar,int millar,int centena, int decena, int unidad);
 /*@description: Initial Port Cfg 
 */
-int unidad = 0, decena = 0, dummy = 0, adc,decimal=0,centena=0;
+int unidad = 0, decena = 0, dummy = 0, adc,centena=0,millar=0,decMillar=0;
 float result=0;
 			
 int main(void)
@@ -83,13 +83,15 @@ int main(void)
 			result = ADC0_RA;
 			adc = result;
 			ADC0_SC1A = 0x00;
-		//	result = (result*13)/10;
-			centena=result/100;
-			decena = (result-(centena*100))/10;
-			unidad = (result-((decena*10)+(centena*100)));	
+			decMillar=result/10000;
+			millar=(result-(decMillar*10000))/1000;
+			centena=(result-((decMillar*10000)+(millar*1000)))/100;
+			decena = (result-((decMillar*10000)+(millar*1000)+(centena*100)))/10;
+			unidad = (result-((decMillar*10000)+(millar*1000)+(decena*10)+(centena*100)));	
 					
-		
-			imprimirTemp(centena,decena,unidad);
+		delay(1400000);
+			imprimirTemp(decMillar,millar,centena,decena,unidad);
+			
 			
 		}
 		else
@@ -217,7 +219,7 @@ void delay(long time)
 void cfgADC(void)
 {	
 	//ADC Configuration Register 1 (ADCx_CFG1) page 465
-	ADC0_CFG1 = 0x00;  
+	ADC0_CFG1 = 0x0C;  
 	
 	//ADC Configuration Register 2 (ADCx_CFG2) page 467
 	//Channel A selected
@@ -234,8 +236,10 @@ void cfgADC(void)
 	ADC0_SC1A = 0x00;
 }
 
-void imprimirTemp(int centena, int decena, int unidad){
+void imprimirTemp(int decMillar,int millar,int centena, int decena, int unidad){
 	sendCode(nIns, 0x85);
+	sendCode(nData, 0X30+decMillar);
+	sendCode(nData, 0X30+millar);
 	sendCode(nData, 0X30+centena);
 	sendCode(nData,0x30+decena);
 	sendCode(nData,0x30+unidad);
