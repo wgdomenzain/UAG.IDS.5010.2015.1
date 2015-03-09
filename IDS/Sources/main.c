@@ -24,14 +24,14 @@
 #define	nBit7	0x80	//'10000000'
 
 //Time definitions
-#define nt15_msec	3500
-#define nt40_usec	35
+#define nt15_msec	10000
+#define nt40_usec	3500
 
 //LCD Control
 #define nIns	0
 #define nData	1
 
-#define PortLCD    	GPIOD_PDOR
+#define PortLCD    	GPIOC_PDOR
 //Enable connected to portb_01
 #define Enable_1	GPIOB_PDOR |= 0x01
 #define Enable_0	GPIOB_PDOR &= 0xFE
@@ -52,10 +52,15 @@ const unsigned char InitializeLCD[5] = {0x38, 0x38, 0x38, 0x0C, 0x01};
 /* Functions */
 void cfgPorts(void);
 void cfgADC(void);
-void cfgPWM(void);
+void cfgpwm(void);
 void initLCD(void);
 void delay(long time);
 void sendCode(int Code, int Data);
+void imprimirTemp(int centena, int decena, int unidad);
+/*@description: Initial Port Cfg 
+*/
+int unidad = 0, decena = 0, dummy = 0, adc,decimal=0,centena=0;
+float result=0;
 			
 int main(void)
 {
@@ -63,20 +68,29 @@ int main(void)
 	cfgPorts();
 	//Initialize LCD
 	initLCD();
-	//Configure PWM
-	cfgPWM();
+	//Configure ADC
+	cfgADC();
 	
 	//Set position to print character
-	sendCode(nIns, 0x83);
+	//sendCode(nIns, 0x83);
 	//Print character
-	sendCode(nData, 'W');
-	sendCode(nIns, 0x80);
-	
+	//sendCode(nData, 'W');
+	//sendCode(nIns, 0x80);
 	for(;;)
 	{
-		if((ADC0_SC1A & ADC_SC1_COCO_MASK) == ADC_SC1_COCO_MASK)
+		if((ADC0_SC1A & 0x00000080)  == 0x00000080)
 		{
-			GPIOC_PDOR = ADC0_RA; 
+			result = ADC0_RA;
+			adc = result;
+			ADC0_SC1A = 0x00;
+		//	result = (result*13)/10;
+			centena=result/100;
+			decena = (result-(centena*100))/10;
+			unidad = (result-((decena*10)+(centena*100)));	
+					
+		
+			imprimirTemp(centena,decena,unidad);
+			
 		}
 		else
 		{
@@ -92,20 +106,18 @@ void cfgPorts(void)
 	//Turn on clock for portb
 	SIM_SCGC5 = SIM_SCGC5_PORTB_MASK;	
 	//Turn on clock for portd
-	SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;	
+	//SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;	
 	////Turn on clock for portc
 	SIM_SCGC5 |= SIM_SCGC5_PORTC_MASK;
 	////Turn on clock for porte
 	SIM_SCGC5 |= SIM_SCGC5_PORTE_MASK;
 	////Turn on clock for porte
 	SIM_SCGC6 = SIM_SCGC6_ADC0_MASK;
-	//Turn on clock for TPM0
-	SIM_SCGC6 |= SIM_SCGC6_TPM0_MASK;
 	
 	/* Set pins of PORTB as GPIO */
 	PORTB_PCR0= PORT_PCR_MUX(1);
 	PORTB_PCR1= PORT_PCR_MUX(1);
-	PORTB_PCR2= PORT_PCR_MUX(1);
+	PORTB_PCR2=(0|PORT_PCR_MUX(1));
 	PORTB_PCR3=(0|PORT_PCR_MUX(1));
 	PORTB_PCR4=(0|PORT_PCR_MUX(1));
 	PORTB_PCR5=(0|PORT_PCR_MUX(1));
@@ -117,37 +129,38 @@ void cfgPorts(void)
 	PORTC_PCR1= PORT_PCR_MUX(1);
 	PORTC_PCR2= PORT_PCR_MUX(1);
 	PORTC_PCR3= PORT_PCR_MUX(1);
+	PORTC_PCR4= PORT_PCR_MUX(1);
+	PORTC_PCR5= PORT_PCR_MUX(1);
+	PORTC_PCR6= PORT_PCR_MUX(1);
+	PORTC_PCR7= PORT_PCR_MUX(1);
 	
 	/* Set pins of PORTD as GPIO */
-	PORTD_PCR0= PORT_PCR_MUX(4);
-	PORTD_PCR1= PORT_PCR_MUX(4);
-	PORTD_PCR2=(0|PORT_PCR_MUX(4));
-	PORTD_PCR3=(0|PORT_PCR_MUX(4));
-	PORTD_PCR4=(0|PORT_PCR_MUX(4));
-	PORTD_PCR5=(0|PORT_PCR_MUX(4));
-	PORTD_PCR6=(0|PORT_PCR_MUX(1));
-	PORTD_PCR7=(0|PORT_PCR_MUX(1));
+	/*PORTD_PCR0= PORT_PCR_MUX(1);
+	PORTD_PCR1= PORT_PCR_MUX(1);
+	PORTD_PCR2= PORT_PCR_MUX(1);
+	PORTD_PCR3= PORT_PCR_MUX(1);
+	PORTD_PCR4= PORT_PCR_MUX(1);
+	PORTD_PCR5= PORT_PCR_MUX(1);
+	PORTD_PCR6= PORT_PCR_MUX(1);
+	PORTD_PCR7= PORT_PCR_MUX(1);*/
 	
-	/* Set pin of PORTE as TPM1 and TPM2 */
-	PORTE_PCR20 = PORT_PCR_MUX(3);
-	PORTE_PCR21 = PORT_PCR_MUX(3);
-	PORTE_PCR22 = PORT_PCR_MUX(3);
-	PORTE_PCR23 = PORT_PCR_MUX(3);
+	/* Set pin of PORTE as ADC0_DP0/ADC0_SE0 */
+	PORTE_PCR20= PORT_PCR_MUX(0);
 	
 	//Initialize PortB
 	GPIOB_PDOR = 0x00;
 	
-	//Initialize PortD 
-	GPIOD_PDOR = 0x00;
+	//Initialize PortC
+	GPIOC_PDOR = 0x00;
 
 	//Configure PortB as outputs
 	GPIOB_PDDR = 0xFF;
 	
 	//Configure PortD as outputs
-	GPIOD_PDDR = 0xFF;
+	GPIOC_PDDR = 0xFF;
 	
 	//Configure PortC as inputs
-	GPIOC_PDDR = 0x00;
+	//GPIOC_PDDR = 0x00;
 }
 
 void initLCD(void)
@@ -198,6 +211,7 @@ void delay(long time)
 	{
 		time--;
 	}
+	
 }
 
 void cfgADC(void)
@@ -213,56 +227,16 @@ void cfgADC(void)
 	ADC0_SC2 = 0;   	
 	
 	//Status and Control Register 3 (ADCx_SC3)
-	ADC0_SC3 = 0x08; 	
+	ADC0_SC3 = 0x0C; 	
 	
 	//ADC Status and Control Registers 1 - page 462
 	//This registers triggers the ADC conversion
 	ADC0_SC1A = 0x00;
 }
 
-void cfgPWM(void)
-{
-	//Select the CLK for the TPM Module - page 196
-	SIM_SOPT2 |= SIM_SOPT2_TPMSRC(1);
-	
-	// Selects the MCGFLLCLK clock 
-	SIM_SOPT2 &= ~(SIM_SOPT2_PLLFLLSEL_MASK); 
-	
-	//Clear counter register - page 553
-	TPM0_CNT = 0;
-	
-	//Set signal period to 1 ms
-	TPM0_MOD = 53;
-	
-	//See page 552 for TPMx_SC configuration
-	//(freq = ?)
-	TPM0_SC = 0x0B;			
-	
-	//See page 556 for TPMx_CnSC configuration
-	TPM0_C0SC = 0x28;		//0010 1000
-	
-	TPM0_C0V = 6;
-	
-	//See page 556 for TPMx_CnSC configuration
-	/*	TPM0_C0SC = 0x28;		//0010 1000
-		
-		TPM0_C0V = 5500;
-		
-		TPM0_C1SC = 0x28;		//0010 1000
-			
-		TPM0_C1V = 1250;
-		
-		TPM0_C2SC = 0x28;		//0010 1000
-			
-		TPM0_C2V = 2500;
-		
-		TPM0_C3SC = 0x28;		//0010 1000
-							
-		TPM0_C3V = 10;
-
-		
-		TPM0_C5SC = 0x28;		//0010 1000
-											
-		TPM0_C5V = 7500;*/
-	
+void imprimirTemp(int centena, int decena, int unidad){
+	sendCode(nIns, 0x85);
+	sendCode(nData, 0X30+centena);
+	sendCode(nData,0x30+decena);
+	sendCode(nData,0x30+unidad);
 }
