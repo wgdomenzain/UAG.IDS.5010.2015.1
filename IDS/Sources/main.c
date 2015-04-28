@@ -1,209 +1,251 @@
 /*
-@author: 		Walter Gonzalez Domenzain
-@description: 	8020 Group
-@functions:		None
-@environment: 	KL25Z
-@date: 			22/01/2014
-@comments:		
-@version:		1.0 - Initial
-*/
+ * main implementation: use this 'C' sample to create your own application
+ *
+ */
 
 #include "derivative.h" /* include peripheral declarations */
+//#include "UART0_PDD.h"
 
+#define PortLCD    GPIOD_PDOR
+#define RS_1   GPIOB_PDOR |= 0x02 
+#define RS_0   GPIOB_PDOR &= 0xF
+#define Enable_1	   GPIOB_PDOR |= 0x01
+#define Enable_0	   GPIOB_PDOR &= 0xFE
 
-#define GPIO_PIN_MASK 0x1Fu
-#define GPIO_PIN(x) (((1)<<(x & GPIO_PIN_MASK)))
+// time for delay
+#define			n1seg			0xFFFF
+#define			n0_5seg			0x4FFF
+#define			n30mseg			0x0400
+#define			n15mseg			0x02E8
+#define			n40useg			0x1AD0
 
-#define	nBit0	0x01	//'00000001'
-#define	nBit1	0x02	//'00000010'
-#define	nBit2	0x04	//'00000100'
-#define	nBit3	0x08	//'00001000'
-#define	nBit4	0x10	//'00010000'
-#define	nBit5	0x20	//'00100000'
-#define	nBit6	0x40	//'01000000'
-#define	nBit7	0x80	//'10000000'
+#define 		nIns			0x00
+#define 		nData			0x01
 
-//Time definitions
-#define nt15_msec	10000
-#define nt40_usec	3500
-
-//LCD Control
-#define nIns	0
-#define nData	1
-
-#define PortLCD    	GPIOC_PDOR
-//Enable connected to portb_01
-#define Enable_1	GPIOB_PDOR |= 0x01
-#define Enable_0	GPIOB_PDOR &= 0xFE
-#define RS_1   		GPIOB_PDOR |= 0x02
-#define RS_0   		GPIOB_PDOR &= 0xFD
-
-#define turnBlueLedOn 0xFFFFFFFD
-#define portD GPIOD_PDOR
-
-
-
-
-#define	Set_GPIOB_PDOR(x)	(GPIOB_PDOR |= (1 << (x-1)))
-
-int int_Temp;
-
-//Cursor Blink off initialization
-const unsigned char InitializeLCD[5] = {0x38, 0x38, 0x38, 0x0C, 0x01};
-//--------------------------------------------------------------
-//Declare Prototypes
-/* Functions */
+#define PortButtons 	GPIOE_PDIR
+const unsigned char InitializeLCD[5] 				= {0x38, 0x38, 0x38, 0x0C, 0x01}; 
+unsigned int cfgADC(void);
+//int seconds1 = 0,alarm = 0,minutes1 = 0,seconds2 = 0,minutes2 = 0,horas1 = 0, horas2 = 0;
+int B1 = 0;
+void uart0_putchar (char data);
+unsigned char uart0_getchar (void);
+char c;
+char h;
+ //For ADC
+unsigned int Valor;
+unsigned int Dece;
+unsigned int Unid;
+unsigned int Residuo;
+unsigned int Deci;
+unsigned int Residuo1;
 void cfgPorts(void);
-void cfgADC(void);
-void cfgpwm(void);
+void UARTinit();
+void quickSend(const unsigned char *str) ;
+void quickSendNum(const unsigned val);
+void quickSendHex(const unsigned val) ;
+void sendCode(int Code, int Data);
 void initLCD(void);
 void delay(long time);
-void sendCode(int Code, int Data);
-void imprimirTemp(int decMillar,int millar,int centena, int decena, int unidad);
-void imprimirPorc(int decena,int unidad,int decimal, int decimal2, int decimal3);
-/*@description: Initial Port Cfg 
-*/
-int unidad = 0, decena = 0, dummy = 0, adc,centena=0,millar=0,decMillar=0,arre=0,unidadP=0,decenaP=0,decimal1=0,decimal2=0,decimal3=0;
-float result=0,porcentaje;
-			
+void Clock_Configuration (void);
+void rtc_init(void);
+void cfgPWM(void);
+unsigned int cfgADC(void);
+unsigned char uart0_getchar (void);
+void uart0_putchar (char data);
+int i;
+int x;
+
 int main(void)
 {
-	//Configure ports
-	cfgPorts();
-	//Initialize LCD
-	initLCD();
-	//Configure ADC
-	cfgADC();
+	//int counter = 0;
 	
-	//Config PWM
-	cfgpwm();
+	 cfgPorts();
+	 initLCD();
 	
-	//Set position to print character
-	//sendCode(nIns, 0x83);
-	//Print character
-	//sendCode(nData, 'W');
-	//sendCode(nIns, 0x80);
+	 UARTinit(); 
+	// rtc_init();
+	 //cfgADC();
+	 //cfgPWM();
+	i=0;
 	
-	portD=turnBlueLedOn;
+		UART0_D= 'H';
+		delay(10000);
+		UART0_D= 'o';
+		delay(10000);
+		UART0_D= 'l';
+		delay(10000);
+		UART0_D= 'a';
+		delay(10000);
+		UART0_D= ' ';
+		delay(10000);
+		UART0_D= 'M';
+		delay(10000);
+		UART0_D= 'u';
+		delay(10000);
+		UART0_D= 'n';
+		delay(10000);
+		UART0_D= 'd';
+		delay(10000);
+		UART0_D= 'o';
+		delay(10000);
+		UART0_D= '!';
+		delay(10000);
+		UART0_D= ' ';
+		delay(10000);	
 	
-	for(;;)
-	{
-		if((ADC0_SC1A & 0x00000080)  == 0x00000080)
-		{
-			result = ADC0_RA;
-			adc = result;
-			ADC0_SC1A = 0x00;
-			centena=result/100;
-			decena = (result-(centena*100))/10;
-			unidad = (result-((decena*10)+(centena*100)));	
-			decMillar=result/10000;
-			millar=(result-(decMillar*10000))/1000;
-			centena=(result-((decMillar*10000)+(millar*1000)))/100;
-			decena = (result-((decMillar*10000)+(millar*1000)+(centena*100)))/10;
-			unidad = (result-((decMillar*10000)+(millar*1000)+(decena*10)+(centena*100)));	
-			imprimirTemp(decMillar,millar,centena,decena,unidad);	
-			TPM0_C0V = (result*20000)/65535;
-			arre=TPM0_C0V;
-			porcentaje=((arre*100)/20);
-			
-			decenaP= porcentaje/10000;
-			unidadP= (porcentaje-(decenaP*10000))/1000;
-			decimal1=(porcentaje-((decenaP*10000)+(unidadP*1000)))/100;
-			decimal2 = (porcentaje-((decenaP*10000)+(unidadP*1000)+(decimal1*100)))/10;
-			decimal3 = (porcentaje-((decenaP*10000)+(unidadP*1000)+(decimal2*10)+(decimal1*100)));
-			imprimirPorc(decenaP,unidadP,decimal1,decimal2,decimal3);			
-					
-			
-		}
+	for(;;) {	   
+	   	
 	}
+	
 	return 0;
 }
-
 void cfgPorts(void)
 {
-	//Activate clocks
-	//Turn on clock for portb
-	SIM_SCGC5 = SIM_SCGC5_PORTB_MASK;	
-	//Turn on clock for portd
-	SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK;	
-	////Turn on clock for portc
-	SIM_SCGC5 |= SIM_SCGC5_PORTC_MASK;
-	////Turn on clock for porte
-	SIM_SCGC5 |= SIM_SCGC5_PORTE_MASK;
-	////Turn on clock for porte
-	SIM_SCGC6 = SIM_SCGC6_ADC0_MASK;
-	//Turn on clock for TPM0
-	SIM_SCGC6 |= SIM_SCGC6_TPM0_MASK;
-	
-	/* Set pins of PORTB as GPIO */
-	PORTB_PCR0= PORT_PCR_MUX(1);
-	PORTB_PCR1= PORT_PCR_MUX(1);
-	PORTB_PCR2=(0|PORT_PCR_MUX(1));
-	PORTB_PCR3=(0|PORT_PCR_MUX(1));
-	PORTB_PCR4=(0|PORT_PCR_MUX(1));
-	PORTB_PCR5=(0|PORT_PCR_MUX(1));
-	PORTB_PCR6=(0|PORT_PCR_MUX(1));
-	PORTB_PCR7=(0|PORT_PCR_MUX(1));
+	//Turn on clock for portB and portC
+ SIM_SCGC5 |= SIM_SCGC5_PORTA_MASK; /* SIM_SCGC5: PORTA=1 */
+ SIM_SCGC5 |= SIM_SCGC5_PORTB_MASK; /* SIM_SCGC5: PORTB=1 */
+ SIM_SCGC5 |= SIM_SCGC5_PORTC_MASK; /* SIM_SCGC5: PORTC=1 */
+ SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK; /* SIM_SCGC5: PORTD=1 */
+ SIM_SCGC5 |= SIM_SCGC5_PORTE_MASK; /* SIM_SCGC5: PORTE=1 */
 	
 	/* Set pins of PORTC as GPIO */
-	PORTC_PCR0= PORT_PCR_MUX(1);
-	PORTC_PCR1= PORT_PCR_MUX(1);
-	PORTC_PCR2= PORT_PCR_MUX(1);
-	PORTC_PCR3= PORT_PCR_MUX(1);
-	PORTC_PCR4= PORT_PCR_MUX(1);
-	PORTC_PCR5= PORT_PCR_MUX(1);
-	PORTC_PCR6= PORT_PCR_MUX(1);
-	PORTC_PCR7= PORT_PCR_MUX(1);
+ PORTD_PCR0=(0|PORT_PCR_MUX(1));
+ PORTD_PCR1=(0|PORT_PCR_MUX(1));
+ PORTD_PCR2=(0|PORT_PCR_MUX(1));
+ PORTD_PCR3=(0|PORT_PCR_MUX(1));
+ PORTD_PCR4=(0|PORT_PCR_MUX(1));
+ PORTD_PCR5=(0|PORT_PCR_MUX(1));
+ PORTD_PCR6=(0|PORT_PCR_MUX(1));
+ PORTD_PCR7=(0|PORT_PCR_MUX(1));
+    
 	
-	PORTD_PCR0= PORT_PCR_MUX(4);
-	PORTD_PCR1= PORT_PCR_MUX(4);
-	PORTD_PCR2=(0|PORT_PCR_MUX(4));
-	PORTD_PCR3=(0|PORT_PCR_MUX(4));
-	PORTD_PCR4=(0|PORT_PCR_MUX(4));
-	PORTD_PCR5=(0|PORT_PCR_MUX(4));
-	PORTD_PCR6=(0|PORT_PCR_MUX(4));
-	PORTD_PCR7=(0|PORT_PCR_MUX(4));
+	/* Set pins of PORTB 0 and PORTB 1 as GPIO */
+ PORTB_PCR0=(0|PORT_PCR_MUX(1));
+ PORTB_PCR1=(0|PORT_PCR_MUX(1));
+ PORTB_PCR8=(0|PORT_PCR_MUX(1));
+ PORTB_PCR9=(0|PORT_PCR_MUX(1));
+ PORTB_PCR10=(0|PORT_PCR_MUX(1));
+ PORTB_PCR11=(0|PORT_PCR_MUX(1));
+ 
+    /* Set pins of PORTE for PWM */
+ PORTE_PCR0=(0|PORT_PCR_MUX(1));
+ //PORTE_PCR30=(0|PORT_PCR_MUX(3));
+  
+ /* Set PORTB 2 for ADC  */
+// PORTB_PCR2=(PORT_PCR_MUX(0));
 	
-	PORTE_PCR20 = PORT_PCR_MUX(3);
-		PORTE_PCR21 = PORT_PCR_MUX(3);
-		PORTE_PCR22 = PORT_PCR_MUX(3);
-		PORTE_PCR23 = PORT_PCR_MUX(3);
 	
-	/* Set pin of PORTE as ADC0_DP0/ADC0_SE0 */
-	PORTE_PCR20= PORT_PCR_MUX(0);
-	
-	//Initialize PortB
-	GPIOB_PDOR = 0x00;
-	
-	//Initialize PortC
-		GPIOC_PDOR = 0x00;
-		
-	//Initialize PortC
-	GPIOD_PDOR = 0xFF;
-
-	//Configure PortB as outputs
-	GPIOB_PDDR = 0xFF;
+	//Reasure first PortD and B value
+ GPIOB_PDOR = 0x00;
+ GPIOD_PDOR = 0x00;
+ //GPIOE_PDOR = 0x00;
+	//GPIOC_PDOR = 0x00;
 	
 	//Configure PortD as outputs
-	GPIOC_PDDR = 0xFF;
-	GPIOD_PDDR = 0xFF;
+ GPIOD_PDDR = 0xFF;
+	//Configure PortB as outputs
+ GPIOB_PDDR = 0xFF;
+	//Configure PortE as outputs
+ GPIOE_PDDR = 0x00;
+	//Configure PortC as outputs
+	//GPIOC_PDDR = 0xFE;
 	
-	//Configure PortC as inputs
-	//GPIOC_PDDR = 0x00;
 }
 
-void initLCD(void)
+void UARTinit()
 {
-	int i;
-	delay(nt15_msec);
+ SIM_SCGC4 |= SIM_SCGC4_UART0_MASK;                                                   
 	
-	/* Send initialization instructions */
-	/* Loop for sending each character from the array */
-	for(i=0;i<5;i++)
-	{										
-		sendCode(nIns, InitializeLCD[i]);	/* send initialization instructions */			
-	}
+ /* PORTA_PCR1: ISF=0,MUX=2 */
+ PORTA_PCR1 = (uint32_t)((PORTA_PCR1 & (uint32_t)~0x01000500UL) | (uint32_t)0x0200UL);
+ /* PORTA_PCR2: ISF=0,MUX=2 */
+ PORTA_PCR2 = (uint32_t)((PORTA_PCR2 & (uint32_t)~0x01000500UL) | (uint32_t)0x0200UL); 
+
+ /* Disable TX & RX while we configure settings */
+ UART0_C2 &= ~(UART0_C2_TE_MASK); //disable transmitter
+ UART0_C2 &= ~(UART0_C2_RE_MASK); //disable receiver
+ 
+ /* UART0_C1: LOOPS=0,DOZEEN=0,RSRC=0,M=0,WAKE=0,ILT=0,PE=0,PT=0 */
+ UART0_C1 = 0x00U; /* Set the C1 register */
+ /* UART0_C3: R8T9=0,R9T8=0,TXDIR=0,TXINV=0,ORIE=0,NEIE=0,FEIE=0,PEIE=0 */
+ UART0_C3 = 0x00U; /* Set the C3 register */
+ /* UART0_S2: LBKDIF=0,RXEDGIF=0,MSBF=0,RXINV=0,RWUID=0,BRK13=0,LBKDE=0,RAF=0 */
+ UART0_S2 = 0x00U; /* Set the S2 register */
+ 
+ SIM_SOPT2 |= SIM_SOPT2_UART0SRC(1); //set clock source to be from PLL/FLL
+ SIM_SOPT2 |= SIM_SOPT2_CLKOUTSEL(0b100);
+ unsigned SBR = 546;//137; //Set the baud rate register, SBR = 137
+ UART0_BDH |= (~UART0_BDH_SBR_MASK) | SBR >> 8;
+ UART0_BDL |= (~UART0_BDL_SBR_MASK) | SBR;
+ 
+ char OSR = 3; //set the oversampling ratio to option #3 = 4x
+ UART0_C4 &= (~UART0_C4_OSR_MASK) | OSR;
+ 
+ /*
+ * Target Baud rate = 38400 9600
+ *
+ * Baud rate = baud clock / ((OSR+1) * SBR)
+ * baud clock = FLL/PLL = 20.97152MHz  32kHZ
+ * OSR = 3
+ * SBR = 137 //546
+ * Resulting Baud rate = 20.97152MHz / ((3 + 1) * 546) = 9600
+ */
+ 
+ UART0_C5 |= UART0_C5_BOTHEDGE_MASK; //enable sampling on both edges of the clock
+ UART0_C2 |= UART0_C2_TE_MASK; //enable transmitter
+ UART0_C2 |= UART0_C2_RE_MASK; //enable receiver
 	
+}
+
+void quickSend(const unsigned char *str) 
+{
+  while(*str!='\0') { //send every character except the null or '\0' character that terminates the string
+    UART0_D = *str++; //put the next character in the transmit register & increment which character is next
+    while((UART0_S1 & UART0_S1_TDRE_MASK) == 0); //wait for the trasmit register to be empty (meaning the whole character has been sent)
+  }
+}
+
+void quickSendNum(const unsigned val) 
+{
+    char nums[20];
+    int cnt=0;
+    unsigned tmp = val;
+    do { //send every character except the null or '\0' character that terminates the string
+        char num = tmp % 10;
+        nums[cnt++]='0'+num;
+        //UART0_D = '0'+num; //put the next character in the transmit register & increment which character is next
+        tmp /= 10;
+        //while((UART0_S1 & UART0_S1_TDRE_MASK) == 0); //wait for the trasmit register to be empty (meaning the whole character has been sent)
+    } while(tmp > 0);
+ 
+    int i;
+    for(i=cnt-1; i>=0; i--) {
+        UART0_D = nums[i]; //put the next character in the transmit register & increment which character is next
+        while((UART0_S1 & UART0_S1_TDRE_MASK) == 0); //wait for the trasmit register to be empty (meaning the whole character has been sent)
+    }
+}
+
+void quickSendHex(const unsigned val) 
+{
+    char nums[20];
+    int cnt=0;
+    unsigned tmp = val;
+    do { //send every character except the null or '\0' character that terminates the string
+        char num = tmp % 16;
+        if(num < 10)
+            nums[cnt++]='0'+num;
+        else
+            nums[cnt++]='A'+num-10;
+        //UART0_D = '0'+num; //put the next character in the transmit register & increment which character is next
+        tmp /= 16;
+        //while((UART0_S1 & UART0_S1_TDRE_MASK) == 0); //wait for the trasmit register to be empty (meaning the whole character has been sent)
+    } while(tmp > 0);
+ 
+    int i;
+    for(i=cnt-1; i>=0; i--) {
+        UART0_D = nums[i]; //put the next character in the transmit register & increment which character is next
+        while((UART0_S1 & UART0_S1_TDRE_MASK) == 0); //wait for the trasmit register to be empty (meaning the whole character has been sent)
+    }
 }
 
 void sendCode(int Code, int Data)
@@ -211,99 +253,87 @@ void sendCode(int Code, int Data)
 	//Assign a value to pin RS
 	/*HINT: When RS is 1, then the LCD receives a data
 	when RS is 0, then the LCD receives an instruction */
-	// Initialize RS and Enable with 0
+	// Initialise RS and Enable with 0
 	RS_0;
 	Enable_0;
 	//Assign the value we want to send to the LCD
 	PortLCD = Data;	
 	
 	//We make the algorithm to establish if its an instruction we start with 0 on RS value, otherwise if its a data command we start with RS as 1;
+	
 	if (Code == nIns)
 	{
+		RS_0;
 		Enable_1;
-		delay(nt40_usec);
+		delay(n40useg);
 		Enable_0;
 		RS_0;
-	}		
+	}
 	else if(Code == nData)
 	{
 		RS_1;
 		Enable_1;
-		delay(nt40_usec);
+		delay(n40useg);
 		Enable_0;
 		RS_0;
 	}
 }
+
+void initLCD(void)
+{
+	unsigned int i;											/* local index */
+	//LCD requires a delay of 15 msec
+	delay(n15mseg);									/* wait for 15 mseg */
+	
+	/* send initialization instructions */
+	/* Loop for sending each character from the array */
+	for(i=0;i<5;i++)
+	{										
+		sendCode(nIns, InitializeLCD[i]);	/* send initialization instructions */
+					
+	}
+
+}
+
 void delay(long time)
 {
-	while (time > 0)
-	{
-		time--;
-	}
+	/*@description: 
+	*/
+	//Initiate time
+	long x;
+	x = time;
 	
+	//Execute loop as long as x is not zero
+	while (x != 0)
+		{
+		//Decrease x
+		x--;
+		}
 }
 
-void cfgADC(void)
-{	
-	//ADC Configuration Register 1 (ADCx_CFG1) page 465
-	ADC0_CFG1 = 0x0C;  
-	
-	//ADC Configuration Register 2 (ADCx_CFG2) page 467
-	//Channel A selected
-	ADC0_CFG2 = 0x00;  	
-	
-	//Status and Control Register 2 (ADCx_SC2) page 470
-	ADC0_SC2 = 0;   	
-	
-	//Status and Control Register 3 (ADCx_SC3)
-	ADC0_SC3 = 0x0C; 	
-	
-	//ADC Status and Control Registers 1 - page 462
-	//This registers triggers the ADC conversion
-	ADC0_SC1A = 0x00;
-}
 
-void imprimirTemp(int decMillar,int millar,int centena, int decena, int unidad){
-	sendCode(nIns, 0x85);
-		sendCode(nData, 0X30+decMillar);
-		sendCode(nData, 0X30+millar);
-		sendCode(nData, 0X30+centena);
-		sendCode(nData,0x30+decena);
-		sendCode(nData,0x30+unidad);
-}
+//quickSendNum(B1);
+//quickSend((unsigned char*)c);
 
-void imprimirPorc(int decMillar,int millar,int centena, int decena, int unidad){
-		sendCode(nIns, 0xC4);
-		sendCode(nData, 0X30+decMillar);
-		sendCode(nData, 0X30+millar);
-		sendCode(nData, '.');		
-		sendCode(nData, 0X30+centena);
-		sendCode(nData,0x30+decena);
-		sendCode(nData,0x30+unidad);
-		sendCode(nData, '%');	
-}
+//Valor  = B1;
+//Dece = Valor/ 100;
+//Residuo  = Valor % 100;
+//Unid = Residuo / 10;
+//Residuo1 = Residuo % 10;
+//Deci = Residuo1 ;
 
-void cfgpwm(void)
+unsigned char uart0_getchar (void)
 {
-	//Select the CLK for the TPM Module - page 196
-	SIM_SOPT2 |= SIM_SOPT2_TPMSRC(1);
-	
-	// Selects the MCGFLLCLK clock 
-	SIM_SOPT2 &= ~(SIM_SOPT2_PLLFLLSEL_MASK); 
-	
-	//Clear counter register - page 553
-	TPM0_CNT = 0;
-	
-	//Set signal period to 1 ms
-	TPM0_MOD = 20000;
-	
-	//See page 552 for TPMx_SC configuration
-	//(freq = ?)
-	TPM0_SC = 0x0E;			
-	
-	//See page 556 for TPMx_CnSC configuration
-	TPM0_C0SC = 0x28;		//0010 1000
-	
-	TPM0_C0V = 13634;
-		
+/* Warten bis Charakter empfangen wurde */
+while (!(UART0_S1 & UART_S1_RDRF_MASK));
+/* Return the 8-bit data from the receiver */
+return UART0_D;
+}
+
+void uart0_putchar (char data)
+{
+/* Warten bis Speicher verfügbar im FIFO */
+while(!(UART0_S1 & UART_S1_TDRE_MASK));
+/* Send the character */
+UART0_D = data;
 }
